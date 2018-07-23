@@ -43,8 +43,12 @@ const renderDescriptionText = (selectedService, serviceOptionsConfig) => {
       const paraText = serviceOptionsConfig[curr].descriptionPara;
       acc.push(
         <Fragment key={serviceOptionText}>
-          <HeaderText>{headerText}</HeaderText>
-          <DescriptionText>{paraText}</DescriptionText>
+          <HeaderText data-testid="services-header-text">
+            {headerText}
+          </HeaderText>
+          <DescriptionText data-testid="services-description-text">
+            {paraText}
+          </DescriptionText>
         </Fragment>
       );
     }

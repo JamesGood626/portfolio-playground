@@ -23,17 +23,26 @@ const OptionText = styled.h3`
   width: 100%;
 `;
 
+// Need to get the OptionText by ID for testing purposes
+const renderServiceOptions = (serviceOptions, showNewServiceDescription) => {
+  return Object.getOwnPropertyNames(serviceOptions).map(property => (
+    <OptionText
+      id={property}
+      key={property}
+      onClick={showNewServiceDescription}
+    >
+      {serviceOptions[property].serviceOptionText}
+    </OptionText>
+  ));
+};
+
 export const ServicesSliderOptions = ({
   showNewServiceDescription,
   serviceOptions
 }) => {
   return (
     <SliderOptionsContainer>
-      {Object.getOwnPropertyNames(serviceOptions).map(property => (
-        <OptionText id={property} onClick={showNewServiceDescription}>
-          {serviceOptions[property].serviceOptionText}
-        </OptionText>
-      ))}
+      {renderServiceOptions(serviceOptions, showNewServiceDescription)}
     </SliderOptionsContainer>
   );
 };
