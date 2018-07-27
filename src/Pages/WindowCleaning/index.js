@@ -6,7 +6,9 @@ export const WindowCleaningPage = () => {
   return (
     <Fragment>
       <Header />
-      <ServicesSliderSection />
+      <main>
+        <ServicesSliderSection />
+      </main>
     </Fragment>
   );
 };

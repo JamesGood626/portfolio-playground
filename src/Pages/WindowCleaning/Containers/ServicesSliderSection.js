@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import ServicesSlider from "./ServicesSlider";
+import { FlexColJCAICenterSection } from "../../../LayoutStyledComponents";
 
-const StyledSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const StyledSection = FlexColJCAICenterSection.extend`
   width: 100vw;
   background: #999;
 `;

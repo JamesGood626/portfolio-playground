@@ -1,12 +1,10 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import { CTAButton } from "./CTAButton";
+// import { ServiceQuoteForm } from "./ServiceQuoteForm";
+import { FlexColJCAICenterDiv } from "../../../LayoutStyledComponents";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const Container = FlexColJCAICenterDiv.extend`
   width: 80%;
   height: 82%;
   background: #fcfcfc;
@@ -56,14 +54,40 @@ const renderDescriptionText = (selectedService, serviceOptionsConfig) => {
   }, []);
 };
 
+// You'll want to pass in a third parameter which will be the
+// config for the specific services and pricing catered to the service for
+// which the quote was requested. -> that config object will be ServiceQuoteForm's props
+// COMMENTING THIS OUT FOR NOW BECAUSE I THINK I OVERLOOKED A SIMPLER SOLUTION
+// const renderServiceQuoteForm = (quoteRequested, serviceOptionsConfig) => {
+//   return Object.getOwnPropertyNames(
+//     serviceOptionsConfig
+//   ).reduce((acc, curr) => {
+//     const serviceOptionText = serviceOptionsConfig[curr].serviceOptionText;
+//     if (quoteRequested === serviceOptionText) {
+//       // const headerText = serviceOptionsConfig[curr].descriptionHeader;
+//       // const paraText = serviceOptionsConfig[curr].descriptionPara;
+//       acc.push(<ServiceQuoteForm />);
+//     }
+//     return acc;
+//   }, []);
+// };
+
 export const ServicesDescription = ({
+  quoteRequested,
   selectedService,
-  serviceOptionsConfig
+  serviceOptionsConfig,
+  updateQuoteRequested
 }) => {
   return (
     <Container>
       {renderDescriptionText(selectedService, serviceOptionsConfig)[0]}
-      <CTAButton>Contact Us</CTAButton>
+      <CTAButton onClick={updateQuoteRequested}>Get Quote</CTAButton>
     </Container>
   );
 };
+
+// {
+//   !quoteRequested
+//     ? renderDescriptionText(selectedService, serviceOptionsConfig)[0]
+//     : renderServiceQuoteForm(quoteRequested, serviceOptionsConfig)[0];
+// }

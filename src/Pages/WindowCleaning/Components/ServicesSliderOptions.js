@@ -1,21 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { FlexJCSpaceAroundAICenterDiv } from "../../../LayoutStyledComponents";
 
-const SliderOptionsContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+const SliderOptionsContainer = FlexJCSpaceAroundAICenterDiv.extend`
   width: 100%;
   height: 18%;
   border-bottom: 3px solid #fcfcfc;
 
   // Desktop Styles
-  @media (min-width: 1100px) {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: blue;
-  }
+  // @media (min-width: 1100px) {
+  //   display: flex;
+  //   justify-content: space-around;
+  //   align-items: center;
+  //   background: blue;
+  // }
 `;
 
 const OptionText = styled.h3`

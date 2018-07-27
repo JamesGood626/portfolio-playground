@@ -7,7 +7,7 @@ const Button = styled.button`
   background: #5ab9ea;
   border: none;
   border-radius: 25rem;
-  color: #fcfcfc;
+  color: ${props => props.theme.main};
   font-size: 1.2rem;
 `;
 

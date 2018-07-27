@@ -1,22 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { CTAButton } from "./CTAButton";
+import { FlexColJCAICenterDiv } from "../../../LayoutStyledComponents";
 
-const ContentContainer = styled.div`
+const ContentContainer = FlexColJCAICenterDiv.extend`
   position: absolute;
   bottom: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   height: 40vh;
   width: 100%;
 `;
 
 const HeadlineText = styled.h1`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-size: 2.2rem;
   margin-bottom: 6vh;
   color: #fcfcfc;
@@ -34,7 +28,7 @@ const ContactNumber = styled.p`margin-top: 1.4rem;`;
 export const HeaderContent = () => {
   return (
     <ContentContainer>
-      <HeadlineText class="header-headline-text">
+      <HeadlineText>
         <p>Wakanda Foreva!</p>
       </HeadlineText>
       <CTAButton>Get a Quote</CTAButton>

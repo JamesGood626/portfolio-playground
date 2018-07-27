@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import { asyncComponent } from "./asyncComponent";
+import { Home } from "./Home";
 
 // Use Switch within the page components if you'd like to add page transitions
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
+          <Route exact path="/" component={Home} />
           <Route
             path="/lawyer"
             component={asyncComponent(() => import("./Pages/Lawyer"))}

@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { ServicesSliderOptions } from "../Components/ServicesSliderOptions";
 import { ServicesDescription } from "../Components/ServicesDescription";
+import ServiceQuoteForm from "../Components/ServiceQuoteForm";
 import { serviceOptionsConfig } from "../Config/servicesConfig";
-
+import { quotePricingConfig } from "../Config/quotePricingConfig";
+import { FlexColAICenterDiv } from "../../../LayoutStyledComponents";
 // const COMMERCIAL = "commercial";
 // const RESIDENTIAL = "residential";
 // const REAL_ESTATE = "real_estate";
@@ -29,25 +31,38 @@ const SliderContainer = styled.div`
   }
 `;
 
-const ServicesDescriptionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const ServicesDescriptionContainer = FlexColAICenterDiv.extend`
   width: 100%;
   height: 100%;
 `;
 
 export default class ServicesSlider extends Component {
   state = {
+    quoteRequested: null,
     selectedService: serviceOptionsConfig.COMMERCIAL.serviceOptionText
   };
 
   showNewServiceDescription = e => {
     this.setState({
-      selectedService: serviceOptionsConfig[e.target.id].serviceOptionText
+      selectedService: serviceOptionsConfig[e.target.id].serviceOptionText,
+      quoteRequested: null
     });
   };
+
+  updateQuoteRequested = e => {
+    this.setState((prevState, state) => ({
+      quoteRequested:
+        quotePricingConfig[
+          prevState.selectedService
+            .replace(" ", "_")
+            .replace(" ", "_")
+            .toUpperCase()
+        ]
+    }));
+  };
+
   render() {
+    const { quoteRequested, selectedService } = this.state;
     return (
       <SliderContainer>
         <ServicesSliderOptions
@@ -55,10 +70,15 @@ export default class ServicesSlider extends Component {
           serviceOptions={serviceOptionsConfig}
         />
         <ServicesDescriptionContainer>
-          <ServicesDescription
-            selectedService={this.state.selectedService}
-            serviceOptionsConfig={serviceOptionsConfig}
-          />
+          {!quoteRequested ? (
+            <ServicesDescription
+              selectedService={selectedService}
+              serviceOptionsConfig={serviceOptionsConfig}
+              updateQuoteRequested={this.updateQuoteRequested}
+            />
+          ) : (
+            <ServiceQuoteForm quotePricing={quoteRequested} />
+          )}
         </ServicesDescriptionContainer>
       </SliderContainer>
     );
