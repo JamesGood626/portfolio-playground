@@ -99,10 +99,9 @@ export const TestimonialSection = () => {
               <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
               <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
               <p>
-                Lorem Ipsum dolor sit upon. They did an outstanding job I really
-                wouldn't dream of hiring any other firm to handle the bull crap
-                the comes our way. Do yourself a favor and hire them for their
-                outrageous price.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur dignissim, felis porttitor viverra imperdiet, turpis
+                sem sodales ligula, ut mattis massa sem et diam.
               </p>
             </TestimonialCardContentContainerDiv>
           </TestimonialCard>

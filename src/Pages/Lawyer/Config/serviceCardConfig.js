@@ -2,29 +2,33 @@ export const serviceCardConfig = [
   {
     icon: ";D",
     header: "VC Fund Information",
-    paragraph: `We are a proud legal counsel to several
-           prominent venture capital funds, angel investors
-           and accelerators from all across the United States.`
+    paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Curabitur dignissim, felis porttitor viverra
+                imperdiet, turpis sem sodales ligula, ut mattis massa
+                sem et diam.`
   },
   {
     icon: "D:",
     header: "2nd Obj",
-    paragraph: `Yeah yeah they get it all ready
-           prominent venture capital funds, angel investors
-           and accelerators from all across the United States.`
+    paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Curabitur dignissim, felis porttitor viverra
+                imperdiet, turpis sem sodales ligula, ut mattis massa
+                sem et diam.`
   },
   {
     icon: "O,o",
     header: "3rd Obj",
-    paragraph: `Some nonsense legal mumbojumbo
-           prominent venture capital funds, angel investors
-           and accelerators from all across the United States.`
+    paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Curabitur dignissim, felis porttitor viverra
+                imperdiet, turpis sem sodales ligula, ut mattis massa
+                sem et diam.`
   },
   {
     icon: ":O",
     header: "4th Obj",
-    paragraph: `Lorem ipsum dipsum sit upon cradle doo woo too
-           prominent venture capital funds, angel investors
-           and accelerators from all across the United States.`
+    paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Curabitur dignissim, felis porttitor viverra
+                imperdiet, turpis sem sodales ligula, ut mattis massa
+                sem et diam.`
   }
 ];
