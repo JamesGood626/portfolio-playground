@@ -51,17 +51,18 @@ const ServiceCardIconContainerDiv = styled.div`
   height: 120px;
   width: 120px;
   border: 2px solid #222;
+  margin-top: 4vh;
 
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -20px;
-    left: calc(50% - 10px);
-    height: 4px;
-    width: 20px;
-    background: #222;
-  }
+  // &:after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   bottom: -40px;
+  //   left: calc(50% - 10px);
+  //   height: 4px;
+  //   width: 20px;
+  //   background: #222;
+  // }
 `;
 
 const ServiceCardHeader = styled.h3`
@@ -71,8 +72,8 @@ const ServiceCardHeader = styled.h3`
     content: "";
     display: block;
     position: absolute;
-    top: 8%;
-    left: -9%;
+    top: 2%;
+    left: -0.8rem;
     height: 1.5rem;
     border-left: 4px solid #222;
   }
@@ -82,7 +83,7 @@ const ServiceCardHeader = styled.h3`
     display: block;
     position: absolute;
     top: 8%;
-    right: -9%;
+    right: -0.8rem;
     height: 1.5rem;
     border-right: 4px solid #222;
   }

@@ -9,7 +9,7 @@ export const serviceCardConfig = [
   },
   {
     icon: "D:",
-    header: "2nd Obj",
+    header: "Legitimate Title",
     paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit. Curabitur dignissim, felis porttitor viverra
                 imperdiet, turpis sem sodales ligula, ut mattis massa
@@ -17,7 +17,7 @@ export const serviceCardConfig = [
   },
   {
     icon: "O,o",
-    header: "3rd Obj",
+    header: "Legitimate TitleTree",
     paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit. Curabitur dignissim, felis porttitor viverra
                 imperdiet, turpis sem sodales ligula, ut mattis massa
@@ -25,7 +25,7 @@ export const serviceCardConfig = [
   },
   {
     icon: ":O",
-    header: "4th Obj",
+    header: "Legitimate Four",
     paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit. Curabitur dignissim, felis porttitor viverra
                 imperdiet, turpis sem sodales ligula, ut mattis massa

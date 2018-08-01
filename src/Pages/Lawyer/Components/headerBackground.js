@@ -21,11 +21,8 @@ const ImageOverlay = styled.div`
     bottom: 0;
     left: 0;
     width: 100vw;
-    background: linear-gradient(
-      120deg,
-      rgba(90, 185, 234, 0.7),
-      rgba(136, 96, 208, 0.7)
-    );
+    opacity: 0.7;
+    background: #fffffa;
   }
 `;
 

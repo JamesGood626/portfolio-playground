@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
+import Media from "react-media";
 import styled from "styled-components";
 import {
   FlexJCCenterAIStartSection,
@@ -18,6 +19,7 @@ const TestimonialContainerSection = FlexJCCenterAIStartSection.extend`
 
 const TestimonialInnerContainerDiv = FlexColJCAICenterDiv.extend`
   padding: 0;
+  width: 90%;
   max-width: 60rem;
   margin-bottom: 10vh;
   background: orange;
@@ -29,7 +31,7 @@ const TestimonialInnerContainerDiv = FlexColJCAICenterDiv.extend`
 
 const TestimonialCardContainerDiv = FlexJCAICenterDiv.extend`
   align-self: center;
-  width: 90%;
+  width: 100%;
   margin-top: 4vh;
   background: blue;
 `;
@@ -43,7 +45,7 @@ const TestimonialCard = FlexColJCAICenterDiv.extend`
   box-shadow: 0px 4px 30px -4px #555;
   background: #fcfcfc;
 
-  @media (min-width: 524px) {
+  @media (min-width: 400px) {
     width: 280px;
   }
 `;
@@ -69,8 +71,8 @@ const TestimonialCardHeader = styled.h3`
     content: "";
     display: block;
     position: absolute;
-    top: 8%;
-    left: -9%;
+    top: 1%;
+    left: -0.9rem;
     height: 1.5rem;
     border-left: 4px solid #222;
   }
@@ -79,39 +81,74 @@ const TestimonialCardHeader = styled.h3`
     content: "";
     display: block;
     position: absolute;
-    top: 8%;
-    right: -9%;
+    top: 1%;
+    right: -0.9rem;
     height: 1.5rem;
     border-right: 4px solid #222;
   }
 `;
 
-export const TestimonialSection = () => {
+const renderThreeCards = () => {
   return (
-    <TestimonialContainerSection>
-      <TestimonialInnerContainerDiv>
-        <h2>What Our Clients Are Saying</h2>
-        <TestimonialCardContainerDiv>
-          <span>"LA"</span>
-          <TestimonialCard className="testimonial-card hide-card--one" />
-          <TestimonialCard>
-            <TestimonialCardContentContainerDiv>
-              <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
-              <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Curabitur dignissim, felis porttitor viverra imperdiet, turpis
-                sem sodales ligula, ut mattis massa sem et diam.
-              </p>
-            </TestimonialCardContentContainerDiv>
-          </TestimonialCard>
-          <TestimonialCard className="testimonial-card hide-card--two" />
-          <span>"RA"</span>
-        </TestimonialCardContainerDiv>
-      </TestimonialInnerContainerDiv>
-    </TestimonialContainerSection>
+    <Fragment>
+      <TestimonialCard className="testimonial-card hide-card--one" />
+      <TestimonialCard>
+        <TestimonialCardContentContainerDiv>
+          <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+          <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            dignissim, felis porttitor viverra imperdiet, turpis sem sodales
+            ligula, ut mattis massa sem et diam.
+          </p>
+        </TestimonialCardContentContainerDiv>
+      </TestimonialCard>
+      <TestimonialCard className="testimonial-card hide-card--two" />
+    </Fragment>
   );
 };
+
+const renderCardCarousel = active => {
+  return (
+    <Fragment>
+      <span>"LA"</span>
+      <TestimonialCard>
+        <TestimonialCardContentContainerDiv>
+          <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+          <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            dignissim, felis porttitor viverra imperdiet, turpis sem sodales
+            ligula, ut mattis massa sem et diam.
+          </p>
+        </TestimonialCardContentContainerDiv>
+      </TestimonialCard>
+      <span>"RA"</span>
+    </Fragment>
+  );
+};
+
+export default class TestimonialSection extends Component {
+  state = {
+    active: null
+  };
+
+  render() {
+    return (
+      <TestimonialContainerSection>
+        <TestimonialInnerContainerDiv>
+          <h2>What Our Clients Are Saying</h2>
+          <TestimonialCardContainerDiv>
+            <Media query="(min-width: 900px)">
+              {matches =>
+                matches ? renderThreeCards() : renderCardCarousel(1)}
+            </Media>
+          </TestimonialCardContainerDiv>
+        </TestimonialInnerContainerDiv>
+      </TestimonialContainerSection>
+    );
+  }
+}
 
 /*******************************
 *** Testimonial Prop Section ***

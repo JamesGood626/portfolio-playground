@@ -2,13 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  height: 3.2rem;
-  width: 12rem;
-  background: #5ab9ea;
-  border: none;
-  border-radius: 25rem;
-  color: ${props => props.theme.main};
-  font-size: 1.2rem;
+  height: 50px;
+  width: 250px;
+  font-size: 1.4rem;
+  color: #ff312e;
+  background: transparent;
+  border: 2px solid #ff312e;
 `;
 
 export const CTAButton = ({ children, onClick }) => {

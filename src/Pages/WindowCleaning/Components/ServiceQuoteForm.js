@@ -1,8 +1,109 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import styled from "styled-components";
+import "../Styles/main.css";
+import {
+  FlexColJCSpaceAroundAICenterDiv,
+  FlexColJCStartAICenterDiv
+} from "../../../LayoutStyledComponents";
+
+// const SliderInput = styled.input`
+//   margin: 0;
+//   color: blue;
+//   background: lime;
+//   thumb: blue;
+// `;
+
+const FormContainerDiv = FlexColJCStartAICenterDiv.extend`
+  height: 24rem;
+  width: 70%;
+`;
+
+const TotalAmountCounter = styled.h3`
+  margin: 1rem 0;
+  font-size: 2.4rem;
+  color: #999;
+  font-family: ${props => props.theme.mainFont};
+`;
+
+const SelectSpan = styled.span`
+  position: relative;
+
+  &:after {
+    content: ">";
+    display: block;
+    position: absolute;
+    color: #fcfcfc;
+    top: 32%;
+    right: 5%;
+    transform: rotate(90deg);
+  }
+`;
+
+const Select = styled.select`
+  position: relative;
+  padding: 0 0 0 10px;
+  font-size: 0.9rem;
+  // Gets rid of the arrows
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 10rem;
+  height: 2.4rem;
+  margin: 0.5rem 0;
+  border-radius: 0;
+  color: #fcfcfc;
+  background: ${props => props.theme.primaryColor};
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+// Didn't end up using this due to not having a reliable source
+// of state to update the label text to the corresponding selected option
+
+// const Label = styled.label`
+//   display: block;
+//   position: relative;
+//   width: 10rem;
+//   height: 2.4rem;
+//   margin: 0.5rem 0;
+// `;
+
+// const LabelTextSpan = styled.span`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+//   width: 100%;
+//   background: #fcfcfc;
+//   color: #fcfcfc;
+//   pointer-events: none;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   background: ${props => props.theme.primaryColor};
+
+// &:after {
+//   content: ">";
+//   display: block;
+//   position: absolute;
+//   top: 27%;
+//   right: 10%;
+//   transform: rotate(90deg);
+// }
+// `;
 
 const renderSliderInput = (field, index, formValues, updateFormVal) => {
   return (
-    <div className="slidecontainer" key={index}>
+    <div className="slide-container" key={index}>
       <p data-testid={`slider-${index}-header`}>
         {`${field.title}: `}
         {formValues[index] ? formValues[index].value : "--"}
@@ -22,30 +123,27 @@ const renderSliderInput = (field, index, formValues, updateFormVal) => {
 
 const renderDropDownInput = (field, index, formValues, updateFormVal) => {
   return (
-    <select
-      id={field.id}
-      className={field.type}
-      key={index}
-      onChange={updateFormVal}
-    >
-      {field.options.map((option, i) => {
-        return (
-          <option
-            className={field.type}
-            value={field.pricePer[i]}
-            key={`option-${i}`}
-          >
-            {option}
-          </option>
-        );
-      })}
-    </select>
+    <SelectSpan key={index}>
+      <Select id={field.id} className={field.type} onChange={updateFormVal}>
+        {field.options.map((option, i) => {
+          return (
+            <option
+              className={field.type}
+              value={field.pricePer[i]}
+              key={`option-${i}`}
+            >
+              {option}
+            </option>
+          );
+        })}
+      </Select>
+    </SelectSpan>
   );
 };
 
 const renderCheckboxInput = (field, index, formValues, updateFormVal) => {
   return (
-    <div key={index}>
+    <div className="checkbox-quoteform" key={index}>
       <input
         type="checkbox"
         id={field.id}
@@ -55,7 +153,7 @@ const renderCheckboxInput = (field, index, formValues, updateFormVal) => {
         onClick={updateFormVal}
         data-testid={`checkbox-${index}`}
       />
-      <label htmlFor={field.pricePer}>{field.title}</label>
+      <label htmlFor={field.id}>{field.title}</label>
     </div>
   );
 };
@@ -234,10 +332,14 @@ export default class ServiceQuoteForm extends Component {
     const { quotePricing } = this.props;
     const { formValues, total } = this.state;
     return (
-      <div data-testid="services-quote-form">
-        {<h1 data-testid="total-amount">{total}</h1>}
+      <FormContainerDiv data-testid="services-quote-form">
+        {
+          <TotalAmountCounter data-testid="total-amount">
+            {total}
+          </TotalAmountCounter>
+        }
         {renderFormFields(quotePricing, formValues, this.updateFormVal)}
-      </div>
+      </FormContainerDiv>
     );
   }
 }

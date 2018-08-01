@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { valuePropConfig } from "../Config/valuePropConfig";
+import { CTAButton } from "../Components/CTAButton";
 import {
   FlexColJCAICenterSection,
   FlexColJCSpaceAroundAICenterDiv
@@ -72,9 +73,7 @@ export default class ValuePropSection extends Component {
         <ValuePropCardContainerDiv>
           <h2>{valuePropConfig.header}</h2>
           <p>{valuePropConfig.paragraph}</p>
-          <button class="cta-button black-button">
-            {valuePropConfig.buttonText}
-          </button>
+          <CTAButton>{valuePropConfig.buttonText}</CTAButton>
         </ValuePropCardContainerDiv>
       </ValuePropContainerSection>
     );

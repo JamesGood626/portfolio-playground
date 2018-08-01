@@ -1,47 +1,53 @@
 import React from "react";
 import styled from "styled-components";
 
-const NavContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  z-index: 30;
-  top: 0;
-  height: 6rem;
-  width: 90vw;
-`;
-
 const Nav = styled.nav`
-  display: flex;
-  justify-content: flex-end;
+  display: ${props => (props.sidebarMenu ? "flex" : "none")};
+  flex-direction: ${props => (props.sidebarMenu ? "column" : "none")};
+  justify-content: ${props => (props.sidebarMenu ? "space-between" : "none")};
+  align-items: ${props => (props.sidebarMenu ? "center" : "none")};
+  height: ${props => (props.sidebarMenu ? "40%" : null)};
+
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 0;
+    color: #fcfcfc;
+  }
 `;
 
 const Link = styled.a`
-  margin-left: 4rem;
-  font-size: 1rem;
-  color: #fcfcfc;
-  text-decoration: none;
+  font-size: ${props => props.theme.navLinkFontSize};
+  font-family: ${props => props.theme.mainFont};
+  @media (min-width: 900px) {
+    margin-left: 4rem;
+    font-size: ${props => props.theme.navLinkFontSize900W};
+    text-decoration: none;
+  }
+  &:hover {
+    color: ${props => props.theme.secondaryColor};
+  }
 `;
 
-export const Menu = () => {
+// in the component that manages the hamburger dropdown
+// will pass true in for overlayStyle
+// and meed to add styling for nav to appear as a sidebar
+export const Menu = ({ sidebarMenu }) => {
   return (
-    <NavContainer>
-      <div class="site-branding">Logo Here</div>
-      <Nav>
-        <span id="active-link" class="nav-link">
-          <Link>Home</Link>
-        </span>
-        <span class="nav-link">
-          <Link>About</Link>
-        </span>
-        <span class="nav-link">
-          <Link>Work</Link>
-        </span>
-        <span class="nav-link">
-          <Link>Contact</Link>
-        </span>
-      </Nav>
-    </NavContainer>
+    <Nav sidebarMenu={sidebarMenu}>
+      <span className="nav-link">
+        <Link className="active-link">Home</Link>
+      </span>
+      <span class="nav-link">
+        <Link>About</Link>
+      </span>
+      <span class="nav-link">
+        <Link>Work</Link>
+      </span>
+      <span class="nav-link">
+        <Link>Contact</Link>
+      </span>
+    </Nav>
   );
 };

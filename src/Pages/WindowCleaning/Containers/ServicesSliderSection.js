@@ -5,14 +5,13 @@ import { FlexColJCAICenterSection } from "../../../LayoutStyledComponents";
 
 const StyledSection = FlexColJCAICenterSection.extend`
   width: 100vw;
-  background: #999;
+  background: #fcfcfc;
 `;
 
 export default class ServicesSliderSection extends Component {
   render() {
     return (
       <StyledSection>
-        <h1>Services</h1>
         <ServicesSlider />
       </StyledSection>
     );

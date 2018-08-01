@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Menu } from "../Components/menu";
+import { NavLogoSection } from "../Components/NavLogoSection";
 import { HeaderBackground } from "../Components/headerBackground";
 import { HeaderContent } from "../Components/headerContent";
 
@@ -16,7 +16,7 @@ class Header extends Component {
   render() {
     return (
       <StyledHeader role="banner">
-        <Menu />
+        <NavLogoSection />
         <HeaderBackground>
           <HeaderContent />
         </HeaderBackground>

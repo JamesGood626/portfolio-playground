@@ -20,6 +20,7 @@ const OfferInnerContainerDiv = FlexColJCSpaceBetweenAICenterDiv.extend`
   // align-items: center;
   // justify-content: space-between;
   height: 100%;
+  width: 90%;
   max-width: 60rem;
   padding: 12vh 0;
 

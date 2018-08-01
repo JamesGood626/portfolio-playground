@@ -4,11 +4,14 @@
   "private": true,
   "homepage": "https://jamesgood626.github.io/my-portfolio-playground/",
   "dependencies": {
+    "gsap": "^2.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-media": "^1.8.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
+    "react-transition-group": "^2.4.0",
     "styled-components": "^3.3.3"
   },
   "scripts": {

@@ -1,10 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { blogPostConfig } from "../Config/blogPostConfig";
 import { FlexColAICenterDiv } from "../../../LayoutStyledComponents";
 
-// THIS IS THE FILE I LEFT OFF IN.
-
-const BlogPostCardContainerDiv = FlexColAICenterDiv.extend`margin-bottom: 8vh;`;
+const BlogPostCardContainerDiv = FlexColAICenterDiv.extend`
+  margin-bottom: 8vh;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    position: relative;
+    margin-bottom: 55vh;
+  }
+`;
 
 const BlogPostInfoTextContainerDiv = FlexColAICenterDiv.extend`
   padding: 0;
@@ -12,43 +18,123 @@ const BlogPostInfoTextContainerDiv = FlexColAICenterDiv.extend`
   padding-top: 1.4vh;
   background: #fcfcfc;
   // This was commented out below so may not be needed.
-  margin: 1.4vh 0;
+  // margin: 1.4vh 0;
+  & > h3 {
+    margin: 1.4vh 0;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 360px;
+    width: 590px;
+    padding-top: 1.6vh;
+    box-shadow: 0px 4px 30px -4px #555;
+    background: #fcfcfc;
+
+    & > h3 {
+      margin: 1.6vh 0;
+    }
+    & > p {
+      margin-bottom: 2vh;
+    }
+  }
+`;
+
+const BlogPostImageContainerDiv = styled.div`
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 200px;
+    width: 300px;
+    background: rgba(166, 13, 2, 0.4);
+  }
+
+  @media (min-width: 768px) {
+    &:before {
+      height: 427px;
+      width: 640px;
+    }
+  }
+`;
+
+const BlogPostInfoTextLeftContainerDiv = BlogPostInfoTextContainerDiv.extend`
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 25%;
+    left: 13%;
+  }
+
+  @media (min-width: 1024px) {
+    left: 20%;
+  }
+`;
+
+// Gonna have to play around with these left values once I have the image in.
+const BlogPostInfoTextRightContainerDiv = BlogPostInfoTextContainerDiv.extend`
+  @media (min-width: 768px) {
+    position: absolute;
+    top: -25%;
+    left: -8.5%;
+  }
+
+  @media (min-width: 1024px) {
+    left: -20%;
+  }
 `;
 
 const BlogPostCardLeftContainerDiv = BlogPostCardContainerDiv.extend``;
 
-const renderLeftCard = () => {
+const BlogPostCardRightContainerDiv = BlogPostCardContainerDiv.extend`
+  align-self: flex-end;
+`;
+
+const renderLeftCard = (header, content) => {
   return (
-    <div class="blogpost-card-left">
-      <div class="blogpost-featured-image">
+    <BlogPostCardLeftContainerDiv>
+      <BlogPostImageContainerDiv>
         "take into account how you'll handle responsive images"
-      </div>
-      <div class="blogpost-info-text-left">
-        <h3>"Header Here"</h3>
-        <p>"The content goes here"</p>
-      </div>
-    </div>
+      </BlogPostImageContainerDiv>
+      <BlogPostInfoTextLeftContainerDiv>
+        <h3>{header}</h3>
+        <p>{content}</p>
+      </BlogPostInfoTextLeftContainerDiv>
+    </BlogPostCardLeftContainerDiv>
   );
 };
 
-const renderRightCard = () => {
+const renderRightCard = (header, content) => {
   return (
-    <div class="blogpost-card-right">
-      <div class="blogpost-featured-image">
+    <BlogPostCardRightContainerDiv>
+      <BlogPostImageContainerDiv>
         "take into account how you'll handle responsive images"
-      </div>
-      <div class="blogpost-info-text-right">
-        <h3>"Header Here"</h3>
-        <p>"The content goes here"</p>
-      </div>
-    </div>
+      </BlogPostImageContainerDiv>
+      <BlogPostInfoTextRightContainerDiv>
+        <h3>{header}</h3>
+        <p>{content}</p>
+      </BlogPostInfoTextRightContainerDiv>
+    </BlogPostCardRightContainerDiv>
   );
 };
 
-const renderCards = () => {};
+const renderCards = config => {
+  console.log("renderCards RUnning");
+  return config.map((post, i) => {
+    const iPlusOne = i + 1;
+    if (iPlusOne % 2 === 0) {
+      return renderRightCard(post.header, post.paragraph);
+    } else {
+      return renderLeftCard(post.header, post.paragraph);
+    }
+  });
+};
 
 export const BlogPostCard = () => {
-  return <h3>A blog post card!</h3>;
+  return renderCards(blogPostConfig);
 };
 
 /*******************************
@@ -102,29 +188,29 @@ export const BlogPostCard = () => {
 //     width: 640px;
 //   }
 
-//   .blogpost-card-left,
-//   .blogpost-card-right {
-//     flex-direction: row;
-//     position: relative;
-//     margin-bottom: 55vh;
-//   }
+// .blogpost-card-left,
+// .blogpost-card-right {
+//   flex-direction: row;
+//   position: relative;
+//   margin-bottom: 55vh;
+// }
 
 //   .blogpost-card-right {
 //     justify-content: flex-end;
 //     margin-bottom: 25vh;
 //   }
 
-//   .blogpost-info-text-left,
-//   .blogpost-info-text-right {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     height: 360px;
-//     width: 590px;
-//     padding-top: 1.6vh;
-//     box-shadow: 0px 4px 30px -4px #555;
-//     background: #fcfcfc;
-//   }
+// .blogpost-info-text-left,
+// .blogpost-info-text-right {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   height: 360px;
+//   width: 590px;
+//   padding-top: 1.6vh;
+//   box-shadow: 0px 4px 30px -4px #555;
+//   background: #fcfcfc;
+// }
 
 //   .blogpost-info-text-left > p,
 //   .blogpost-info-text-right > p {
@@ -136,11 +222,11 @@ export const BlogPostCard = () => {
 //     margin: 1.6vh 0;
 //   }
 
-//   .blogpost-info-text-left {
-//     position: absolute;
-//     top: 25%;
-//     left: 13%;
-//   }
+// .blogpost-info-text-left {
+//   position: absolute;
+//   top: 25%;
+//   left: 13%;
+// }
 
 //   .blogpost-info-text-right {
 //     position: absolute;
