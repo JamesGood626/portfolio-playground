@@ -276,7 +276,7 @@ export default class TestimonialSection extends Component {
       { scale: 1.04, border: "3px solid #84ceeb" }
     );
     TweenMax.fromTo(
-      this.mid,
+      ".midCircle100VW-container",
       0.3,
       { x: 0, opacity: 1 },
       { x: 210, opacity: 0.3 }
@@ -297,7 +297,7 @@ export default class TestimonialSection extends Component {
       { scale: 1, border: "1px solid #999" }
     );
     TweenMax.fromTo(
-      this.mid,
+      ".midCircle100VW-container",
       0.3,
       { x: 210, opacity: 0.3 },
       { x: 0, opacity: 1 }
@@ -318,7 +318,7 @@ export default class TestimonialSection extends Component {
       { scale: 1.04, border: "3px solid #84ceeb" }
     );
     TweenMax.fromTo(
-      this.mid,
+      ".midCircle100VW-container",
       0.3,
       { x: 0, opacity: 1 },
       { x: -210, opacity: 0.3 }
@@ -339,7 +339,7 @@ export default class TestimonialSection extends Component {
       { scale: 1, border: "1px solid #999" }
     );
     TweenMax.fromTo(
-      this.mid,
+      ".midCircle100VW-container",
       0.3,
       {
         x: -210,

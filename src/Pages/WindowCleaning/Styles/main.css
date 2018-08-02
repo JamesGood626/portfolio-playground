@@ -47,7 +47,7 @@
   align-items: center;
   width: 100vw;
   height: 50vh;
-  background: red;
+  /*background: red;*/
 }
 
 .midCircle100VW-container {
@@ -57,7 +57,7 @@
   width: 100vw;
   height: 50vh;
   z-index: 100;
-  background: green;
+  /* background: green; */
 }
 
 .rightCircle100VW-container {
@@ -66,7 +66,22 @@
   align-items: center;
   width: 100vw;
   height: 50vh;
-  background: blue;
+  /* background: blue; */
+}
+
+@media (min-width: 900px) {
+  .leftCircle100VW-container {
+    height: 0px;
+    width: 0px;
+  }
+  .midCircle100VW-container {
+    height: auto;
+    width: auto;
+  }
+  .rightCircle100VW-container {
+    height: 0px;
+    width: 0px;
+  }
 }
 
 @media (min-width: 900px) {
