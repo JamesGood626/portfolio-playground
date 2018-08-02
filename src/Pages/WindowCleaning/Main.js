@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Header from "./Containers/Header";
 import ServicesSliderSection from "./Containers/ServicesSliderSection";
-import { TestimonialSection } from "./Components/TestimonialSection";
+import TestimonialSection from "./Containers/TestimonialSection";
 
 // TODO:
 // Responsive Hamburger menu (Just need the svg for it now...)

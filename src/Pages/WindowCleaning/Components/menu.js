@@ -27,6 +27,7 @@ const Link = styled.a`
   }
   &:hover {
     color: ${props => props.theme.secondaryColor};
+    cursor: pointer;
   }
 `;
 
@@ -39,13 +40,13 @@ export const Menu = ({ sidebarMenu }) => {
       <span className="nav-link">
         <Link className="active-link">Home</Link>
       </span>
-      <span class="nav-link">
+      <span className="nav-link">
         <Link>About</Link>
       </span>
-      <span class="nav-link">
+      <span className="nav-link">
         <Link>Work</Link>
       </span>
-      <span class="nav-link">
+      <span className="nav-link">
         <Link>Contact</Link>
       </span>
     </Nav>

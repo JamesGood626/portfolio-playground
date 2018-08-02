@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 import { Transition, TransitionGroup } from "react-transition-group";
-import { TweenMax } from "gsap";
+import { TweenMax, TimelineMax } from "gsap";
 import { Menu } from "./Menu";
 import Sidebar from "./Sidebar";
 
@@ -11,21 +11,71 @@ const Div = styled.div`
   position: absolute;
   z-index: 20;
   right: 0;
-  background: papayawhip;
 
   @media (min-width: 900px) {
     display: none;
   }
 `;
 
+const SvgContainerDiv = styled.div`
+  height: 3rem;
+  width: 3rem;
+`;
+
+// For getting the menu to center upon animating sidebar in
+// I thought about possibly adjusting the width of the navbar container
+// which contains the logo and the svg in order to preserve it's position
+// across screen resize.
 export default class Hamburguesa extends Component {
   state = {
     showSidebar: false,
-    nodeRef: null
+    nodeRef: null,
+    tl: null
   };
 
   componentDidMount = () => {
     window.addEventListener("resize", this.updateScreenSize);
+    TweenMax.set(this.hamberguesaTopLine, { transformOrigin: "center" });
+    TweenMax.set(this.hamberguesaBottomLine, { transformOrigin: "center" });
+    const tl = new TimelineMax();
+    tl.add("startTween");
+    tl.to(".hamberguesa", 0.5, { fill: "#84ceeb" });
+    // tl.to(this.hamberguesaSvg, 0.5, { x: "-50%" }, "startTween");
+    tl.to(this.hamberguesaMidLine, 0.3, { opacity: 0 }, "startTween");
+    tl.to(
+      this.hamberguesaTopLine,
+      0.5,
+      {
+        y: 8,
+        rotation: 45
+      },
+      "startTween"
+    );
+    tl.to(
+      this.hamberguesaBottomLine,
+      0.5,
+      {
+        y: -6,
+        rotation: -45
+      },
+      "startTween"
+    );
+    tl.add("finishTween");
+    tl.to(".hamberguesa", 0.3, { fill: "#fcfcfc" }, "finishTween");
+    tl.to(".hamberguesa-mid-line", 0.3, { opacity: 1 }, "finishTween");
+    tl.to(".hamberguesa-top-line", 0.5, { y: 0, rotation: 0 }, "finishTween");
+    tl.to(
+      ".hamberguesa-bottom-line",
+      0.5,
+      { y: 0, rotation: 0 },
+      "finishTween"
+    );
+    tl.addPause(0.5);
+
+    tl.pause();
+    this.setState((prevState, state) => ({
+      tl: tl
+    }));
   };
 
   componentWillUnmount = () => {
@@ -39,7 +89,7 @@ export default class Hamburguesa extends Component {
   animateSidebarOut = node => {
     TweenMax.fromTo(node, 0.5, { x: 0 }, { x: 400 });
   };
-  // It'll do for now, but see if there's any potential perf downsides
+  // Throttle?
   updateScreenSize = e => {
     if (e.target.innerWidth > 900) {
       this.setState((prevState, state) => ({
@@ -49,19 +99,70 @@ export default class Hamburguesa extends Component {
   };
 
   toggleSidebar = e => {
+    if (!this.state.showSidebar) {
+      this.state.tl.time(0);
+      this.state.tl.play();
+    } else {
+      this.state.tl.play();
+    }
+
     this.setState((prevState, state) => ({
       showSidebar: !prevState.showSidebar
     }));
   };
 
   render() {
-    const noMargin = {
-      margin: "0"
-    };
     const { showSidebar } = this.state;
     return (
       <Fragment>
-        <Div onClick={this.toggleSidebar}>---</Div>
+        <Div onClick={this.toggleSidebar}>
+          <SvgContainerDiv>
+            <svg
+              id="Layer_1"
+              className="svgBurger"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 42 42"
+              ref={x => (this.hamberguesaSvg = x)}
+            >
+              <path
+                className="hamberguesa hamberguesa-circle"
+                d="M125,92a19,19,0,1,1-19,19,19,19,0,0,1,19-19m0-2a21,21,0,1,0,21,21,21,21,0,0,0-21-21Z"
+                transform="translate(-104 -90)"
+              />
+              <rect
+                className="hamberguesa hamberguesa-top-line"
+                x="8"
+                y="12"
+                width="26"
+                height="3"
+                rx="2"
+                ry="2"
+                ref={x => (this.hamberguesaTopLine = x)}
+              />
+              <rect
+                className="hamberguesa hamberguesa-mid-line"
+                x="8"
+                y="19"
+                width="26"
+                height="3"
+                rx="2"
+                ry="2"
+                ref={x => (this.hamberguesaMidLine = x)}
+              />
+              <rect
+                className="hamberguesa hamberguesa-bottom-line"
+                x="8"
+                y="26"
+                width="26"
+                height="3"
+                rx="2"
+                ry="2"
+                ref={x => (this.hamberguesaBottomLine = x)}
+              />
+            </svg>
+          </SvgContainerDiv>
+        </Div>
         <TransitionGroup>
           {showSidebar ? (
             <Transition

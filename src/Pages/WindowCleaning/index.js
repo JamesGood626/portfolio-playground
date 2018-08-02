@@ -20,6 +20,8 @@ const theme = {
   testimonialHeaderFontSize: "1.8rem",
   testimonialHeaderFontSize752W: "2.4rem",
   testimonialHeaderFontSize: "1.8rem",
+  testimonialCircleHeaderFontSize752W: "1.8rem",
+  testimonialCircleHeaderFontSize: "1.4rem",
   paraFontSize: "1rem",
   paraFontSize752W: "1.2rem",
   headerLineHeight: "2.4rem",

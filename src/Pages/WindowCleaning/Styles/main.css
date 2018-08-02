@@ -9,8 +9,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 24rem;
-  width: 24rem;
+  height: 28rem;
+  width: 28rem;
   border-radius: 50%;
   border: 1px solid #999;
   background: #fcfcfc;
@@ -41,7 +41,55 @@
   right: 1%;
 }
 
+.leftCircle100VW-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  background: red;
+}
+
+.midCircle100VW-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  z-index: 100;
+  background: green;
+}
+
+.rightCircle100VW-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  background: blue;
+}
+
+@media (min-width: 900px) {
+  .leftCircle100VW-container {
+    border-radius: 50%;
+  }
+  .midCircle100VW-container {
+    border-radius: 50%;
+  }
+  .rightCircle100VW-container {
+    border-radius: 50%;
+  }
+}
 /* SVG LOGO STYLES */
+/* Hamberguesa Toggle */
+.hamberguesa {
+  fill: #fcfcfc;
+}
+
+/* .hamberguesa-top-line {
+  fill: blue;
+} */
+/* Logo */
 .cls-1 {
   fill: transparent;
 }

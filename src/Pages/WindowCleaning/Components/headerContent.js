@@ -39,7 +39,7 @@ const ContactText = styled.div`
   color: #fcfcfc;
 
   @media (min-width: 670px) {
-    margin-top: -1.5rem;
+    margin-top: -1.1rem;
   }
 `;
 
