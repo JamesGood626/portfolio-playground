@@ -1,8 +1,8 @@
 {
-  "name": "my-portfolio-playground",
+  "name": "portfolio-playground",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jamesgood626.github.io/my-portfolio-playground/",
+  "homepage": "https://jamesgood626.github.io/portfolio-playground/",
   "dependencies": {
     "gsap": "^2.0.1",
     "react": "^16.4.1",
