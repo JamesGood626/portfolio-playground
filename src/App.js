@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import { asyncComponent } from "./asyncComponent";
 import { Home } from "./Home";
@@ -8,7 +8,7 @@ import { Home } from "./Home";
 class App extends Component {
   render() {
     return (
-      <BrowserRouter basename={"/" + process.env.PUBLIC_URL}>
+      <HashRouter basename={"/" + process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route
@@ -20,7 +20,7 @@ class App extends Component {
             component={asyncComponent(() => import("./Pages/WindowCleaning"))}
           />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
