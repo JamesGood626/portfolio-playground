@@ -16,6 +16,8 @@ describe("ensuring ServiceDescription renders the appropriate service descriptio
     );
     const descriptionHeaderTextNode = getByTestId("services-header-text");
     const descriptionTextNode = getByTestId("services-description-text");
+    console.log("STILL GETTING THE CORRECT NODES: ", descriptionHeaderTextNode);
+    console.log("STILL GETTING THE CORRECT NODES: ", descriptionTextNode);
     expect(descriptionHeaderTextNode.innerHTML).toEqual(
       serviceOptionsConfig.COMMERCIAL.descriptionHeader
     );

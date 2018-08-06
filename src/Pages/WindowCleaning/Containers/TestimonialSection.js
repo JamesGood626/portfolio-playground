@@ -445,7 +445,7 @@ export default class TestimonialSection extends Component {
               ref={x => (this.mid = x)}
               onMouseOver={this.midCircHoverOver}
               onMouseOut={this.midCircHoverOut}
-              style={showSlider ? midCircleActive ? posRelative : null : null}
+              style={showSlider ? midCircleActive ? null : null : null}
             >
               <TestimonialCircleHeader>Jeff Hayworthy</TestimonialCircleHeader>
               <TestimonialCirclePara>

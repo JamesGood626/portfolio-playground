@@ -4,11 +4,9 @@ import ServicesSliderSection from "./Containers/ServicesSliderSection";
 import TestimonialSection from "./Containers/TestimonialSection";
 
 // TODO:
-// Responsive Hamburger menu (Just need the svg for it now...)
-// Menu hover effects?
-// Button hover effect (shinyness)
-// Fill Testimonial circles with testimonial content (Important)
-// Circle slider (Important)
+// Circle slider (Important) // Tweak the animation to be consistent
+// Hide overflow in services description slider. (Text goes outside div on mobile)
+// Make tweens for svg hamburger a timeline so it can be interrupted
 
 // Found a bug!
 // When waterstain or paint isn't selected and you drag the range slider

@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import { Main } from "./Main";
 
@@ -30,10 +31,14 @@ const theme = {
   paraLetterSpacing: "0.1rem"
 };
 
+const PageContainerDiv = styled.div`overflow-x: hidden;`;
+
 export const WindowCleaningPage = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Main />
+      <PageContainerDiv>
+        <Main />
+      </PageContainerDiv>
     </ThemeProvider>
   );
 };

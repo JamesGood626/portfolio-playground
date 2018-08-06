@@ -12,6 +12,14 @@ import { Footer } from "./Components/Footer";
 // instead of a stateful one that would manage the page scroll and trigger animations
 // versus letting each section monitor that on their own. Ehh... I need to refactor. The latter
 // sounds bad.
+
+// TODO:
+// Font sizes using style components theming
+// Header image...
+// Fix blog post card section
+// Create the slider animation for testimonials
+// SVG's and images
+// minimal animations on scroll
 export const LawyerPage = () => {
   return (
     <div>

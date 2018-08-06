@@ -179,9 +179,6 @@ const calculatePrices = (
   formValues
 ) => {
   return quotePricing.formFields.reduce((acc, curr) => {
-    if (curr === multiplierIndex) {
-      return acc;
-    }
     if (
       typeof curr.multipliers === "object" &&
       typeof formValues[curr.id] === "object"
@@ -225,6 +222,7 @@ const calculatePrices = (
     ) {
       const calculation = formValues[curr.id].value * curr.pricePer;
       acc += calculation;
+      return acc;
     }
     return acc;
   }, 0);
@@ -284,7 +282,7 @@ const calculateTotal = (quotePricing, formValues, total) => {
   if (total !== newTotal) {
     return Math.round(newTotal);
   } else {
-    return 0;
+    return total;
   }
 };
 
