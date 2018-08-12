@@ -1,9 +1,11 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { BlogPostCard } from "./BlogPostCard";
 import { FlexCol } from "../../../LayoutStyledComponents";
 
-const BlogPostContainerSection = FlexCol.extend`width: 100%;`;
+const BlogPostContainerSection = FlexCol.extend`
+  width: 100%;
+`;
 
 const BlogPostInnerContainerDiv = FlexCol.extend`
   align-items: center;

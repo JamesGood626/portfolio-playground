@@ -18,7 +18,6 @@ const theme = {
   serviceDropDownFontSize600W: "1.8rem",
   serviceHeaderFontSize: "1.8rem",
   serviceHeaderFontSize752W: "2.4rem",
-  testimonialHeaderFontSize: "1.8rem",
   testimonialHeaderFontSize752W: "2.4rem",
   testimonialHeaderFontSize: "1.8rem",
   testimonialCircleHeaderFontSize752W: "1.8rem",
@@ -31,7 +30,9 @@ const theme = {
   paraLetterSpacing: "0.1rem"
 };
 
-const PageContainerDiv = styled.div`overflow-x: hidden;`;
+const PageContainerDiv = styled.div`
+  overflow-x: hidden;
+`;
 
 export const WindowCleaningPage = () => {
   return (

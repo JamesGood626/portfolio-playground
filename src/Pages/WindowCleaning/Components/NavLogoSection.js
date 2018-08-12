@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Logo } from "./Logo";
-import { Menu } from "./Menu";
+// import { Menu } from "./Menu";
 import Hamburguesa from "./Hamburguesa";
 
 const NavContainer = styled.div`

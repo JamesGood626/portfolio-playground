@@ -19,6 +19,10 @@ class App extends Component {
             path="/windowcleaning"
             component={asyncComponent(() => import("./Pages/WindowCleaning"))}
           />
+          <Route
+            path="/sliderpractice"
+            component={asyncComponent(() => import("./SliderPractice"))}
+          />
         </Switch>
       </HashRouter>
     );

@@ -27,63 +27,73 @@
   }
 }
 
-/* Position Fixed and Absolute are the only two things */
-/* that don't constrain the circles at smaller screen sizes */
-/* This will need to be taken into account when I rework the animation... */
-#testimonial-circle-left {
-  position: absolute;
-  left: 1%;
-}
-
-#testimonial-circle-mid {
-  z-index: 100;
-}
-
-#testimonial-circle-right {
-  position: absolute;
-  right: 1%;
-}
-
 .leftCircle100VW-container {
+  /* position: absolute;
+  left: -40%; */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 100vw;
-  height: 50vh;
-  /* background: red; */
+  height: 100%;
+  background: red;
 }
 
 .midCircle100VW-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 100vw;
-  height: 50vh;
+  height: 100%;
   z-index: 100;
   /* background: green; */
 }
 
 .rightCircle100VW-container {
+  position: relative;
+  /* position: absolute;
+  right: -40%; */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 100vw;
-  height: 50vh;
-  /* background: blue; */
+  height: 100%;
+  background: blue;
 }
 
 @media (min-width: 900px) {
+  #testimonial-circle-left {
+    position: absolute;
+    left: 1%;
+  }
+
+  #testimonial-circle-mid {
+    z-index: 100;
+  }
+
+  #testimonial-circle-right {
+    position: absolute;
+    right: 1%;
+  }
+
   .leftCircle100VW-container {
+    position: static;
     height: 0px;
     width: 0px;
     border-radius: 50%;
   }
   .midCircle100VW-container {
+    position: static;
     height: auto;
     width: auto;
     border-radius: 50%;
   }
   .rightCircle100VW-container {
+    position: static;
     height: 0px;
     width: 0px;
     border-radius: 50%;
@@ -114,16 +124,16 @@
   font-family: Quicksand, sans-serif;
 }
 .cls-4 {
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
 }
 .cls-5 {
   font-size: 14px;
 }
 .cls-6 {
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
 }
 .cls-7 {
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
 }
 
 /* Aside Navbar Styles */
@@ -260,3 +270,35 @@ input[type="checkbox"]:focus {
 .checkbox-quoteform > label:hover {
   cursor: pointer;
 }
+
+.prevent-highlight-text {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+/* .slider {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-scroll-snap-points-x: repeat(300px);
+  -ms-scroll-snap-points-x: repeat(300px);
+  scroll-snap-points-x: repeat(300px);
+  -webkit-scroll-snap-type: mandatory;
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fcfcfc;
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
+  background: #e04;
+} */

@@ -1,10 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import "../Styles/main.css";
-import {
-  FlexColJCSpaceAroundAICenterDiv,
-  FlexColJCStartAICenterDiv
-} from "../../../LayoutStyledComponents";
+import { FlexColJCStartAICenterDiv } from "../../../LayoutStyledComponents";
 
 // const SliderInput = styled.input`
 //   margin: 0;
@@ -169,15 +166,11 @@ const renderFormFields = (quotePricing, formValues, updateFormVal) => {
     if (field.type === "checkbox") {
       return renderCheckboxInput(field, i, formValues, updateFormVal);
     }
+    return null;
   });
 };
 
-const calculatePrices = (
-  multiplierIndex,
-  multiplier,
-  quotePricing,
-  formValues
-) => {
+const calculatePrices = (multiplier, quotePricing, formValues) => {
   return quotePricing.formFields.reduce((acc, curr) => {
     if (
       typeof curr.multipliers === "object" &&
@@ -237,7 +230,7 @@ const calculatePressureWashingPrices = (quotePricing, formValues) => {
         acc += calculation;
         return acc;
       } else if (formValues[curr.id].value !== null) {
-        acc += parseInt(formValues[curr.id].value);
+        acc += formValues[curr.id].value;
         return acc;
       }
     }
@@ -265,12 +258,7 @@ const calculateTotal = (quotePricing, formValues, total) => {
       typeof formValues[multiplierIndex] === "object"
         ? formValues[multiplierIndex].value
         : 0;
-    newTotal = calculatePrices(
-      multiplierIndex,
-      multiplier,
-      quotePricing,
-      formValues
-    );
+    newTotal = calculatePrices(multiplier, quotePricing, formValues);
   }
 
   if (service === "pressure washing") {

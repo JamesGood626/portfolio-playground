@@ -1,38 +1,93 @@
 import React, { Component } from "react";
-import Media from "react-media";
+import ReactDOM from "react-dom";
+// import Media from "react-media";
 import styled from "styled-components";
 import { TweenMax } from "gsap";
+import { ScrollToPlugin } from "gsap/src/uncompressed/plugins/ScrollToPlugin";
+// import { CSSPlugin } from "gsap/src/uncompressed/plugins/CSSPlugin";
 import "../Styles/main.css";
 import { FlexColJCAICenterSection } from "../../../LayoutStyledComponents";
 
-const Section = FlexColJCAICenterSection.extend`background: #fcfcfc;`;
+const Section = FlexColJCAICenterSection.extend`
+  background: #fcfcfc;
+`;
 
-const ContainerDiv = styled.div`
-  position: relative;
+// TODO:
+// AND FINALLY - integrate swipe feature, lock points on swipe.
+// Fix pressure washing quote form bug... 603020
+// Oh.. and fix the svg menu animation.
+// DEPLOYY!!!
+
+// const ContainerDiv = styled.div`
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 0;
+//   height: 55vh;
+//   background: papayawhip;
+//   width: 100vw;
+//   overflow-x: auto;
+
+//   // @media (max-width: 900px) {
+//   //   width: 140vw;
+//   //   background: yellow;
+//   // }
+
+//   // @media (max-width: 600px) {
+//   //   width: 160vw;
+//   //   background: lime;
+//   // }
+
+//   // @media (max-width: 450px) {
+//   //   width: 200vw
+//   //   background: blue;
+//   // }
+
+//   @media (min-width: 900px) {
+//     justify-content: center;
+//     width: 68rem;
+//     margin-bottom: 20vh;
+//   }
+// `;
+
+const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0;
-  height: 55vh;
-
-  @media (max-width: 900px) {
-    width: 130rem;
-  }
-
-  @media (max-width: 600px) {
-    width: 100rem;
-  }
-
-  @media (max-width: 450px) {
-    width: 80rem;
-  }
+  width: 100vw;
+  overflow-x: hidden;
 
   @media (min-width: 900px) {
     justify-content: center;
-    width: 68rem;
     margin-bottom: 20vh;
   }
 `;
+
+// Keys to the slider
+const Slider = styled.div`
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 75vh;
+  overflow-x: hidden;
+  background: lime;
+  // scroll-snap-points-x: repeat(100%);
+  // scroll-snap-type: mandatory;
+
+  @media (min-width: 900px) {
+    justify-content: center;
+    align-items: center;
+    width: 68rem;
+    overflow-x: hidden;
+  }
+`;
+
+// Moving these styles to main.css -> leftCircle100VW-container, mid, right
+// const Slide = styled.div`
+//   width: 120vw;
+//   flex-shrink: 0;
+//   height: 100%;
+// `;
 
 const TestimonialHeader = styled.h2`
   margin: 10vh 0;
@@ -84,7 +139,7 @@ const TestimonialSliderIndicationDiv = styled.div`
   margin-bottom: 10vh;
 `;
 
-const SmallCircleDiv = styled.div`
+const SmallCircle = styled.div`
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
@@ -97,174 +152,86 @@ const SmallCircleDiv = styled.div`
 export default class TestimonialSection extends Component {
   state = {
     leftCircleActive: false,
-    midCircleActive: false,
+    midCircleActive: true,
     rightCircleActive: false,
-    showSlider: false
+    showSlider: false,
+    scrollLeftPos: null,
+    activeDivLeftPos: null,
+    mouseDown: false
   };
 
   componentDidMount = () => {
     const { showSlider } = this.state;
     window.addEventListener("resize", this.updateScreenSize);
+    document.addEventListener("mouseout", this.endMouseDown);
     if (window.innerWidth < 900 && !showSlider) {
+      const leftPos = this.midCircContainer.getBoundingClientRect().left;
+      this.slider.scrollLeft = leftPos;
       this.setState((prevState, state) => ({
         showSlider: true,
-        midCircleActive: true
+        midCircleActive: true,
+        scrollLeftPos: leftPos
       }));
     }
+  };
+
+  shouldComponentUpdate = (nextProps, nextState) => {
+    if (nextState.scrollLeftPos === this.state.scrollLeftPos) {
+      return false;
+    }
+    return true;
   };
 
   componentWillUnmount = () => {
     window.removeEventListener("resize", this.updateScreenSize);
+    document.removeEventListener("mouseout", this.endMouseDown);
   };
 
   updateScreenSize = e => {
-    const { showSlider } = this.state;
     if (e.target.innerWidth > 900) {
       TweenMax.set(".leftCircle100VW-container", { clearProps: "x" });
       TweenMax.set(".midCircle100VW-container", { clearProps: "x" });
       TweenMax.set(".rightCircle100VW-container", { clearProps: "x" });
-      this.setState((prevState, state) => ({
-        leftCircleActive: false,
-        midCircleActive: false,
-        rightCircleActive: false,
+      TweenMax.set(".leftCircle100VW-container", { zIndex: 0 });
+      TweenMax.set(".midCircle100VW-container", { zIndex: 20 });
+      TweenMax.set(".rightCircle100VW-container", { zIndex: 0 });
+      this.setState({
         showSlider: false
-      }));
+      });
     } else if (e.target.innerWidth < 900) {
-      this.setState((prevState, state) => ({
-        midCircleActive: true,
-        showSlider: true
-      }));
+      if (this.state.midCircleActive) {
+        // Using width instead of left, because left yields strange results hovering around 0 and -3, etc.
+        // Causing the animation to be janky for the first few clicks after resize.
+        const scrollToPos = this.midCircContainer.getBoundingClientRect().width;
+        this.slider.scrollLeft = scrollToPos;
+        // showSlider must be set to true in order for the circles to be styled w/ position absolute.
+        this.setState((prevState, state) => ({
+          showSlider: true,
+          scrollLeftPos: scrollToPos
+        }));
+      } else if (this.state.rightCircleActive) {
+        TweenMax.set(".rightCircle100VW-container", { zIndex: 1000 });
+        const scrollToPos =
+          this.rightCircContainer.getBoundingClientRect().width * 2;
+        this.slider.scrollLeft = scrollToPos;
+        this.setState((prevState, state) => ({
+          showSlider: true,
+          scrollLeftPos: scrollToPos
+        }));
+      } else {
+        TweenMax.set(".leftCircle100VW-container", { zIndex: 1000 });
+        this.setState((prevState, state) => ({
+          showSlider: true
+        }));
+      }
     }
   };
 
-  leftCircleSlideIn = () => {
-    const { midCircleActive, rightCircleActive } = this.state;
-    // TweenMax.set(this.mid, { display: "block" });
-    // TweenMax.set(this.right, { display: "block" });
-    if (midCircleActive) {
-      TweenMax.fromTo(
-        ".leftCircle100VW-container",
-        0.4,
-        { x: "-100%" },
-        { x: "100%" }
-      );
-      TweenMax.fromTo(
-        ".midCircle100VW-container",
-        0.4,
-        { x: "0%" },
-        { x: "100%" }
-      );
-      TweenMax.fromTo(
-        ".rightCircle100VW-container",
-        0.4,
-        { x: "100%" },
-        { x: "200%" }
-      );
-    } else if (rightCircleActive) {
-      TweenMax.fromTo(
-        ".leftCircle100VW-container",
-        0.4,
-        { x: "-100%" },
-        { x: "100%" }
-      );
-      TweenMax.fromTo(
-        ".midCircle100VW-container",
-        0.4,
-        { x: "-40%" },
-        { x: "100%" }
-      );
-      TweenMax.fromTo(
-        ".rightCircle100VW-container",
-        0.4,
-        { x: "100%" },
-        { x: "200%" }
-      );
-    }
-  };
-
-  midCircleSlideIn = () => {
-    const { leftCircleActive, rightCircleActive } = this.state;
-    if (leftCircleActive) {
-      TweenMax.fromTo(
-        ".leftCircle100VW-container",
-        0.4,
-        { x: "100%" },
-        { x: "-20%" }
-      );
-      TweenMax.fromTo(
-        ".midCircle100VW-container",
-        0.4,
-        { x: "100%" },
-        { x: "0%" }
-      );
-      TweenMax.fromTo(
-        ".rightCircle100VW-container",
-        0.4,
-        { x: "300%" },
-        { x: "200%" }
-      );
-    } else if (rightCircleActive) {
-      TweenMax.fromTo(
-        ".leftCircle100VW-container",
-        0.4,
-        { x: "180%" },
-        { x: "280%" }
-      );
-      TweenMax.fromTo(
-        ".midCircle100VW-container",
-        0.4,
-        { x: "-100%" },
-        { x: "0%" }
-      );
-      TweenMax.fromTo(
-        ".rightCircle100VW-container",
-        0.4,
-        { x: "-100%" },
-        { x: "20%" }
-      );
-    }
-  };
-
-  rightCircleSlideIn = () => {
-    const { leftCircleActive, midCircleActive } = this.state;
-    if (midCircleActive) {
-      TweenMax.fromTo(
-        ".leftCircle100VW-container",
-        0.5,
-        { x: "100%" },
-        { x: "-200%" }
-      );
-      TweenMax.fromTo(
-        ".midCircle100VW-container",
-        0.5,
-        { x: "0%" },
-        { x: "-100%" }
-      );
-      TweenMax.fromTo(
-        ".rightCircle100VW-container",
-        0.5,
-        { x: "100%" },
-        { x: "-100%" }
-      );
-    } else if (leftCircleActive) {
-      TweenMax.fromTo(
-        ".leftCircle100VW-container",
-        0.5,
-        { x: "-100%" },
-        { x: "-200%" }
-      );
-      TweenMax.fromTo(
-        ".midCircle100VW-container",
-        0.5,
-        { x: "0%" },
-        { x: "-100%" }
-      );
-      TweenMax.fromTo(
-        ".rightCircle100VW-container",
-        0.5,
-        { x: "200%" },
-        { x: "-100%" }
-      );
+  endMouseDown = e => {
+    if (this.state.mouseDown) {
+      this.setState({
+        mouseDown: false
+      });
     }
   };
 
@@ -376,30 +343,130 @@ export default class TestimonialSection extends Component {
     );
   };
 
+  setLeftCircleActive = () => {
+    this.setState((prevState, state) => ({
+      leftCircleActive: true,
+      midCircleActive: false,
+      rightCircleActive: false
+    }));
+    return this.leftCircContainer.getBoundingClientRect().left;
+  };
+
+  setMidCircleActive = () => {
+    this.setState((prevState, state) => ({
+      leftCircleActive: false,
+      midCircleActive: true,
+      rightCircleActive: false
+    }));
+    return this.midCircContainer.getBoundingClientRect().left;
+  };
+
+  setRightCircleActive = () => {
+    this.setState((prevState, state) => ({
+      leftCircleActive: false,
+      midCircleActive: false,
+      rightCircleActive: true
+    }));
+    return this.rightCircContainer.getBoundingClientRect().left;
+  };
+
   updateActiveCircle = e => {
-    console.log("This is the target id: ", e.target.id);
+    TweenMax.set(".leftCircle100VW-container", { zIndex: 0 });
+    TweenMax.set(".midCircle100VW-container", { zIndex: 0 });
+    TweenMax.set(".rightCircle100VW-container", { zIndex: 0 });
+    e.preventDefault();
+    let divLeftPos;
     const id = e.target.id;
     if (id === "left-circle") {
-      this.leftCircleSlideIn();
-      this.setState((prevState, state) => ({
-        leftCircleActive: true,
-        midCircleActive: false,
-        rightCircleActive: false
-      }));
+      divLeftPos = this.setLeftCircleActive();
     } else if (id === "mid-circle") {
-      this.midCircleSlideIn();
-      this.setState((prevState, state) => ({
-        leftCircleActive: false,
-        midCircleActive: true,
-        rightCircleActive: false
-      }));
+      divLeftPos = this.setMidCircleActive();
     } else if (id === "right-circle") {
-      this.rightCircleSlideIn();
-      this.setState((prevState, state) => ({
-        leftCircleActive: false,
-        midCircleActive: false,
-        rightCircleActive: true
-      }));
+      divLeftPos = this.setRightCircleActive();
+    }
+    const scrollToPos = this.state.scrollLeftPos + divLeftPos;
+    if (id === "left-circle") {
+      TweenMax.set(".leftCircle100VW-container", { zIndex: 1000 });
+      TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+    } else if (id === "mid-circle") {
+      TweenMax.set(".midCircle100VW-container", { zIndex: 1000 });
+      TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+    } else if (id === "right-circle") {
+      TweenMax.set(".rightCircle100VW-container", { zIndex: 1000 });
+      TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+    }
+    this.setState({
+      scrollLeftPos: scrollToPos
+    });
+  };
+
+  // You need to set state for the position of e.clientX
+  // that way it can be used to determine new scrollLeft position on mouseMove, as
+  // the current implementation causes the left and right circles to animate back to the
+  // middle div with the slightest move.
+  handleMouseDown = e => {
+    e.target.classList.add("prevent-highlight-text");
+    this.setState({
+      mouseDown: true
+    });
+  };
+
+  handleMouseUp = e => {
+    console.log("THE CLIENT X ON MOUSE UP: ", e.clientX);
+    console.log("THIS IS THE TARGET: ", e.currentTarget);
+    e.target.classList.remove("prevent-highlight-text");
+    const windowInnerWidth = window.innerWidth;
+    const halfWindowInnerWidth = window.innerWidth / 2;
+    const oneFourthWindowInnerWidth = halfWindowInnerWidth / 2;
+    const threeFourthWindowInnerWidth =
+      halfWindowInnerWidth + oneFourthWindowInnerWidth;
+    if (e.clientX < oneFourthWindowInnerWidth) {
+      // Then the next circle to the left should slide into view.
+      const divLeftPos = e.currentTarget.nextElementSibling.getBoundingClientRect()
+        .right;
+      console.log(e.currentTarget.nextElementSibling.getBoundingClientRect());
+      console.log(
+        "THIS IS THE DIV LEFT POS WHEN SCROLL TO RIGHT: ",
+        divLeftPos
+      );
+      TweenMax.to(this.slider, 0.5, { scrollTo: { x: divLeftPos } });
+    } else if (e.clientX > threeFourthWindowInnerWidth) {
+      // Then the next circle to the right should slide into view.
+      const divLeftPos = e.currentTarget.previousElementSibling.getBoundingClientRect()
+        .left;
+      console.log(
+        e.currentTarget.previousElementSibling.getBoundingClientRect()
+      );
+      console.log("THIS IS THE DIV LEFT POS WHEN SCROLL TO LEFT: ", divLeftPos);
+      TweenMax.to(this.slider, 0.5, { scrollTo: { x: divLeftPos } });
+    }
+    this.setState({
+      mouseDown: false
+    });
+  };
+
+  handleMouseMove = e => {
+    if (this.state.mouseDown) {
+      // console.log("MOUSE A MOVIN'");
+      // console.log("e.ClientX: ", e.clientX);
+      // console.log("window.innerWidth: ", window.innerWidth);
+      const windowInnerWidth = window.innerWidth;
+      const halfWindowInnerWidth = window.innerWidth / 2;
+      const oneFourthWindowInnerWidth = halfWindowInnerWidth / 2;
+      const threeFourthWindowInnerWidth =
+        halfWindowInnerWidth + oneFourthWindowInnerWidth;
+      if (e.clientX < halfWindowInnerWidth) {
+        // Then the circle should slide to the left
+        // 1.4 just for easing
+        const difference = (e.clientX - halfWindowInnerWidth) / 1.4;
+        const scrollToPos = this.state.scrollLeftPos - difference;
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+      } else if (e.clientX > halfWindowInnerWidth) {
+        // Then the circle should slide to the right
+        const difference = (e.clientX - halfWindowInnerWidth) / 1.4;
+        const scrollToPos = this.state.scrollLeftPos - difference;
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+      }
     }
   };
 
@@ -412,89 +479,109 @@ export default class TestimonialSection extends Component {
       rightCircleActive,
       showSlider
     } = this.state;
-    const posRelative = {
-      position: "relative",
-      left: "0",
-      right: "0"
+    const posAbsolute = {
+      position: "absolute"
     };
     return (
       <Section>
         <TestimonialHeader>Testimonials</TestimonialHeader>
-        <ContainerDiv className="daContainerDiv">
-          <div className="leftCircle100VW-container">
+        <Container>
+          <Slider ref={x => (this.slider = ReactDOM.findDOMNode(x))}>
             <div
-              id="testimonial-circle-left"
-              className="testimonial-circle"
-              onMouseOver={this.leftCircHoverOver}
-              onMouseOut={this.leftCircHoverOut}
-              ref={x => (this.left = x)}
-              style={showSlider ? leftCircleActive ? posRelative : null : null}
+              id="leftCircleContainer"
+              className="leftCircle100VW-container"
+              ref={x => (this.leftCircContainer = x)}
+              onMouseUp={showSlider ? this.handleMouseUp : null}
             >
-              <TestimonialCircleHeader>Janet Janson</TestimonialCircleHeader>
-              <TestimonialCirclePara>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Curabitur dignissim, felis orttitor viverra imperdiet, turpis
-                sem sodales ligula, ut mattis massa sem et diam.
-              </TestimonialCirclePara>
+              <div
+                id="testimonial-circle-left"
+                className="testimonial-circle"
+                onMouseOver={this.leftCircHoverOver}
+                onMouseOut={this.leftCircHoverOut}
+                ref={x => (this.left = x)}
+                style={showSlider ? posAbsolute : null}
+                onMouseDown={showSlider ? this.handleMouseDown : null}
+                onMouseMove={showSlider ? this.handleMouseMove : null}
+              >
+                <TestimonialCircleHeader>Janet Janson</TestimonialCircleHeader>
+                <TestimonialCirclePara>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur dignissim, felis orttitor viverra imperdiet, turpis
+                  sem sodales ligula, ut mattis massa sem et diam.
+                </TestimonialCirclePara>
+              </div>
             </div>
-          </div>
-          <div className="midCircle100VW-container">
             <div
-              id="testimonial-circle-mid"
-              className="testimonial-circle"
-              ref={x => (this.mid = x)}
-              onMouseOver={this.midCircHoverOver}
-              onMouseOut={this.midCircHoverOut}
-              style={showSlider ? midCircleActive ? null : null : null}
+              id="midCircleContainer"
+              className="midCircle100VW-container"
+              ref={x => (this.midCircContainer = x)}
+              onMouseUp={showSlider ? this.handleMouseUp : null}
             >
-              <TestimonialCircleHeader>Jeff Hayworthy</TestimonialCircleHeader>
-              <TestimonialCirclePara>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Curabitur dignissim, felis orttitor viverra imperdiet, turpis
-                sem sodales ligula, ut mattis massa sem et diam.
-              </TestimonialCirclePara>
+              <div
+                id="testimonial-circle-mid"
+                className="testimonial-circle"
+                onMouseOver={this.midCircHoverOver}
+                onMouseOut={this.midCircHoverOut}
+                ref={x => (this.mid = x)}
+                style={showSlider ? posAbsolute : null}
+                onMouseDown={showSlider ? this.handleMouseDown : null}
+                onMouseMove={showSlider ? this.handleMouseMove : null}
+              >
+                <TestimonialCircleHeader>
+                  John Hayworthy
+                </TestimonialCircleHeader>
+                <TestimonialCirclePara>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur dignissim, felis orttitor viverra imperdiet, turpis
+                  sem sodales ligula, ut mattis massa sem et diam.
+                </TestimonialCirclePara>
+              </div>
             </div>
-          </div>
-          <div className="rightCircle100VW-container">
             <div
-              id="testimonial-circle-right"
-              className="testimonial-circle"
-              onMouseOver={this.rightCircHoverOver}
-              onMouseOut={this.rightCircHoverOut}
-              ref={x => (this.right = x)}
-              style={showSlider ? rightCircleActive ? posRelative : null : null}
+              id="rightCircleContainer"
+              className="rightCircle100VW-container"
+              ref={x => (this.rightCircContainer = x)}
+              onMouseUp={showSlider ? this.handleMouseUp : null}
             >
-              <TestimonialCircleHeader>Todd Tilgiver</TestimonialCircleHeader>
-              <TestimonialCirclePara>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Curabitur dignissim, felis orttitor viverra imperdiet, turpis
-                sem sodales ligula, ut mattis massa sem et diam.
-              </TestimonialCirclePara>
+              <div
+                id="testimonial-circle-right"
+                className="testimonial-circle"
+                onMouseOver={this.rightCircHoverOver}
+                onMouseOut={this.rightCircHoverOut}
+                ref={x => (this.right = x)}
+                style={showSlider ? posAbsolute : null}
+                onMouseDown={showSlider ? this.handleMouseDown : null}
+                onMouseMove={showSlider ? this.handleMouseMove : null}
+              >
+                <TestimonialCircleHeader>Buck Gordon</TestimonialCircleHeader>
+                <TestimonialCirclePara>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur dignissim, felis orttitor viverra imperdiet, turpis
+                  sem sodales ligula, ut mattis massa sem et diam.
+                </TestimonialCirclePara>
+              </div>
             </div>
-          </div>
-        </ContainerDiv>
-        <Media query="(max-width: 900px)">
-          {matches =>
-            matches ? (
-              <TestimonialSliderIndicationDiv>
-                <SmallCircleDiv
-                  id="left-circle"
-                  onClick={this.updateActiveCircle}
-                  active={leftCircleActive}
-                />
-                <SmallCircleDiv
-                  id="mid-circle"
-                  onClick={this.updateActiveCircle}
-                  active={midCircleActive}
-                />
-                <SmallCircleDiv
-                  id="right-circle"
-                  onClick={this.updateActiveCircle}
-                  active={rightCircleActive}
-                />
-              </TestimonialSliderIndicationDiv>
-            ) : null}
-        </Media>
+          </Slider>
+        </Container>
+        {showSlider ? (
+          <TestimonialSliderIndicationDiv>
+            <SmallCircle
+              id="left-circle"
+              onClick={this.updateActiveCircle}
+              active={leftCircleActive}
+            />
+            <SmallCircle
+              id="mid-circle"
+              onClick={this.updateActiveCircle}
+              active={midCircleActive}
+            />
+            <SmallCircle
+              id="right-circle"
+              onClick={this.updateActiveCircle}
+              active={rightCircleActive}
+            />
+          </TestimonialSliderIndicationDiv>
+        ) : null}
       </Section>
     );
   }

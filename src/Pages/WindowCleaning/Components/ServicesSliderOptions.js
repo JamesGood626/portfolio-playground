@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styled from "styled-components";
 import Media from "react-media";
 import { FlexJCSpaceAroundAICenterDiv } from "../../../LayoutStyledComponents";
@@ -97,11 +97,9 @@ const renderServiceOptions = (
       key={property}
       addBorder={i === 0 ? false : true}
       active={
-        selectedService === serviceOptions[property].serviceOptionText ? (
-          true
-        ) : (
-          false
-        )
+        selectedService === serviceOptions[property].serviceOptionText
+          ? true
+          : false
       }
       onClick={showNewServiceDescription}
     >
@@ -191,7 +189,8 @@ export const ServicesSliderOptions = ({
                 selectedService,
                 serviceOptions,
                 showNewServiceDescription
-              )}
+              )
+        }
       </Media>
     </SliderOptionsContainer>
   );

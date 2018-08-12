@@ -24,12 +24,12 @@ const HeadlineText = styled.h1`
   color: #fcfcfc;
 `;
 
-const ContactText = styled.div`
-  height: 5rem;
-  margin-top: 0.6rem;
-  text-align: center;
-  color: #fcfcfc;
-`;
+// const ContactText = styled.div`
+//   height: 5rem;
+//   margin-top: 0.6rem;
+//   text-align: center;
+//   color: #fcfcfc;
+// `;
 
 const theme = {
   main: "lime"
@@ -44,7 +44,9 @@ const theme = {
 //   }
 // ${props => props.theme.flexColJCAICenter};
 
-const ContactNumber = styled.p`margin-top: 1.4rem;`;
+// const ContactNumber = styled.p`
+//   margin-top: 1.4rem;
+// `;
 
 export const HeaderContent = () => {
   return (

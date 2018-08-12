@@ -107,8 +107,7 @@ export const ServiceCards = ({ serviceCardConfig }) => {
   return <Fragment>{renderCards(serviceCardConfig)}</Fragment>;
 };
 
-{
-  /* <div class="services-card">
+/* <div class="services-card">
   <div class="services-content-container">
     <div class="services-icon-container">;D</div>
     <h3 class="services-card-header">VC Fund Information</h3>
@@ -118,7 +117,6 @@ export const ServiceCards = ({ serviceCardConfig }) => {
     </p>
   </div>
 </div>; */
-}
 
 // .services-content-container > h3 {
 //   font-size: 1.4rem;

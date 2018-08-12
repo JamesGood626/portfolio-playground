@@ -29,10 +29,9 @@ export default Header;
 
 // This was inbetween the nav tags.
 // Look into the aria-controls and aria-expanded
-{
-  /* <button
+
+/* <button
   class="menu-toggle"
   aria-controls="primary-menu"
   aria-expanded="false"
 />; */
-}

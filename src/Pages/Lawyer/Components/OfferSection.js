@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { CTAButton } from "./CTAButton";
 import {
   FlexJCCenterSection,
@@ -51,8 +51,8 @@ export const OfferSection = () => {
 };
 
 /*************************
-**** Offer Section ****
-*************************/
+ **** Offer Section ****
+ *************************/
 
 // .layout-offer-container {
 //   display: flex;

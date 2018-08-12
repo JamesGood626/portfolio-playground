@@ -94,26 +94,27 @@ const AbsoluteDiv = FlexColJCAICenterDiv.extend`
 // It'll render the form specific to that, and a config obj and function will be
 // passed down to deal with that logic, and make it look like it's dynamic.
 const renderDescriptionText = (selectedService, serviceOptionsConfig) => {
-  return Object.getOwnPropertyNames(
-    serviceOptionsConfig
-  ).reduce((acc, curr) => {
-    const serviceOptionText = serviceOptionsConfig[curr].serviceOptionText;
-    if (selectedService === serviceOptionText) {
-      const headerText = serviceOptionsConfig[curr].descriptionHeader;
-      const paraText = serviceOptionsConfig[curr].descriptionPara;
-      acc.push(
-        <Fragment key={serviceOptionText}>
-          <HeaderText data-testid="services-header-text">
-            {headerText}
-          </HeaderText>
-          <DescriptionText data-testid="services-description-text">
-            {paraText}
-          </DescriptionText>
-        </Fragment>
-      );
-    }
-    return acc;
-  }, []);
+  return Object.getOwnPropertyNames(serviceOptionsConfig).reduce(
+    (acc, curr) => {
+      const serviceOptionText = serviceOptionsConfig[curr].serviceOptionText;
+      if (selectedService === serviceOptionText) {
+        const headerText = serviceOptionsConfig[curr].descriptionHeader;
+        const paraText = serviceOptionsConfig[curr].descriptionPara;
+        acc.push(
+          <Fragment key={serviceOptionText}>
+            <HeaderText data-testid="services-header-text">
+              {headerText}
+            </HeaderText>
+            <DescriptionText data-testid="services-description-text">
+              {paraText}
+            </DescriptionText>
+          </Fragment>
+        );
+      }
+      return acc;
+    },
+    []
+  );
 };
 
 export default class ServicesDescription extends Component {
@@ -128,7 +129,7 @@ export default class ServicesDescription extends Component {
   render() {
     const {
       selectedService,
-      quoteRequests,
+      //quoteRequests,
       serviceOptionsConfig,
       updateQuoteRequested
     } = this.props;

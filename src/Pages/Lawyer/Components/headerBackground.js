@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const Image = styled.img`
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-`;
+// const Image = styled.img`
+//   height: 100vh;
+//   width: 100%;
+//   object-fit: cover;
+// `;
 
 const ImageOverlay = styled.div`
   position: relative;
