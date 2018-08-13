@@ -71,8 +71,8 @@ const Slider = styled.div`
   height: 75vh;
   overflow-x: hidden;
   background: lime;
-  // scroll-snap-points-x: repeat(100%);
-  // scroll-snap-type: mandatory;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
 
   @media (min-width: 900px) {
     justify-content: center;
@@ -160,10 +160,14 @@ export default class TestimonialSection extends Component {
     mouseDown: false
   };
 
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log("UPDATED STATE: ", this.state);
+  };
+
   componentDidMount = () => {
     const { showSlider } = this.state;
     window.addEventListener("resize", this.updateScreenSize);
-    document.addEventListener("mouseout", this.endMouseDown);
+    this.slider.addEventListener("mouseout", this.endMouseDown);
     if (window.innerWidth < 900 && !showSlider) {
       const leftPos = this.midCircContainer.getBoundingClientRect().left;
       this.slider.scrollLeft = leftPos;
@@ -184,7 +188,7 @@ export default class TestimonialSection extends Component {
 
   componentWillUnmount = () => {
     window.removeEventListener("resize", this.updateScreenSize);
-    document.removeEventListener("mouseout", this.endMouseDown);
+    this.slider.removeEventListener("mouseout", this.endMouseDown);
   };
 
   updateScreenSize = e => {
@@ -228,6 +232,9 @@ export default class TestimonialSection extends Component {
   };
 
   endMouseDown = e => {
+    if (!this.state.mouseDown) return;
+    console.log("END MOUSE DOWN FIRING");
+    this.resetSliderDragDefault(true);
     if (this.state.mouseDown) {
       this.setState({
         mouseDown: false
@@ -343,7 +350,7 @@ export default class TestimonialSection extends Component {
     );
   };
 
-  setLeftCircleActive = () => {
+  setStateLeftCircleActive = () => {
     this.setState((prevState, state) => ({
       leftCircleActive: true,
       midCircleActive: false,
@@ -352,16 +359,17 @@ export default class TestimonialSection extends Component {
     return this.leftCircContainer.getBoundingClientRect().left;
   };
 
-  setMidCircleActive = () => {
+  setStateMidCircleActive = scrollToPos => {
     this.setState((prevState, state) => ({
       leftCircleActive: false,
       midCircleActive: true,
-      rightCircleActive: false
+      rightCircleActive: false,
+      scrollLeftPos: scrollToPos
     }));
     return this.midCircContainer.getBoundingClientRect().left;
   };
 
-  setRightCircleActive = () => {
+  setStateRightCircleActive = () => {
     this.setState((prevState, state) => ({
       leftCircleActive: false,
       midCircleActive: false,
@@ -378,11 +386,11 @@ export default class TestimonialSection extends Component {
     let divLeftPos;
     const id = e.target.id;
     if (id === "left-circle") {
-      divLeftPos = this.setLeftCircleActive();
+      divLeftPos = this.setStateLeftCircleActive();
     } else if (id === "mid-circle") {
-      divLeftPos = this.setMidCircleActive();
+      divLeftPos = this.setStateMidCircleActive();
     } else if (id === "right-circle") {
-      divLeftPos = this.setRightCircleActive();
+      divLeftPos = this.setStateRightCircleActive();
     }
     const scrollToPos = this.state.scrollLeftPos + divLeftPos;
     if (id === "left-circle") {
@@ -392,6 +400,9 @@ export default class TestimonialSection extends Component {
       TweenMax.set(".midCircle100VW-container", { zIndex: 1000 });
       TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
     } else if (id === "right-circle") {
+      console.log("THE state SCROLL left POS: ", this.state.scrollLeftPos);
+      console.log("THE RIGHT CIRCLES divleftpos: ", divLeftPos);
+      console.log("THE RIGHT CIRCLES SCROLL TO POS: ", scrollToPos);
       TweenMax.set(".rightCircle100VW-container", { zIndex: 1000 });
       TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
     }
@@ -412,6 +423,7 @@ export default class TestimonialSection extends Component {
   };
 
   handleMouseUp = e => {
+    if (!this.state.mouseDown) return;
     console.log("THE CLIENT X ON MOUSE UP: ", e.clientX);
     console.log("THIS IS THE TARGET: ", e.currentTarget);
     e.target.classList.remove("prevent-highlight-text");
@@ -422,31 +434,94 @@ export default class TestimonialSection extends Component {
       halfWindowInnerWidth + oneFourthWindowInnerWidth;
     if (e.clientX < oneFourthWindowInnerWidth) {
       // Then the next circle to the left should slide into view.
-      const divLeftPos = e.currentTarget.nextElementSibling.getBoundingClientRect()
-        .right;
-      console.log(e.currentTarget.nextElementSibling.getBoundingClientRect());
-      console.log(
-        "THIS IS THE DIV LEFT POS WHEN SCROLL TO RIGHT: ",
-        divLeftPos
-      );
-      TweenMax.to(this.slider, 0.5, { scrollTo: { x: divLeftPos } });
+      const nextRightActiveCircleClassName = e.currentTarget.nextElementSibling
+        ? e.currentTarget.nextElementSibling.className
+        : null;
+      if (nextRightActiveCircleClassName === "midCircle100VW-container") {
+        this.setStateMidCircleActive();
+        const scrollToPos = this.midCircContainer.getBoundingClientRect().width;
+        this.setState({
+          scrollLeftPos: scrollToPos
+        });
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+      } else if (
+        nextRightActiveCircleClassName === "rightCircle100VW-container"
+      ) {
+        this.setStateRightCircleActive();
+        const scrollToPos =
+          this.rightCircContainer.getBoundingClientRect().width * 2;
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+        this.setState({
+          scrollLeftPos: scrollToPos
+        });
+      }
     } else if (e.clientX > threeFourthWindowInnerWidth) {
       // Then the next circle to the right should slide into view.
-      const divLeftPos = e.currentTarget.previousElementSibling.getBoundingClientRect()
-        .left;
-      console.log(
-        e.currentTarget.previousElementSibling.getBoundingClientRect()
-      );
-      console.log("THIS IS THE DIV LEFT POS WHEN SCROLL TO LEFT: ", divLeftPos);
-      TweenMax.to(this.slider, 0.5, { scrollTo: { x: divLeftPos } });
+      const nextLeftActiveCircleClassName = e.currentTarget
+        .previousElementSibling
+        ? e.currentTarget.previousElementSibling.className
+        : null;
+      if (nextLeftActiveCircleClassName === "leftCircle100VW-container") {
+        this.setStateLeftCircleActive();
+        this.setState({
+          scrollLeftPos: 0
+        });
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: 0 } });
+      } else if (nextLeftActiveCircleClassName === "midCircle100VW-container") {
+        this.setStateMidCircleActive();
+        const scrollToPos =
+          this.state.scrollLeftPos -
+          this.midCircContainer.getBoundingClientRect().width;
+        this.setState({
+          scrollLeftPos: scrollToPos
+        });
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+      }
+    } else {
+      // resets circle div to default position if it wasn't dragged
+      // far enough to scroll the next div in
+      this.resetSliderDragDefault();
     }
-    this.setState({
+
+    this.setState((prevState, state) => ({
       mouseDown: false
-    });
+    }));
+  };
+
+  resetSliderDragDefault = mouseOutDragEnd => {
+    const { leftCircleActive, midCircleActive, rightCircleActive } = this.state;
+    if (leftCircleActive) {
+      if (mouseOutDragEnd) {
+        const scrollToPos = this.midCircContainer.getBoundingClientRect().width;
+        this.setStateMidCircleActive(scrollToPos);
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+      } else {
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: 0 } });
+      }
+    } else if (midCircleActive) {
+      const scrollToPos = this.midCircContainer.getBoundingClientRect().width;
+      TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+    } else if (rightCircleActive) {
+      if (mouseOutDragEnd) {
+        const scrollToPos = this.midCircContainer.getBoundingClientRect().width;
+        this.setStateMidCircleActive(scrollToPos);
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+      } else {
+        const scrollToPos =
+          this.rightCircContainer.getBoundingClientRect().width * 2;
+        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+      }
+    }
   };
 
   handleMouseMove = e => {
-    if (this.state.mouseDown) {
+    const {
+      mouseDown,
+      leftCircleActive,
+      midCircleActive,
+      rightCircleActive
+    } = this.state;
+    if (mouseDown) {
       // console.log("MOUSE A MOVIN'");
       // console.log("e.ClientX: ", e.clientX);
       // console.log("window.innerWidth: ", window.innerWidth);
@@ -455,23 +530,20 @@ export default class TestimonialSection extends Component {
       const oneFourthWindowInnerWidth = halfWindowInnerWidth / 2;
       const threeFourthWindowInnerWidth =
         halfWindowInnerWidth + oneFourthWindowInnerWidth;
-      if (e.clientX < halfWindowInnerWidth) {
-        // Then the circle should slide to the left
-        // 1.4 just for easing
-        const difference = (e.clientX - halfWindowInnerWidth) / 1.4;
-        const scrollToPos = this.state.scrollLeftPos - difference;
-        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
-      } else if (e.clientX > halfWindowInnerWidth) {
-        // Then the circle should slide to the right
-        const difference = (e.clientX - halfWindowInnerWidth) / 1.4;
-        const scrollToPos = this.state.scrollLeftPos - difference;
-        TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
-      }
+      this.dragCircle(e.clientX, halfWindowInnerWidth);
     }
   };
 
-  // Applying position relative to the left or right circles so that they
-  // get back into the regular flow of the document to facilitate slider animation.
+  dragCircle = (clientX, halfWindowInnerWidth) => {
+    // clientX greater than halfWindowInnerWidth yields positive difference,
+    // subtracted by state.scrollLeftPos yields result that scrolls to the left
+    // clientX less than halfWindowInnerWidth yields negative difference,
+    // subtracted by state.scrollLeftPos yields result that scrolls to the right
+    const difference = (clientX - halfWindowInnerWidth) / 0.7;
+    const scrollToPos = this.state.scrollLeftPos - difference;
+    TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+  };
+
   render() {
     const {
       leftCircleActive,
