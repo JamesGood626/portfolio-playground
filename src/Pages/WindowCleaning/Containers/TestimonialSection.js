@@ -32,10 +32,22 @@ const Slider = styled.div`
   position: relative;
   display: flex;
   width: 100vw;
-  height: 75vh;
+  height: 80vh;
   overflow-x: hidden;
   scroll-snap-points-x: repeat(100%);
   scroll-snap-type: mandatory;
+
+  @media (max-width: 320px) {
+    height: 100vh;
+  }
+
+  @media (min-height: 750px) {
+    height: 60vh;
+  }
+
+  @media (min-height: 1000px) {
+    height: 50vh;
+  }
 
   @media (min-width: 900px) {
     justify-content: center;
