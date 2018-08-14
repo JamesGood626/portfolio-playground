@@ -53,7 +53,7 @@ export const HeaderContent = () => {
   return (
     <ContentContainer>
       <HeadlineText>
-        <p>Wakanda Foreva!</p>
+        <p>Crystal Clear Choice</p>
       </HeadlineText>
       <CTAButton addMarginTop={true}>Get a Quote</CTAButton>
       <ContactText>

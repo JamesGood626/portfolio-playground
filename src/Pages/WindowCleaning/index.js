@@ -10,7 +10,7 @@ const theme = {
   paraColor: "#999",
   navLinkFontSize: "1.8rem",
   navLinkFontSize900W: "1.2rem",
-  headerFontSize: "2.2rem",
+  headerFontSize: "2rem",
   headerFontSize500W: "3rem",
   headerFontSize768W: "4rem",
   headerFontSize1024W: "6rem",
