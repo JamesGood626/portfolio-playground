@@ -3,13 +3,6 @@ import styled from "styled-components";
 import "../Styles/main.css";
 import { FlexColJCStartAICenterDiv } from "../../../LayoutStyledComponents";
 
-// const SliderInput = styled.input`
-//   margin: 0;
-//   color: blue;
-//   background: lime;
-//   thumb: blue;
-// `;
-
 const FormContainerDiv = FlexColJCStartAICenterDiv.extend`
   height: 24rem;
   width: 70%;
@@ -230,7 +223,7 @@ const calculatePressureWashingPrices = (quotePricing, formValues) => {
         acc += calculation;
         return acc;
       } else if (formValues[curr.id].value !== null) {
-        acc += formValues[curr.id].value;
+        acc += parseInt(formValues[curr.id].value);
         return acc;
       }
     }

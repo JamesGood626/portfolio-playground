@@ -13,43 +13,7 @@ const Section = FlexColJCAICenterSection.extend`
 `;
 
 // TODO:
-// AND FINALLY - integrate swipe feature, lock points on swipe.
-// Fix pressure washing quote form bug... 603020
-// Oh.. and fix the svg menu animation.
-// DEPLOYY!!!
-
-// const ContainerDiv = styled.div`
-//   position: relative;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 0;
-//   height: 55vh;
-//   background: papayawhip;
-//   width: 100vw;
-//   overflow-x: auto;
-
-//   // @media (max-width: 900px) {
-//   //   width: 140vw;
-//   //   background: yellow;
-//   // }
-
-//   // @media (max-width: 600px) {
-//   //   width: 160vw;
-//   //   background: lime;
-//   // }
-
-//   // @media (max-width: 450px) {
-//   //   width: 200vw
-//   //   background: blue;
-//   // }
-
-//   @media (min-width: 900px) {
-//     justify-content: center;
-//     width: 68rem;
-//     margin-bottom: 20vh;
-//   }
-// `;
+// fix overscroll on right circle
 
 const Container = styled.div`
   display: flex;
@@ -70,7 +34,6 @@ const Slider = styled.div`
   width: 100vw;
   height: 75vh;
   overflow-x: hidden;
-  background: lime;
   scroll-snap-points-x: repeat(100%);
   scroll-snap-type: mandatory;
 
@@ -81,13 +44,6 @@ const Slider = styled.div`
     overflow-x: hidden;
   }
 `;
-
-// Moving these styles to main.css -> leftCircle100VW-container, mid, right
-// const Slide = styled.div`
-//   width: 120vw;
-//   flex-shrink: 0;
-//   height: 100%;
-// `;
 
 const TestimonialHeader = styled.h2`
   margin: 10vh 0;
@@ -160,22 +116,21 @@ export default class TestimonialSection extends Component {
     mouseDown: false
   };
 
-  componentDidUpdate = (prevProps, prevState) => {
-    console.log("UPDATED STATE: ", this.state);
-  };
-
   componentDidMount = () => {
     const { showSlider } = this.state;
     window.addEventListener("resize", this.updateScreenSize);
+    this.left.addEventListener("touchmove", this.disableYScroll, false);
+    this.mid.addEventListener("touchmove", this.disableYScroll, false);
+    this.right.addEventListener("touchmove", this.disableYScroll, false);
     this.slider.addEventListener("mouseout", this.endMouseDown);
     if (window.innerWidth < 900 && !showSlider) {
       const leftPos = this.midCircContainer.getBoundingClientRect().left;
       this.slider.scrollLeft = leftPos;
-      this.setState((prevState, state) => ({
+      this.setState({
         showSlider: true,
         midCircleActive: true,
         scrollLeftPos: leftPos
-      }));
+      });
     }
   };
 
@@ -189,7 +144,19 @@ export default class TestimonialSection extends Component {
   componentWillUnmount = () => {
     window.removeEventListener("resize", this.updateScreenSize);
     this.slider.removeEventListener("mouseout", this.endMouseDown);
+    this.left.removeEventListener("touchmove", this.disableYScroll);
+    this.mid.removeEventListener("touchmove", this.disableYScroll);
+    this.right.removeEventListener("touchmove", this.disableYScroll);
   };
+
+  disableYScroll = e => {
+    e.preventDefault();
+  };
+
+  // enableYScroll = e => {
+  //   console.log("enable y scroll");
+  //   document.documentElement.style.overflow = "auto";
+  // };
 
   updateScreenSize = e => {
     if (e.target.innerWidth > 900) {
@@ -233,7 +200,6 @@ export default class TestimonialSection extends Component {
 
   endMouseDown = e => {
     if (!this.state.mouseDown) return;
-    console.log("END MOUSE DOWN FIRING");
     this.resetSliderDragDefault(true);
     if (this.state.mouseDown) {
       this.setState({
@@ -351,40 +317,46 @@ export default class TestimonialSection extends Component {
   };
 
   setStateLeftCircleActive = () => {
-    this.setState((prevState, state) => ({
+    this.setState({
       leftCircleActive: true,
       midCircleActive: false,
       rightCircleActive: false
-    }));
+    });
     return this.leftCircContainer.getBoundingClientRect().left;
   };
 
   setStateMidCircleActive = scrollToPos => {
-    this.setState((prevState, state) => ({
+    this.setState({
       leftCircleActive: false,
       midCircleActive: true,
       rightCircleActive: false,
       scrollLeftPos: scrollToPos
-    }));
+    });
     return this.midCircContainer.getBoundingClientRect().left;
   };
 
   setStateRightCircleActive = () => {
-    this.setState((prevState, state) => ({
+    this.setState({
       leftCircleActive: false,
       midCircleActive: false,
       rightCircleActive: true
-    }));
+    });
     return this.rightCircContainer.getBoundingClientRect().left;
   };
 
   updateActiveCircle = e => {
-    TweenMax.set(".leftCircle100VW-container", { zIndex: 0 });
-    TweenMax.set(".midCircle100VW-container", { zIndex: 0 });
-    TweenMax.set(".rightCircle100VW-container", { zIndex: 0 });
-    e.preventDefault();
+    // Also passing in e as "left-circle", "mid-circle"
+    // inside of mouseUp and touchEnd function which handles
+    // animating to next circle and updating state.
+    // necessary to have the z index update.
+    this.right.style.zIndex = 0;
+    this.mid.style.zIndex = 0;
+    this.left.style.zIndex = 0;
+    if (e.target) {
+      e.preventDefault();
+    }
     let divLeftPos;
-    const id = e.target.id;
+    const id = e.target ? e.target.id : e;
     if (id === "left-circle") {
       divLeftPos = this.setStateLeftCircleActive();
     } else if (id === "mid-circle") {
@@ -394,16 +366,13 @@ export default class TestimonialSection extends Component {
     }
     const scrollToPos = this.state.scrollLeftPos + divLeftPos;
     if (id === "left-circle") {
-      TweenMax.set(".leftCircle100VW-container", { zIndex: 1000 });
+      this.left.style.zIndex = 1000;
       TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
     } else if (id === "mid-circle") {
-      TweenMax.set(".midCircle100VW-container", { zIndex: 1000 });
+      this.mid.style.zIndex = 1000;
       TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
     } else if (id === "right-circle") {
-      console.log("THE state SCROLL left POS: ", this.state.scrollLeftPos);
-      console.log("THE RIGHT CIRCLES divleftpos: ", divLeftPos);
-      console.log("THE RIGHT CIRCLES SCROLL TO POS: ", scrollToPos);
-      TweenMax.set(".rightCircle100VW-container", { zIndex: 1000 });
+      this.right.style.zIndex = 1000;
       TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
     }
     this.setState({
@@ -411,34 +380,35 @@ export default class TestimonialSection extends Component {
     });
   };
 
-  // You need to set state for the position of e.clientX
-  // that way it can be used to determine new scrollLeft position on mouseMove, as
-  // the current implementation causes the left and right circles to animate back to the
-  // middle div with the slightest move.
-  handleMouseDown = e => {
-    e.target.classList.add("prevent-highlight-text");
+  mouseDownOrTouchStartLogic = classList => {
+    classList.add("prevent-highlight-text");
     this.setState({
       mouseDown: true
     });
   };
 
-  handleMouseUp = e => {
+  mouseMoveOrTouchMoveLogic = clientX => {
+    const { mouseDown, rightCircleActive } = this.state;
+    if (mouseDown) {
+      const halfWindowInnerWidth = window.innerWidth / 2;
+      this.dragCircle(clientX, halfWindowInnerWidth);
+    }
+  };
+
+  mouseUpOrTouchEndLogic = (clientX, currentTarget, classList) => {
     if (!this.state.mouseDown) return;
-    console.log("THE CLIENT X ON MOUSE UP: ", e.clientX);
-    console.log("THIS IS THE TARGET: ", e.currentTarget);
-    e.target.classList.remove("prevent-highlight-text");
-    const windowInnerWidth = window.innerWidth;
+    classList.remove("prevent-highlight-text");
     const halfWindowInnerWidth = window.innerWidth / 2;
     const oneFourthWindowInnerWidth = halfWindowInnerWidth / 2;
     const threeFourthWindowInnerWidth =
       halfWindowInnerWidth + oneFourthWindowInnerWidth;
-    if (e.clientX < oneFourthWindowInnerWidth) {
+    if (clientX < oneFourthWindowInnerWidth) {
       // Then the next circle to the left should slide into view.
-      const nextRightActiveCircleClassName = e.currentTarget.nextElementSibling
-        ? e.currentTarget.nextElementSibling.className
+      const nextRightActiveCircleClassName = currentTarget.nextElementSibling
+        ? currentTarget.nextElementSibling.className
         : null;
       if (nextRightActiveCircleClassName === "midCircle100VW-container") {
-        this.setStateMidCircleActive();
+        this.updateActiveCircle("mid-circle");
         const scrollToPos = this.midCircContainer.getBoundingClientRect().width;
         this.setState({
           scrollLeftPos: scrollToPos
@@ -447,7 +417,7 @@ export default class TestimonialSection extends Component {
       } else if (
         nextRightActiveCircleClassName === "rightCircle100VW-container"
       ) {
-        this.setStateRightCircleActive();
+        this.updateActiveCircle("right-circle");
         const scrollToPos =
           this.rightCircContainer.getBoundingClientRect().width * 2;
         TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
@@ -455,20 +425,19 @@ export default class TestimonialSection extends Component {
           scrollLeftPos: scrollToPos
         });
       }
-    } else if (e.clientX > threeFourthWindowInnerWidth) {
+    } else if (clientX > threeFourthWindowInnerWidth) {
       // Then the next circle to the right should slide into view.
-      const nextLeftActiveCircleClassName = e.currentTarget
-        .previousElementSibling
-        ? e.currentTarget.previousElementSibling.className
+      const nextLeftActiveCircleClassName = currentTarget.previousElementSibling
+        ? currentTarget.previousElementSibling.className
         : null;
       if (nextLeftActiveCircleClassName === "leftCircle100VW-container") {
-        this.setStateLeftCircleActive();
+        this.updateActiveCircle("left-circle");
         this.setState({
           scrollLeftPos: 0
         });
         TweenMax.to(this.slider, 0.5, { scrollTo: { x: 0 } });
       } else if (nextLeftActiveCircleClassName === "midCircle100VW-container") {
-        this.setStateMidCircleActive();
+        this.updateActiveCircle("mid-circle");
         const scrollToPos =
           this.state.scrollLeftPos -
           this.midCircContainer.getBoundingClientRect().width;
@@ -480,9 +449,11 @@ export default class TestimonialSection extends Component {
     } else {
       // resets circle div to default position if it wasn't dragged
       // far enough to scroll the next div in
+      // odd.. when looking to fix the scroll past the right of the right div's overflow
+      // it will reset itself to default position ONLY IF it isn't dragged all the way
+      // to the left hand side of the screen.
       this.resetSliderDragDefault();
     }
-
     this.setState((prevState, state) => ({
       mouseDown: false
     }));
@@ -514,26 +485,6 @@ export default class TestimonialSection extends Component {
     }
   };
 
-  handleMouseMove = e => {
-    const {
-      mouseDown,
-      leftCircleActive,
-      midCircleActive,
-      rightCircleActive
-    } = this.state;
-    if (mouseDown) {
-      // console.log("MOUSE A MOVIN'");
-      // console.log("e.ClientX: ", e.clientX);
-      // console.log("window.innerWidth: ", window.innerWidth);
-      const windowInnerWidth = window.innerWidth;
-      const halfWindowInnerWidth = window.innerWidth / 2;
-      const oneFourthWindowInnerWidth = halfWindowInnerWidth / 2;
-      const threeFourthWindowInnerWidth =
-        halfWindowInnerWidth + oneFourthWindowInnerWidth;
-      this.dragCircle(e.clientX, halfWindowInnerWidth);
-    }
-  };
-
   dragCircle = (clientX, halfWindowInnerWidth) => {
     // clientX greater than halfWindowInnerWidth yields positive difference,
     // subtracted by state.scrollLeftPos yields result that scrolls to the left
@@ -542,6 +493,38 @@ export default class TestimonialSection extends Component {
     const difference = (clientX - halfWindowInnerWidth) / 0.7;
     const scrollToPos = this.state.scrollLeftPos - difference;
     TweenMax.to(this.slider, 0.5, { scrollTo: { x: scrollToPos } });
+  };
+
+  // You need to set state for the position of e.clientX
+  // that way it can be used to determine new scrollLeft position on mouseMove, as
+  // the current implementation causes the left and right circles to animate back to the
+  // middle div with the slightest move.
+  handleMouseDown = e => {
+    this.mouseDownOrTouchStartLogic(e.target.classList);
+  };
+
+  handleMouseMove = e => {
+    this.mouseMoveOrTouchMoveLogic(e.clientX);
+  };
+
+  handleMouseUp = e => {
+    this.mouseUpOrTouchEndLogic(e.clientX, e.currentTarget, e.target.classList);
+  };
+
+  handleTouchStart = e => {
+    this.mouseDownOrTouchStartLogic(e.target.classList);
+  };
+
+  handleTouchMove = e => {
+    this.mouseMoveOrTouchMoveLogic(e.changedTouches[0].clientX);
+  };
+
+  handleTouchEnd = e => {
+    this.mouseUpOrTouchEndLogic(
+      e.changedTouches[0].clientX,
+      e.currentTarget,
+      e.target.classList
+    );
   };
 
   render() {
@@ -558,12 +541,19 @@ export default class TestimonialSection extends Component {
       <Section>
         <TestimonialHeader>Testimonials</TestimonialHeader>
         <Container>
-          <Slider ref={x => (this.slider = ReactDOM.findDOMNode(x))}>
+          <Slider
+            // className="testimonial-slider"
+            ref={x => (this.slider = ReactDOM.findDOMNode(x))}
+          >
             <div
+              // mouseUp is firing twice, don't know if it's cause I'm on the virtual mobiel device,
+              // but wouldn't hurt to add a check in to setState if on a mobile device to prevent it from
+              // firing.
               id="leftCircleContainer"
               className="leftCircle100VW-container"
               ref={x => (this.leftCircContainer = x)}
               onMouseUp={showSlider ? this.handleMouseUp : null}
+              onTouchEnd={showSlider ? this.handleTouchEnd : null}
             >
               <div
                 id="testimonial-circle-left"
@@ -574,6 +564,8 @@ export default class TestimonialSection extends Component {
                 style={showSlider ? posAbsolute : null}
                 onMouseDown={showSlider ? this.handleMouseDown : null}
                 onMouseMove={showSlider ? this.handleMouseMove : null}
+                onTouchStart={showSlider ? this.handleTouchStart : null}
+                onTouchMove={showSlider ? this.handleTouchMove : null}
               >
                 <TestimonialCircleHeader>Janet Janson</TestimonialCircleHeader>
                 <TestimonialCirclePara>
@@ -588,6 +580,7 @@ export default class TestimonialSection extends Component {
               className="midCircle100VW-container"
               ref={x => (this.midCircContainer = x)}
               onMouseUp={showSlider ? this.handleMouseUp : null}
+              onTouchEnd={showSlider ? this.handleTouchEnd : null}
             >
               <div
                 id="testimonial-circle-mid"
@@ -598,6 +591,8 @@ export default class TestimonialSection extends Component {
                 style={showSlider ? posAbsolute : null}
                 onMouseDown={showSlider ? this.handleMouseDown : null}
                 onMouseMove={showSlider ? this.handleMouseMove : null}
+                onTouchStart={showSlider ? this.handleTouchStart : null}
+                onTouchMove={showSlider ? this.handleTouchMove : null}
               >
                 <TestimonialCircleHeader>
                   John Hayworthy
@@ -614,6 +609,7 @@ export default class TestimonialSection extends Component {
               className="rightCircle100VW-container"
               ref={x => (this.rightCircContainer = x)}
               onMouseUp={showSlider ? this.handleMouseUp : null}
+              onTouchEnd={showSlider ? this.handleTouchEnd : null}
             >
               <div
                 id="testimonial-circle-right"
@@ -624,6 +620,8 @@ export default class TestimonialSection extends Component {
                 style={showSlider ? posAbsolute : null}
                 onMouseDown={showSlider ? this.handleMouseDown : null}
                 onMouseMove={showSlider ? this.handleMouseMove : null}
+                onTouchStart={showSlider ? this.handleTouchStart : null}
+                onTouchMove={showSlider ? this.handleTouchMove : null}
               >
                 <TestimonialCircleHeader>Buck Gordon</TestimonialCircleHeader>
                 <TestimonialCirclePara>

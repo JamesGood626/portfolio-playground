@@ -40,7 +40,6 @@ export default class Hamburguesa extends Component {
     const tl = new TimelineMax();
     tl.add("startTween");
     tl.to(".hamberguesa", 0.5, { fill: "#84ceeb" });
-    // tl.to(this.hamberguesaSvg, 0.5, { x: "-50%" }, "startTween");
     tl.to(this.hamberguesaMidLine, 0.3, { opacity: 0 }, "startTween");
     tl.to(
       this.hamberguesaTopLine,
