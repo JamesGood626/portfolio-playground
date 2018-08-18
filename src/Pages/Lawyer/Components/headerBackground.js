@@ -1,6 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
+import headerImage640W from "../images/640W-header-img.png";
+import headerImage768W from "../images/768W-header-img.png";
+import headerImage1024W from "../images/1024W-header-img.png";
+import headerImage1366W from "../images/1366W-header-img.png";
+import headerImage1600W from "../images/1600W-header-img.png";
+// import headerImage1920W from "../images/1920W-header-img.png";
+
 // const Image = styled.img`
 //   height: 100vh;
 //   width: 100%;
@@ -11,6 +18,7 @@ const ImageOverlay = styled.div`
   position: relative;
   height: auto;
   width: 100vw;
+  overflow: hidden;
 
   &:before {
     content: "";
@@ -29,7 +37,17 @@ const ImageOverlay = styled.div`
 export const HeaderBackground = ({ children }) => {
   return (
     <ImageOverlay class="header-img-overlay">
-      {/* Insert Image Here */}
+      <img
+        id="header-image"
+        src={`${headerImage640W}`}
+        srcSet={`
+              ${headerImage1600W} 1600w,
+              ${headerImage1366W} 1366w,
+              ${headerImage1024W} 1024w,
+              ${headerImage768W} 768w`}
+        sizes="100vw"
+        alt="A Window Cleaner Working."
+      />
       {children}
     </ImageOverlay>
   );
