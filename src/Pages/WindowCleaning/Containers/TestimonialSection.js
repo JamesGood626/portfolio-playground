@@ -10,6 +10,12 @@ import { FlexColJCAICenterSection } from "../../../LayoutStyledComponents";
 
 const Section = FlexColJCAICenterSection.extend`
   background: #fcfcfc;
+  // background: blue;
+
+  // @media (max-height: 500px) {
+  //   height: 160vh;
+  //   justify-content: space-around;
+  // }
 `;
 
 // TODO:
@@ -18,8 +24,26 @@ const Section = FlexColJCAICenterSection.extend`
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  height: 80vh;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: visible;
+  // background: orange;
+
+  @media (max-height: 500px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 320px) {
+    height: 100vh;
+  }
+
+  @media (min-height: 750px) {
+    height: 70vh;
+  }
+
+  @media (min-height: 1000px) {
+    height: 60vh;
+  }
 
   @media (min-width: 900px) {
     justify-content: center;
@@ -33,20 +57,26 @@ const Slider = styled.div`
   display: flex;
   width: 100vw;
   height: 80vh;
+  // horizontal scrolling is disabled without overflow-x
   overflow-x: hidden;
   scroll-snap-points-x: repeat(100%);
   scroll-snap-type: mandatory;
+  // background: lime;
+
+  @media (max-height: 500px) {
+    height: 100vh;
+  }
 
   @media (max-width: 320px) {
     height: 100vh;
   }
 
   @media (min-height: 750px) {
-    height: 60vh;
+    height: 70vh;
   }
 
   @media (min-height: 1000px) {
-    height: 50vh;
+    height: 60vh;
   }
 
   @media (min-width: 900px) {
@@ -147,7 +177,10 @@ export default class TestimonialSection extends Component {
   };
 
   shouldComponentUpdate = (nextProps, nextState) => {
-    if (nextState.scrollLeftPos === this.state.scrollLeftPos) {
+    if (
+      nextState.scrollLeftPos === this.state.scrollLeftPos &&
+      nextState.showSlider === this.state.showSlider
+    ) {
       return false;
     }
     return true;
