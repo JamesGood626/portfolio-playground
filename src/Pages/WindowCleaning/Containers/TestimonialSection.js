@@ -8,41 +8,23 @@ import { ScrollToPlugin } from "gsap/src/uncompressed/plugins/ScrollToPlugin";
 import "../Styles/main.css";
 import { FlexColJCAICenterSection } from "../../../LayoutStyledComponents";
 
-const Section = FlexColJCAICenterSection.extend`
-  background: #fcfcfc;
-  // background: blue;
-
-  // @media (max-height: 500px) {
-  //   height: 160vh;
-  //   justify-content: space-around;
-  // }
-`;
-
 // TODO:
 // fix overscroll on right circle
+
+const Section = FlexColJCAICenterSection.extend`
+  background: #fcfcfc;
+`;
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  height: 80vh;
+  height: 50vh;
+  min-height: 33rem;
   width: 100vw;
-  overflow: visible;
-  // background: orange;
-
-  @media (max-height: 500px) {
-    height: 100vh;
-  }
+  // overflow: visible;
 
   @media (max-width: 320px) {
     height: 100vh;
-  }
-
-  @media (min-height: 750px) {
-    height: 70vh;
-  }
-
-  @media (min-height: 1000px) {
-    height: 60vh;
   }
 
   @media (min-width: 900px) {
@@ -56,27 +38,16 @@ const Slider = styled.div`
   position: relative;
   display: flex;
   width: 100vw;
-  height: 80vh;
+  height: 50vh;
+  min-height: 32rem;
+
   // horizontal scrolling is disabled without overflow-x
   overflow-x: hidden;
   scroll-snap-points-x: repeat(100%);
   scroll-snap-type: mandatory;
-  // background: lime;
-
-  @media (max-height: 500px) {
-    height: 100vh;
-  }
 
   @media (max-width: 320px) {
     height: 100vh;
-  }
-
-  @media (min-height: 750px) {
-    height: 70vh;
-  }
-
-  @media (min-height: 1000px) {
-    height: 60vh;
   }
 
   @media (min-width: 900px) {
@@ -138,6 +109,8 @@ const TestimonialSliderIndicationDiv = styled.div`
 `;
 
 const SmallCircle = styled.div`
+  position: relative;
+  z-index: 100;
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
