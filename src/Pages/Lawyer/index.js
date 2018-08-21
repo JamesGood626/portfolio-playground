@@ -1,12 +1,36 @@
 import React from "react";
-import Header from "./Containers/Header";
-import ServiceSection from "./Containers/ServiceSection";
-import { OfferSection } from "./Components/OfferSection";
-import ValuePropSection from "./Containers/ValuePropSection";
-import TestimonialSection from "./Containers/TestimonialSection";
-import { BlogPostSection } from "./Components/BlogPostSection";
-import { ContactSection } from "./Components/ContactSection";
-import { Footer } from "./Components/Footer";
+import { ThemeProvider } from "styled-components";
+import { Main } from "./Main";
+
+const theme = {
+  mainFont: "balboa-plus-fill, sans-serif",
+  secondaryFont: "questa-grande, serif",
+  primaryColor: "#6F0B0B",
+  blackColor: "#292929",
+  whiteColor: "#F2F2F2",
+  navLinkFontSize: "0.8rem",
+  navLinkFontSize600W: "1.2rem",
+  buttonFontSize: "1rem",
+  buttonFontSize600W: "1.4rem",
+  headerFontSize: "1.6rem",
+  headerFontSize500W: "2rem",
+  headerFontSize768W: "3rem",
+  headerFontSize1024W: "5rem",
+  //serviceDropDownFontSize: "1.4rem",
+  //serviceDropDownFontSize600W: "1.8rem",
+  //serviceHeaderFontSize: "1.8rem",
+  //serviceHeaderFontSize752W: "2.4rem",
+  //testimonialHeaderFontSize752W: "2.4rem",
+  //testimonialHeaderFontSize: "1.8rem",
+  //testimonialCircleHeaderFontSize752W: "1.8rem",
+  //testimonialCircleHeaderFontSize: "1.4rem",
+  paraFontSize: "1rem",
+  paraFontSize752W: "1.2rem",
+  headerLineHeight: "2.4rem",
+  headerLetterSpacing: "0.2rem",
+  paraLineHeight: "1.8rem",
+  paraLetterSpacing: "0.1rem"
+};
 
 // What are the trade offs of using this index.js LawyerPage as a functional component
 // instead of a stateful one that would manage the page scroll and trigger animations
@@ -22,17 +46,8 @@ import { Footer } from "./Components/Footer";
 // minimal animations on scroll
 export const LawyerPage = () => {
   return (
-    <div>
-      <Header />
-      <main>
-        <ServiceSection />
-        <OfferSection />
-        <ValuePropSection />
-        <TestimonialSection />
-        <BlogPostSection />
-        <ContactSection />
-        <Footer />
-      </main>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Main />
+    </ThemeProvider>
   );
 };

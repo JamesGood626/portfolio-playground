@@ -6,3 +6,6 @@ import registerServiceWorker from "./registerServiceWorker";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();
+
+// For the ABC Isometric Computer
+// <a href="https://www.freepik.com/free-vector/isometric-view-of-modern-office-desk_2787383.htm">Designed by Freepik</a>

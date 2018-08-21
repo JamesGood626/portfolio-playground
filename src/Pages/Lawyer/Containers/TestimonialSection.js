@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import Media from "react-media";
 import styled from "styled-components";
+// import { Carousel } from "react-responsive-carousel";
+// import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 import {
   FlexJCCenterAIStartSection,
   FlexJCAICenterDiv,
@@ -34,6 +36,13 @@ const TestimonialCardContainerDiv = FlexJCAICenterDiv.extend`
   width: 100%;
   margin-top: 4vh;
   background: blue;
+`;
+
+const CardContainer = styled.div`
+  // position: absolute;
+  // left: 35vw;
+  width: 21rem;
+  height: 100%;
 `;
 
 const TestimonialCard = FlexColJCAICenterDiv.extend`
@@ -134,25 +143,85 @@ export default class TestimonialSection extends Component {
   };
 
   render() {
+    const divStyle = {
+      width: "60vw",
+      height: "80vh",
+      paddingRight: "0"
+    };
+    const divStyleTwo = { width: "21rem" };
     return (
       <TestimonialContainerSection>
         <TestimonialInnerContainerDiv>
           <h2>What Our Clients Are Saying</h2>
-          <TestimonialCardContainerDiv>
-            <Media query="(min-width: 900px)">
-              {matches =>
-                matches ? renderThreeCards() : renderCardCarousel(1)}
-            </Media>
-          </TestimonialCardContainerDiv>
+          <div style={divStyleTwo} className="carousel-cell">
+            <CardContainer className="cardContainer">
+              <TestimonialCardContentContainerDiv>
+                <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+                <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur dignissim, felis porttitor viverra imperdiet, turpis
+                  sem sodales ligula, ut mattis massa sem et diam.
+                </p>
+              </TestimonialCardContentContainerDiv>
+            </CardContainer>
+          </div>
+          <div style={divStyleTwo} className="carousel-cell">
+            <CardContainer className="cardContainer">
+              <TestimonialCardContentContainerDiv>
+                <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+                <TestimonialCardHeader>Hank Murphey</TestimonialCardHeader>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur dignissim, felis porttitor viverra imperdiet, turpis
+                  sem sodales ligula, ut mattis massa sem et diam.
+                </p>
+              </TestimonialCardContentContainerDiv>
+            </CardContainer>
+          </div>
+          <div style={divStyleTwo} className="carousel-cell">
+            <CardContainer className="cardContainer">
+              <TestimonialCardContentContainerDiv>
+                <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+                <TestimonialCardHeader>Yolanda Simon</TestimonialCardHeader>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur dignissim, felis porttitor viverra imperdiet, turpis
+                  sem sodales ligula, ut mattis massa sem et diam.
+                </p>
+              </TestimonialCardContentContainerDiv>
+            </CardContainer>
+          </div>
         </TestimonialInnerContainerDiv>
       </TestimonialContainerSection>
     );
   }
 }
 
+{
+  /* <Media query="(min-width: 900px)">
+  {matches =>
+    matches ? renderThreeCards() : renderCardCarousel(1)}
+</Media> */
+}
+
+{
+  /* <div className="carousel">
+  <div style={divStyle} className="carousel-cell">
+    Card One
+  </div>
+  <div style={divStyle} className="carousel-cell">
+    Card Two
+  </div>
+  <div style={divStyle} className="carousel-cell">
+    Card Three
+  </div>
+</div> */
+}
+
 /*******************************
-*** Testimonial Prop Section ***
-*******************************/
+ *** Testimonial Prop Section ***
+ *******************************/
 
 // /*  Switch to one card here. */
 // @media (max-width: 900px) {

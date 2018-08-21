@@ -8,11 +8,13 @@ import headerImage1366W from "../images/1366W-header-img.png";
 import headerImage1600W from "../images/1600W-header-img.png";
 // import headerImage1920W from "../images/1920W-header-img.png";
 
-// const Image = styled.img`
-//   height: 100vh;
-//   width: 100%;
-//   object-fit: cover;
-// `;
+const Image = styled.img`
+  @media (max-width: 610px) {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+`;
 
 const ImageOverlay = styled.div`
   position: relative;
@@ -30,14 +32,14 @@ const ImageOverlay = styled.div`
     left: 0;
     width: 100vw;
     opacity: 0.7;
-    background: #fffffa;
+    background: #292929;
   }
 `;
 
 export const HeaderBackground = ({ children }) => {
   return (
-    <ImageOverlay class="header-img-overlay">
-      <img
+    <ImageOverlay className="header-img-overlay">
+      <Image
         id="header-image"
         src={`${headerImage640W}`}
         srcSet={`

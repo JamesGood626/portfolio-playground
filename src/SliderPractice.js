@@ -1,211 +1,109 @@
-import React, { Component } from "react";
-//import styled from "styled-components";
-import "./Pages/WindowCleaning/Styles/main.css";
-
-// const Container = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   height: 100vh;
-//   width: 100vw;
-//   overflow: hidden;
-// `;
-
-// const Slider = styled.div`
-//   width: 80vw;
-//   height: 60vh;
-//   display: flex;
-//   overflow-x: auto;
-//   -webkit-overflow-scrolling: touch;
-
-//   -webkit-scroll-snap-points-x: repeat(80vw);
-//   -ms-scroll-snap-points-x: repeat(80vw);
-//   scroll-snap-points-x: repeat(80vw);
-//   -webkit-scroll-snap-type: mandatory;
-//   -ms-scroll-snap-type: mandatory;
-//   scroll-snap-type: mandatory;
-// `;
-
-// const Slide = styled.div`
-//   width: 80vw;
-//   flex-shrink: 0;
-//   height: 100%;
-//   scroll-behavior: smooth;
-// `;
-
-// const TestimonialCircleHeader = styled.h3`
-//   margin: 1rem 0;
-//   line-height: ${props => props.theme.headerLineHeight}
-//   letter-spacing: ${props => props.theme.headerLetterSpacing}
-//   color: ${props => props.theme.paraColor}
-//   font-size: ${props => props.theme.testimonialCircleHeaderFontSize};
-//   font-family: ${props => props.theme.mainFont};
-
-//   @media (min-width: 752px) {
-//     font-size: ${props => props.theme.testimonialCircleHeaderFontSize752W};
-//   }
-// `;
-
-// const TestimonialCirclePara = styled.p`
-//   width: 68%;
-//   text-align: center;
-//   color: ${props => props.theme.paraColor}
-//   line-height: ${props => props.theme.paraLineHeight}
-//   letter-spacing: ${props => props.theme.paraLetterSpacing}
-//   font-size: ${props => props.theme.paraFontSize};
-//   font-family: ${props => props.theme.mainFont};
-
-//   @media (min-width: 752px) {
-//     font-size: ${props => props.theme.paraFontSize752W}
-//   }
-// `;
+// import React, { Component } from "react";
+// //import styled from "styled-components";
+// import "./Pages/WindowCleaning/Styles/main.css";
+// import Flickity from "flickity";
 
 // export default class SliderPractice extends Component {
-// handleClick = e => {
-//   console.log("preventing default");
-//   e.preventDefault();
-// };
+//   componentDidMount = () => {
+//     new Flickity(".carousel", {
+//       // options, defaults listed
+
+//       accessibility: true,
+//       // enable keyboard navigation, pressing left & right keys
+
+//       adaptiveHeight: false,
+//       // set carousel height to the selected slide
+
+//       autoPlay: false,
+//       // advances to the next cell
+//       // if true, default is 3 seconds
+//       // or set time between advances in milliseconds
+//       // i.e. `autoPlay: 1000` will advance every 1 second
+
+//       cellAlign: "center",
+//       // alignment of cells, 'center', 'left', or 'right'
+//       // or a decimal 0-1, 0 is beginning (left) of container, 1 is end (right)
+
+//       cellSelector: undefined,
+//       // specify selector for cell elements
+
+//       contain: false,
+//       // will contain cells to container
+//       // so no excess scroll at beginning or end
+//       // has no effect if wrapAround is enabled
+
+//       draggable: ">1",
+//       // enables dragging & flicking
+//       // if at least 2 cells
+
+//       dragThreshold: 3,
+//       // number of pixels a user must scroll horizontally to start dragging
+//       // increase to allow more room for vertical scroll for touch devices
+
+//       freeScroll: false,
+//       // enables content to be freely scrolled and flicked
+//       // without aligning cells
+
+//       friction: 0.2,
+//       // smaller number = easier to flick farther
+
+//       groupCells: false,
+//       // group cells together in slides
+
+//       initialIndex: 0,
+//       // zero-based index of the initial selected cell
+
+//       lazyLoad: true,
+//       // enable lazy-loading images
+//       // set img data-flickity-lazyload="src.jpg"
+//       // set to number to load images adjacent cells
+
+//       percentPosition: true,
+//       // sets positioning in percent values, rather than pixels
+//       // Enable if items have percent widths
+//       // Disable if items have pixel widths, like images
+
+//       prevNextButtons: true,
+//       // creates and enables buttons to click to previous & next cells
+
+//       pageDots: true,
+//       // create and enable page dots
+
+//       resize: true,
+//       // listens to window resize events to adjust size & positions
+
+//       rightToLeft: false,
+//       // enables right-to-left layout
+
+//       setGallerySize: true,
+//       // sets the height of gallery
+//       // disable if gallery already has height set with CSS
+
+//       watchCSS: false,
+//       // watches the content of :after of the element
+//       // activates if #element:after { content: 'flickity' }
+
+//       wrapAround: false
+//       // at end of cells, wraps-around to first for infinite scrolling
+//     });
+//   };
 //   render() {
+//     const divStyle = {
+//       height: "40vh",
+//       width: "100vw"
+//     };
 //     return (
-//       <Container>
-//         <Slider>
-//           <Slide id="rightCirc" className="leftCircle100VW-container">
-//             <div
-//               id="testimonial-circle-left"
-//               className="testimonial-circle"
-//               // onMouseOver={this.leftCircHoverOver}
-//               // onMouseOut={this.leftCircHoverOut}
-//               ref={x => (this.left = x)}
-//               // style={showSlider ? posRelative : null}
-//             >
-//               <TestimonialCircleHeader>Janet Janson</TestimonialCircleHeader>
-//               <TestimonialCirclePara>
-//                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-//                 Curabitur dignissim, felis orttitor viverra imperdiet, turpis
-//                 sem sodales ligula, ut mattis massa sem et diam.
-//               </TestimonialCirclePara>
-//             </div>
-//           </Slide>
-//           <Slide id="midCirc" className="midCircle100VW-container">
-//             <div
-//               id="testimonial-circle-left"
-//               className="testimonial-circle"
-//               // onMouseOver={this.leftCircHoverOver}
-//               // onMouseOut={this.leftCircHoverOut}
-//               ref={x => (this.left = x)}
-//               // style={showSlider ? posRelative : null}
-//             >
-//               <TestimonialCircleHeader>John Hayworthy</TestimonialCircleHeader>
-//               <TestimonialCirclePara>
-//                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-//                 Curabitur dignissim, felis orttitor viverra imperdiet, turpis
-//                 sem sodales ligula, ut mattis massa sem et diam.
-//               </TestimonialCirclePara>
-//             </div>
-//           </Slide>
-//           <Slide id="leftCirc" className="rightCircle100VW-container">
-//             <div
-//               id="testimonial-circle-left"
-//               className="testimonial-circle"
-//               // onMouseOver={this.leftCircHoverOver}
-//               // onMouseOut={this.leftCircHoverOut}
-//               ref={x => (this.left = x)}
-//               // style={showSlider ? posRelative : null}
-//             >
-//               <TestimonialCircleHeader>Buck Gordon</TestimonialCircleHeader>
-//               <TestimonialCirclePara>
-//                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-//                 Curabitur dignissim, felis orttitor viverra imperdiet, turpis
-//                 sem sodales ligula, ut mattis massa sem et diam.
-//               </TestimonialCirclePara>
-//             </div>
-//           </Slide>
-//         </Slider>
-//         <a href="#leftCirc" onClick={this.handleClick}>
-//           Left
-//         </a>
-//         <a href="#midCirc" onClick={this.handleClick}>
-//           Mid
-//         </a>
-//         <a href="#rightCirc" onClick={this.handleClick}>
-//           Right
-//         </a>
-//       </Container>
+//       <div className="carousel">
+//         <div style={divStyle} className="carousel-cell">
+//           Card One
+//         </div>
+//         <div style={divStyle} className="carousel-cell">
+//           Card Two
+//         </div>
+//         <div style={divStyle} className="carousel-cell">
+//           Card Three
+//         </div>
+//       </div>
 //     );
 //   }
 // }
-
-// {
-//   /* <Slider>
-//   <Slide id="slide-1">1</Slide>
-//   <Slide id="slide-2">2</Slide>
-//   <Slide id="slide-3">3</Slide>
-// </Slider> */
-// }
-
-// const Slider = styled.div`
-//   width: 300px;
-//   height: 300px;
-//   display: flex;
-//   overflow-x: auto;
-//   -webkit-overflow-scrolling: touch;
-//   -webkit-scroll-snap-points-x: repeat(300px);
-//   -ms-scroll-snap-points-x: repeat(300px);
-//   scroll-snap-points-x: repeat(300px);
-//   -webkit-scroll-snap-type: mandatory;
-//   -ms-scroll-snap-type: mandatory;
-//   scroll-snap-type: mandatory;
-// `;
-
-// const Slide = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   font-size: 2rem;
-//   color: #fcfcfc;
-//   width: 300px;
-//   flex-shrink: 0;
-//   height: 100%;
-//   background: #e04;
-// `;
-
-export default class SliderPractice extends Component {
-  handleClick = e => {
-    console.log("preventing default");
-    e.preventDefault();
-  };
-  render() {
-    return (
-      <div class="slide-wrap">
-        <a href="#slide-1">1</a>
-        <a href="#slide-2">2</a>
-        <a href="#slide-3" onClick={this.handleClick}>
-          3
-        </a>
-        <a href="#slide-4" onClick={this.handleClick}>
-          4
-        </a>
-        <a href="#slide-5" onClick={this.handleClick}>
-          5
-        </a>
-
-        <div class="slider">
-          <div class="slide" id="slide-1">
-            1
-          </div>
-          <div class="slide" id="slide-2">
-            2
-          </div>
-          <div class="slide" id="slide-3">
-            3
-          </div>
-          <div class="slide" id="slide-4">
-            4
-          </div>
-          <div class="slide" id="slide-5">
-            5
-          </div>
-        </div>
-      </div>
-    );
-  }
-}

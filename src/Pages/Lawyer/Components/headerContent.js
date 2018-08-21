@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import { FlexColJCFlexStartAICenterDiv } from "../../../LayoutStyledComponents";
 import { CTAButton } from "./CTAButton";
 
@@ -19,45 +19,45 @@ const HeadlineText = styled.h1`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 2.2rem;
+  font-family: ${props => props.theme.mainFont};
+  font-size: ${props => props.theme.headerFontSize};
   margin-bottom: 6vh;
-  color: #fcfcfc;
+  color: ${props => props.theme.whiteColor};
+
+  @media (min-width: 500px) {
+    font-size: ${props => props.theme.headerFontSize500W};
+  }
+  @media (min-width: 768px) {
+    font-size: ${props => props.theme.headerFontSize768W};
+  }
+  @media (min-width: 1024px) {
+    font-size: ${props => props.theme.headerFontSize1024W};
+  }
 `;
 
+// Example of using theme props
 // const ContactText = styled.div`
 //   height: 5rem;
-//   margin-top: 0.6rem;
+//   margin-top: 1.2rem;
+//   margin-bottom: 0;
 //   text-align: center;
+//   font-family: ${props => props.theme.mainFont};
+//   font-size: ${props => props.theme.paraFontSize};
 //   color: #fcfcfc;
-// `;
 
-const theme = {
-  main: "lime"
-};
-
-// flexColJCAICenter: {
-//     display: "flex",
-//     "flex-direction": "column",
-//     "justify-content": "center",
-//     "align-items": "center",
-//     background: "orange"
+//   @media (min-width: 670px) {
+//     margin-top: -1.1rem;
 //   }
-// ${props => props.theme.flexColJCAICenter};
-
-// const ContactNumber = styled.p`
-//   margin-top: 1.4rem;
 // `;
 
 export const HeaderContent = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <ContentContainer>
-        <HeadlineText>
-          <span>You Want Excellent Litigation</span>
-          <span>We'll Provide It</span>
-        </HeadlineText>
-        <CTAButton>Let's Talk</CTAButton>
-      </ContentContainer>
-    </ThemeProvider>
+    <ContentContainer>
+      <HeadlineText>
+        <span>You Want Excellent Litigation</span>
+        <span>We'll Provide It</span>
+      </HeadlineText>
+      <CTAButton>Let's Talk</CTAButton>
+    </ContentContainer>
   );
 };
