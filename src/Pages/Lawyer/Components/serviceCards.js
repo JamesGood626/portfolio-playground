@@ -28,30 +28,35 @@ const ServiceCard = FlexColJCAICenterDiv.extend`
 `;
 
 const ServiceCardContentContainerDiv = FlexColAICenterDiv.extend`
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   height: 85%;
   padding: 0;
   width: 85%;
-  background: lime;
 
   & > h3 {
-    font-size: 1.4rem;
+    font-size: ${props => props.theme.serviceCardHeaderFontSize};
   }
 
   & > p {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 0.6rem;
+    font-family: ${props => props.theme.secondaryFont};
+    font-size: ${props => props.theme.paraFontSize};
+    line-height: ${props => props.theme.paraLineHeight};
+    letter-spacing: ${props => props.theme.paraLetterSpacing};
+  }
+
+  @media (min-width: 500px) {
+    & > h3 {
+      font-size: ${props => props.theme.serviceCardHeaderFontSize500W};
+    }
   }
 `;
 
 const ServiceCardIconContainerDiv = styled.div`
   position: relative;
-  height: 120px;
-  width: 120px;
-  border: 2px solid #222;
-  margin-top: 4vh;
+  height: 10rem;
+  width: 10rem;
+  margin-bottom: 0.6rem;
 
   // &:after {
   //   content: "";
@@ -67,6 +72,7 @@ const ServiceCardIconContainerDiv = styled.div`
 
 const ServiceCardHeader = styled.h3`
   position: relative;
+  font-size: ${props => props.theme.serviceCardHeaderFontSize};
 
   &:before {
     content: "";
@@ -87,6 +93,16 @@ const ServiceCardHeader = styled.h3`
     height: 1.5rem;
     border-right: 4px solid #222;
   }
+
+  @media (max-width: 500px) {
+    &:before {
+      top: -20%;
+    }
+
+    &:after {
+      top: -14%;
+    }
+  }
 `;
 
 const renderCards = serviceCardConfig => {
@@ -106,6 +122,20 @@ const renderCards = serviceCardConfig => {
 export const ServiceCards = ({ serviceCardConfig }) => {
   return <Fragment>{renderCards(serviceCardConfig)}</Fragment>;
 };
+
+{
+  /* <svg
+  id="Layer_1"
+  data-name="Layer 1"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 41.01 41.01"
+>
+  <path
+    d="M128 108.91L147.09 128 128 147.09 108.91 128 128 108.91m0-1.42L107.49 128 128 148.51 148.51 128 128 107.49z"
+    transform="translate(-107.49 -107.49)"
+  />
+</svg> */
+}
 
 /* <div class="services-card">
   <div class="services-content-container">

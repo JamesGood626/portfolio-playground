@@ -8,10 +8,6 @@ import {
 import { serviceCardConfig } from "../Config/serviceCardConfig";
 
 const ServicesSectionContainer = FlexColJCFlexStartAICenterSection.extend`
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-start;
-  // align-items: center;
   margin-bottom: 0;
   height: 100%;
   width: 100vw;
@@ -26,7 +22,14 @@ const ServicesInnerContainerDiv = styled.div`
   text-align: center;
 
   & > h2 {
-    font-size: 2rem;
+    font-family: ${props => props.theme.mainFont};
+    font-size: ${props => props.theme.serviceHeaderFontSize};
+  }
+
+  @media (min-width: 500px) {
+    & > h2 {
+      font-size: ${props => props.theme.serviceHeaderFontSize500W};
+    }
   }
 `;
 
@@ -52,8 +55,8 @@ export default class ServiceSection extends Component {
 }
 
 /*************************
-**** Services Section ****
-*************************/
+ **** Services Section ****
+ *************************/
 // .services-card-container {
 //   display: flex;
 //   flex-wrap: wrap;

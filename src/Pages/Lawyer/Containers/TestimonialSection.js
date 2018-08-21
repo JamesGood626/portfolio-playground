@@ -73,7 +73,7 @@ const TestimonialIconContainerDiv = styled.div`
   border: 2px solid #222;
 `;
 
-const TestimonialCardHeader = styled.h3`
+const TestimonialCardHeader = styled.h2`
   position: relative;
 
   &:before {

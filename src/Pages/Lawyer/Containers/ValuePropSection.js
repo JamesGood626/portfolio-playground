@@ -30,13 +30,18 @@ const ValuePropCardContainerDiv = FlexColJCSpaceAroundAICenterDiv.extend`
   & > h2 {
     width: 90%;
     margin-top: 6vh;
-    font-size: 2rem;
+    font-family: ${props => props.theme.mainFont};
+    font-size: ${props => props.theme.valuePropHeaderFontSize};
     text-align: center;
   }
 
   & > p {
     width: 90%;
     margin-top: 2vh;
+    font-family: ${props => props.theme.secondaryFont};
+    font-size: ${props => props.theme.paraFontSize};
+    line-height: ${props => props.theme.paraLineHeight};
+    letter-spacing: ${props => props.theme.paraLetterSpacing};
   }
 
   & > button {
@@ -44,6 +49,12 @@ const ValuePropCardContainerDiv = FlexColJCSpaceAroundAICenterDiv.extend`
     margin-bottom: 4vh;
     color: #222;
     border: 2px solid #222;
+  }
+
+  @media (min-width: 500px) {
+    & > h2 {
+      font-size: ${props => props.theme.valuePropHeaderFontSize500W};
+    }
   }
 
   @media (min-width: 768px) {
@@ -73,7 +84,9 @@ export default class ValuePropSection extends Component {
         <ValuePropCardContainerDiv>
           <h2>{valuePropConfig.header}</h2>
           <p>{valuePropConfig.paragraph}</p>
-          <CTAButton>{valuePropConfig.buttonText}</CTAButton>
+          <CTAButton changeBorderOnHover={true}>
+            {valuePropConfig.buttonText}
+          </CTAButton>
         </ValuePropCardContainerDiv>
       </ValuePropContainerSection>
     );
@@ -81,8 +94,8 @@ export default class ValuePropSection extends Component {
 }
 
 /*************************
-*** Value Prop Section ***
-*************************/
+ *** Value Prop Section ***
+ *************************/
 
 /* This could have potentially been easier */
 /* If I wrap the h3, p, and button, inside of */

@@ -16,10 +16,14 @@ const theme = {
   headerFontSize500W: "2rem",
   headerFontSize768W: "3rem",
   headerFontSize1024W: "5rem",
-  //serviceDropDownFontSize: "1.4rem",
-  //serviceDropDownFontSize600W: "1.8rem",
-  //serviceHeaderFontSize: "1.8rem",
-  //serviceHeaderFontSize752W: "2.4rem",
+  serviceHeaderFontSize: "1.4rem",
+  serviceHeaderFontSize500W: "2.4rem",
+  serviceCardHeaderFontSize: "1rem",
+  serviceCardHeaderFontSize500W: "1.4rem",
+  offerHeaderFontSize: "1.4rem",
+  offerHeaderFontSize500W: "2.4rem",
+  valuePropHeaderFontSize: "1.4rem",
+  valuePropHeaderFontSize500W: "2.4rem",
   //testimonialHeaderFontSize752W: "2.4rem",
   //testimonialHeaderFontSize: "1.8rem",
   //testimonialCircleHeaderFontSize752W: "1.8rem",
@@ -28,7 +32,7 @@ const theme = {
   paraFontSize752W: "1.2rem",
   headerLineHeight: "2.4rem",
   headerLetterSpacing: "0.2rem",
-  paraLineHeight: "1.8rem",
+  paraLineHeight: "1.6rem",
   paraLetterSpacing: "0.1rem"
 };
 

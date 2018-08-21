@@ -26,9 +26,14 @@ const OfferInnerContainerDiv = FlexColJCSpaceBetweenAICenterDiv.extend`
 
   & > h2 {
     text-align: center;
-    margin-top: -4vh;
-    margin-bottom: 2vh;
-    font-size: 2rem;
+    margin-top: -3vh;
+    margin-bottom: 4vh;
+    font-family: ${props => props.theme.mainFont};
+    font-size: ${props => props.theme.offerHeaderFontSize};
+
+    @media (min-width: 500px) {
+      font-size: ${props => props.theme.offerHeaderFontSize500W};
+    }
   }
 
   & > button {
@@ -44,7 +49,7 @@ export const OfferSection = () => {
           All lawyers think alike. But not all lawyers are great. See what makes
           the difference.
         </h2>
-        <CTAButton>Download</CTAButton>
+        <CTAButton alternateHoverColor={true}>Download</CTAButton>
       </OfferInnerContainerDiv>
     </OfferContainerSection>
   );
