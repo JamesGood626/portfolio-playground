@@ -11,7 +11,6 @@ const Button = styled.button`
   color: ${props => props.theme.whiteColor};
   background: transparent;
   border: 2px solid ${props => props.theme.whiteColor};
-  overflow: hidden;
   box-shadow: inset 0 0 0 0 ${props => props.theme.primaryColor};
   transition: 0.2s ease-out;
 

@@ -31,7 +31,7 @@ const ValuePropCardContainerDiv = FlexColJCSpaceAroundAICenterDiv.extend`
     width: 90%;
     margin-top: 6vh;
     font-family: ${props => props.theme.mainFont};
-    font-size: ${props => props.theme.valuePropHeaderFontSize};
+    font-size: ${props => props.theme.headerLevelTwoFontSize};
     text-align: center;
   }
 
@@ -53,7 +53,7 @@ const ValuePropCardContainerDiv = FlexColJCSpaceAroundAICenterDiv.extend`
 
   @media (min-width: 500px) {
     & > h2 {
-      font-size: ${props => props.theme.valuePropHeaderFontSize500W};
+      font-size: ${props => props.theme.headerLevelTwoFontSize500W};
     }
   }
 

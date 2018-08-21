@@ -1,6 +1,6 @@
 import React from "react";
 // import styled from "styled-components";
-import { BlogPostCard } from "./BlogPostCard";
+import { BlogPostCards } from "./BlogPostCard";
 import { FlexCol } from "../../../LayoutStyledComponents";
 
 const BlogPostContainerSection = FlexCol.extend`
@@ -14,14 +14,21 @@ const BlogPostInnerContainerDiv = FlexCol.extend`
   margin-top: 10vh;
 
   & > h2 {
-    font-size: 2rem;
+    font-family: ${props => props.theme.mainFont};
+    font-size: ${props => props.theme.headerLevelTwoFontSize};
+  }
+
+  @media (min-width: 500px) {
+    & > h2 {
+      font-size: ${props => props.theme.headerLevelTwoFontSize500W};
+    }
   }
 `;
 
 const BlogPostCardContainerDiv = FlexCol.extend`
   height: auto;
   width: 100%;
-  margin-top: 4vh;
+  margin-top: 8vh;
 `;
 
 export const BlogPostSection = () => {
@@ -30,7 +37,7 @@ export const BlogPostSection = () => {
       <BlogPostInnerContainerDiv>
         <h2>Recent Posts</h2>
         <BlogPostCardContainerDiv>
-          <BlogPostCard />
+          <BlogPostCards />
         </BlogPostCardContainerDiv>
       </BlogPostInnerContainerDiv>
     </BlogPostContainerSection>

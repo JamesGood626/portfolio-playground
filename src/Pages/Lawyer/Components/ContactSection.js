@@ -21,11 +21,21 @@ const ContactContainerInnerDiv = FlexColJCStartAICenterDiv.extend`
 
   & > h2 {
     margin-top: 4vh;
-    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    font-family: ${props => props.theme.mainFont};
+    font-size: ${props => props.theme.headerLevelTwoFontSize};
   }
 
   & > p {
     text-align: center;
+    font-family: ${props => props.theme.secondaryFont};
+    font-size: ${props => props.theme.paraFontSize};
+  }
+
+  @media (min-width: 500px) {
+    & > h2 {
+      font-size: ${props => props.theme.headerLevelTwoFontSize500VW};
+    }
   }
 `;
 
@@ -109,7 +119,7 @@ export const ContactSection = () => {
             name="textarea"
             placeholder="How Can We Help You?"
           />
-          <SubmitButton>Submit</SubmitButton>
+          <SubmitButton changeBorderOnHover={true}>Submit</SubmitButton>
         </StyledForm>
       </ContactContainerInnerDiv>
     </ContactContainerSection>
@@ -119,8 +129,8 @@ export const ContactSection = () => {
 // </ContactFormInputSpan>
 
 /*******************************
-******* Contact Section ********
-*******************************/
+ ******* Contact Section ********
+ *******************************/
 // /* Specifically targeting iPhone4 */
 // @media (max-height: 480px) {
 //     .layout-contact-container {

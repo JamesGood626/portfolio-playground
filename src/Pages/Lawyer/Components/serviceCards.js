@@ -33,7 +33,7 @@ const ServiceCardContentContainerDiv = FlexColAICenterDiv.extend`
   width: 85%;
 
   & > h3 {
-    font-size: ${props => props.theme.serviceCardHeaderFontSize};
+    font-size: ${props => props.theme.cardHeaderFontSize};
   }
 
   & > p {
@@ -47,7 +47,7 @@ const ServiceCardContentContainerDiv = FlexColAICenterDiv.extend`
 
   @media (min-width: 500px) {
     & > h3 {
-      font-size: ${props => props.theme.serviceCardHeaderFontSize500W};
+      font-size: ${props => props.theme.cardHeaderFontSize500W};
     }
   }
 `;

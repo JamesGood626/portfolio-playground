@@ -29,10 +29,10 @@ const OfferInnerContainerDiv = FlexColJCSpaceBetweenAICenterDiv.extend`
     margin-top: -3vh;
     margin-bottom: 4vh;
     font-family: ${props => props.theme.mainFont};
-    font-size: ${props => props.theme.offerHeaderFontSize};
+    font-size: ${props => props.theme.headerLevelTwoFontSize};
 
     @media (min-width: 500px) {
-      font-size: ${props => props.theme.offerHeaderFontSize500W};
+      font-size: ${props => props.theme.headerLevelTwoFontSize500W};
     }
   }
 

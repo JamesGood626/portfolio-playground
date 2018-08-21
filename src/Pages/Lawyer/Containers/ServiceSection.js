@@ -23,12 +23,12 @@ const ServicesInnerContainerDiv = styled.div`
 
   & > h2 {
     font-family: ${props => props.theme.mainFont};
-    font-size: ${props => props.theme.serviceHeaderFontSize};
+    font-size: ${props => props.theme.headerLevelTwoFontSize};
   }
 
   @media (min-width: 500px) {
     & > h2 {
-      font-size: ${props => props.theme.serviceHeaderFontSize500W};
+      font-size: ${props => props.theme.headerLevelTwoFontSize500W};
     }
   }
 `;

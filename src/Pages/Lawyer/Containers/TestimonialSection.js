@@ -26,8 +26,15 @@ const TestimonialInnerContainerDiv = FlexColJCAICenterDiv.extend`
   margin-bottom: 10vh;
   background: orange;
   & > h2 {
-    font-size: 2rem;
+    font-family: ${props => props.theme.mainFont};
+    font-size: ${props => props.theme.headerLevelTwoFontSize};
     margin-top: 10vh;
+  }
+
+  @media (min-width: 500px) {
+    & > h2 {
+      font-size: ${props => props.theme.headerLevelTwoFontSize500W};
+    }
   }
 `;
 
@@ -43,6 +50,7 @@ const CardContainer = styled.div`
   // left: 35vw;
   width: 21rem;
   height: 100%;
+  margin: 0;
 `;
 
 const TestimonialCard = FlexColJCAICenterDiv.extend`
@@ -50,7 +58,7 @@ const TestimonialCard = FlexColJCAICenterDiv.extend`
   min-height: 300px;
   max-height: 420px;
   width: 220px;
-  margin: 0 0.4rem;
+  // margin: 0 0.4rem;
   box-shadow: 0px 4px 30px -4px #555;
   background: #fcfcfc;
 
@@ -60,9 +68,9 @@ const TestimonialCard = FlexColJCAICenterDiv.extend`
 `;
 
 const TestimonialCardContentContainerDiv = FlexColAICenterDiv.extend`
+  width: 85%;
   height: 85%;
   padding: 0;
-  width: 85%;
   background: lime;
 `;
 
@@ -73,8 +81,9 @@ const TestimonialIconContainerDiv = styled.div`
   border: 2px solid #222;
 `;
 
-const TestimonialCardHeader = styled.h2`
+const TestimonialCardHeader = styled.h3`
   position: relative;
+  font-size: ${props => props.theme.cardHeaderFontSize};
 
   &:before {
     content: "";
@@ -94,6 +103,10 @@ const TestimonialCardHeader = styled.h2`
     right: -0.9rem;
     height: 1.5rem;
     border-right: 4px solid #222;
+  }
+
+  @media (min-width: 500px) {
+    font-size: ${props => props.theme.cardHeaderFontSize500W};
   }
 `;
 
@@ -148,12 +161,12 @@ export default class TestimonialSection extends Component {
       height: "80vh",
       paddingRight: "0"
     };
-    const divStyleTwo = { width: "21rem" };
+    // const divStyleTwo = { width: "21rem" };
     return (
       <TestimonialContainerSection>
         <TestimonialInnerContainerDiv>
           <h2>What Our Clients Are Saying</h2>
-          <div style={divStyleTwo} className="carousel-cell">
+          <TestimonialCardContainerDiv>
             <CardContainer className="cardContainer">
               <TestimonialCardContentContainerDiv>
                 <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
@@ -165,8 +178,6 @@ export default class TestimonialSection extends Component {
                 </p>
               </TestimonialCardContentContainerDiv>
             </CardContainer>
-          </div>
-          <div style={divStyleTwo} className="carousel-cell">
             <CardContainer className="cardContainer">
               <TestimonialCardContentContainerDiv>
                 <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
@@ -178,8 +189,6 @@ export default class TestimonialSection extends Component {
                 </p>
               </TestimonialCardContentContainerDiv>
             </CardContainer>
-          </div>
-          <div style={divStyleTwo} className="carousel-cell">
             <CardContainer className="cardContainer">
               <TestimonialCardContentContainerDiv>
                 <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
@@ -191,7 +200,7 @@ export default class TestimonialSection extends Component {
                 </p>
               </TestimonialCardContentContainerDiv>
             </CardContainer>
-          </div>
+          </TestimonialCardContainerDiv>
         </TestimonialInnerContainerDiv>
       </TestimonialContainerSection>
     );

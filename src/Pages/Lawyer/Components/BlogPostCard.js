@@ -26,7 +26,7 @@ const BlogPostCardContainerDiv = FlexColAICenterDiv.extend`
   @media (min-width: 768px) {
     flex-direction: row;
     position: relative;
-    margin-bottom: 55vh;
+    margin-bottom: 30vh;
   }
 `;
 
@@ -34,11 +34,25 @@ const BlogPostInfoTextContainerDiv = FlexColAICenterDiv.extend`
   padding: 0;
   margin-top: 0;
   padding-top: 1.4vh;
+  padding-bottom: 1.4vh;
   background: #fcfcfc;
   // This was commented out below so may not be needed.
   // margin: 1.4vh 0;
   & > h3 {
+    font-family: ${props => props.theme.mainFont};
+    font-size: ${props => props.theme.cardHeaderFontSize};
     margin: 1.4vh 0;
+  }
+
+  & > p {
+    font-family: ${props => props.theme.secondaryFont};
+    font-size: ${props => props.theme.paraFontSize};
+  }
+
+  @media (min-width: 500px) {
+    & > h3 {
+      font-size: ${props => props.theme.cardHeaderFontSize500W};
+    }
   }
 
   @media (min-width: 768px) {
@@ -115,31 +129,37 @@ const Image = styled.img`
 
 /**********************************/
 const BlogPostInfoTextLeftContainerDiv = BlogPostInfoTextContainerDiv.extend`
-  @media (min-width: 768px) {
-    position: absolute;
-    top: 25%;
-    left: 13%;
+  & > p {
+    width: 80%;
+    line-height: ${props => props.theme.paraLineHeight};
+    letter-spacing: ${props => props.theme.paraLetterSpacing};
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 32%;
     left: 20%;
   }
 `;
 
 // Gonna have to play around with these left values once I have the image in.
 const BlogPostInfoTextRightContainerDiv = BlogPostInfoTextContainerDiv.extend`
-  @media (min-width: 768px) {
-    position: absolute;
-    top: -25%;
-    left: -8.5%;
+  & > p {
+    width: 80%;
+    line-height: ${props => props.theme.paraLineHeight};
+    letter-spacing: ${props => props.theme.paraLetterSpacing};
   }
 
-  @media (min-width: 1024px) {
-    left: -20%;
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 35%;
+    left: -12.5%;
   }
 `;
 
-const BlogPostCardLeftContainerDiv = BlogPostCardContainerDiv.extend``;
+const BlogPostCardLeftContainerDiv = BlogPostCardContainerDiv.extend`
+  align-self: flex-start;
+`;
 
 const BlogPostCardRightContainerDiv = BlogPostCardContainerDiv.extend`
   align-self: flex-end;
@@ -192,7 +212,6 @@ const renderRightCard = (header, content, imgArr) => {
 };
 
 const renderCards = config => {
-  console.log("renderCards RUnning");
   return config.map((post, i) => {
     const iPlusOne = i + 1;
     if (iPlusOne % 2 === 0) {
@@ -207,7 +226,7 @@ const renderCards = config => {
   });
 };
 
-export const BlogPostCard = () => {
+export const BlogPostCards = () => {
   return renderCards(blogPostConfig);
 };
 
