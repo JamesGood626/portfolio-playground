@@ -15,21 +15,27 @@ import {
 
 const TestimonialContainerSection = FlexJCCenterAIStartSection.extend`
   width: 100%;
+  height: 33rem;
+  min-height: 33rem;
   padding: 0;
+  padding-bottom: 2rem;
   color: #fcfcfc;
-  background: maroon;
+  background: ${props => props.theme.primaryColor};
 `;
 
 const TestimonialInnerContainerDiv = FlexColJCAICenterDiv.extend`
   padding: 0;
   width: 90%;
   max-width: 60rem;
+  min-height: 30rem;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
   margin-bottom: 10vh;
-  background: orange;
+  // background: orange;
   & > h2 {
     font-family: ${props => props.theme.mainFont};
     font-size: ${props => props.theme.headerLevelTwoFontSize};
-    margin-top: 10vh;
+    // margin-top: 10vh;
   }
 
   @media (min-width: 500px) {
@@ -41,9 +47,10 @@ const TestimonialInnerContainerDiv = FlexColJCAICenterDiv.extend`
 
 const TestimonialCardContainerDiv = styled.div`
   width: 100%;
-  height: 40vh;
-  margin-top: -0.5rem;
-  // background: blue;
+  height: 20rem;
+  min-height: 20rem;
+  margin-top: -2rem;
+  // background: red;
 `;
 
 const CardContainer = styled.div`
@@ -51,9 +58,10 @@ const CardContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  margin-top: 4.2rem;
-  // Adjust margin bottom of a negative value
-  // to bring dots closer to card.
+  margin-top: 4.4rem;
+  // background: blue;
+  // negative margin-bottom brings dots closer to card.
+  margin-bottom: -3rem;
 `;
 
 const TestimonialCard = FlexColJCAICenterDiv.extend`
