@@ -5,7 +5,9 @@ import {
   FlexColAICenterDiv
 } from "../../../LayoutStyledComponents";
 
-// The style is slightly off somewhere. But I will return!
+// Okay, need to adjust height of cards on the smallest of screen sizes, as the
+// paragraph text is overflowing out of the div. It's really only a problem on
+// screens less than 350px.
 
 const ServiceCard = FlexColJCAICenterDiv.extend`
   // display: flex;
