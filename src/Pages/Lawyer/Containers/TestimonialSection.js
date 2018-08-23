@@ -156,6 +156,16 @@ const TestimonialCardHeader = styled.h3`
     border-right: 4px solid #222;
   }
 
+  @media (max-width: 500px) {
+    &:before {
+      top: -20%;
+    }
+
+    &:after {
+      top: -20%;
+    }
+  }
+
   @media (min-width: 500px) {
     font-size: ${props => props.theme.cardHeaderFontSize500W};
   }
@@ -178,45 +188,50 @@ const SlideButton = styled.button`
   }
 `;
 
-const renderThreeCards = () => {
-  return (
-    <Fragment>
-      <TestimonialCard className="testimonial-card hide-card--one" />
-      <TestimonialCard>
-        <TestimonialCardContentContainerDiv>
-          <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
-          <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            dignissim, felis porttitor viverra imperdiet, turpis sem sodales
-            ligula, ut mattis massa sem et diam.
-          </p>
-        </TestimonialCardContentContainerDiv>
-      </TestimonialCard>
-      <TestimonialCard className="testimonial-card hide-card--two" />
-    </Fragment>
-  );
-};
+const Svg = styled.svg`
+  width: 2rem;
+  height: 2rem;
+`;
 
-const renderCardCarousel = active => {
-  return (
-    <Fragment>
-      <span>"LA"</span>
-      <TestimonialCard>
-        <TestimonialCardContentContainerDiv>
-          <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
-          <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            dignissim, felis porttitor viverra imperdiet, turpis sem sodales
-            ligula, ut mattis massa sem et diam.
-          </p>
-        </TestimonialCardContentContainerDiv>
-      </TestimonialCard>
-      <span>"RA"</span>
-    </Fragment>
-  );
-};
+// const renderThreeCards = () => {
+//   return (
+//     <Fragment>
+//       <TestimonialCard className="testimonial-card hide-card--one" />
+//       <TestimonialCard>
+//         <TestimonialCardContentContainerDiv>
+//           <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+//           <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
+//           <p>
+//             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+//             dignissim, felis porttitor viverra imperdiet, turpis sem sodales
+//             ligula, ut mattis massa sem et diam.
+//           </p>
+//         </TestimonialCardContentContainerDiv>
+//       </TestimonialCard>
+//       <TestimonialCard className="testimonial-card hide-card--two" />
+//     </Fragment>
+//   );
+// };
+
+// const renderCardCarousel = active => {
+//   return (
+//     <Fragment>
+//       <span>"LA"</span>
+//       <TestimonialCard>
+//         <TestimonialCardContentContainerDiv>
+//           <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+//           <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
+//           <p>
+//             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+//             dignissim, felis porttitor viverra imperdiet, turpis sem sodales
+//             ligula, ut mattis massa sem et diam.
+//           </p>
+//         </TestimonialCardContentContainerDiv>
+//       </TestimonialCard>
+//       <span>"RA"</span>
+//     </Fragment>
+//   );
+// };
 
 const TestimonialCard = FlexColJCAICenterDiv.extend`
   // display: flex;
@@ -286,8 +301,11 @@ export default class TestimonialSection extends Component {
             <Carousel
               initialSlideHeight="-200px"
               renderCenterLeftControls={({ previousSlide }) => (
-                <SlideButton onClick={previousSlide}>
-                  <svg
+                <SlideButton
+                  className="leftSliderArrow"
+                  onClick={previousSlide}
+                >
+                  <Svg
                     id="Layer_1"
                     data-name="Layer 1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -298,13 +316,12 @@ export default class TestimonialSection extends Component {
                       d="M38 5.87v39.31L7.83 26 38 5.87M39 4L6 26l33 21V4z"
                       transform="translate(-6 -4)"
                     />
-                  </svg>
+                  </Svg>
                 </SlideButton>
               )}
               renderCenterRightControls={({ nextSlide }) => (
-                <SlideButton>
-                  <svg
-                    onClick={nextSlide}
+                <SlideButton className="rightSliderArrow" onClick={nextSlide}>
+                  <Svg
                     id="Layer_1"
                     data-name="Layer 1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -315,7 +332,7 @@ export default class TestimonialSection extends Component {
                       d="M12 5.82L42.17 25 12 45.13V5.82M11 4v43l33-22L11 4z"
                       transform="translate(-11 -4)"
                     />
-                  </svg>
+                  </Svg>
                 </SlideButton>
               )}
             >

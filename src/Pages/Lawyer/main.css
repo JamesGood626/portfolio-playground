@@ -10,6 +10,16 @@
   background: lime;
 } */
 
+@media (max-width: 500px) {
+  .leftSliderArrow {
+    margin-left: -1rem;
+  }
+
+  .rightSliderArrow {
+    margin-right: -1rem;
+  }
+}
+
 .cls-1 {
   fill: #f2f2f2;
   font-size: 24px;
