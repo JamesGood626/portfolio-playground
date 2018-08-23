@@ -20,6 +20,10 @@ class App extends Component {
             component={asyncComponent(() => import("./Pages/WindowCleaning"))}
           />
           <Route
+            path="/runascroll"
+            component={asyncComponent(() => import("./Pages/RunaScroll"))}
+          />
+          <Route
             path="/sliderpractice"
             component={asyncComponent(() => import("./SliderPractice"))}
           />

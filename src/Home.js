@@ -80,6 +80,9 @@ export const Home = () => {
         <Link to="/windowcleaning">
           <h1 data-text="Window Cleaning Page">Window Cleaning Page</h1>
         </Link>
+        <Link to="/runascroll">
+          <h1 data-text="Runa Scroll">Runa Scroll</h1>
+        </Link>
       </Nav>
     </Container>
   );

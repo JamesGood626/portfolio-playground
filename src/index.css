@@ -24,5 +24,5 @@ body {
   /* I'll just have to programmitically remove this */
   /* in a main page's componentDidMount if I ever want */
   /* To implement a sidescrolling website */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
