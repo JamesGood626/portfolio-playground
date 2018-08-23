@@ -4,7 +4,9 @@
   "private": true,
   "homepage": "https://jamesgood626.github.io/portfolio-playground",
   "dependencies": {
+    "flickity": "^2.1.2",
     "gsap": "^2.0.1",
+    "nuka-carousel": "^4.3.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-media": "^1.8.0",

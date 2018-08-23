@@ -53,6 +53,9 @@ const Nav = styled.nav`
   @media (min-width: 600px) {
     justify-content: space-around;
   }
+
+  & > span:hover {
+  }
 `;
 
 const Link = styled.a`
@@ -86,16 +89,16 @@ export const Menu = () => {
         </svg>
       </SvgContainer>
       <Nav>
-        <span id="active-link" class="nav-link">
+        <span id="about-link" class="nav-link">
           <Link>About</Link>
         </span>
-        <span class="nav-link">
+        <span id="services-link" class="nav-link">
           <Link>Services</Link>
         </span>
-        <span class="nav-link">
+        <span id="clients-link" class="nav-link">
           <Link>Clients</Link>
         </span>
-        <span class="nav-link">
+        <span id="contact-link" class="nav-link">
           <Link>Contact</Link>
         </span>
       </Nav>

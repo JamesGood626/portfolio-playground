@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
-import Media from "react-media";
+// import Media from "react-media";
 import styled from "styled-components";
+import Carousel from "nuka-carousel";
 // import { Carousel } from "react-responsive-carousel";
 // import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 import {
@@ -38,19 +39,21 @@ const TestimonialInnerContainerDiv = FlexColJCAICenterDiv.extend`
   }
 `;
 
-const TestimonialCardContainerDiv = FlexJCAICenterDiv.extend`
-  align-self: center;
+const TestimonialCardContainerDiv = styled.div`
   width: 100%;
-  margin-top: 4vh;
-  background: blue;
+  height: 40vh;
+  margin-top: -0.5rem;
+  // background: blue;
 `;
 
 const CardContainer = styled.div`
-  // position: absolute;
-  // left: 35vw;
-  width: 21rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   height: 100%;
-  margin: 0;
+  margin-top: 4.2rem;
+  // Adjust margin bottom of a negative value
+  // to bring dots closer to card.
 `;
 
 const TestimonialCard = FlexColJCAICenterDiv.extend`
@@ -68,7 +71,7 @@ const TestimonialCard = FlexColJCAICenterDiv.extend`
 `;
 
 const TestimonialCardContentContainerDiv = FlexColAICenterDiv.extend`
-  width: 85%;
+  width: 16rem;
   height: 85%;
   padding: 0;
   background: lime;
@@ -107,6 +110,23 @@ const TestimonialCardHeader = styled.h3`
 
   @media (min-width: 500px) {
     font-size: ${props => props.theme.cardHeaderFontSize500W};
+  }
+`;
+
+const SlideButton = styled.button`
+  width: 2.4rem;
+  height: 2.4rem;
+  background: none;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  & > svg {
+    &:hover {
+      fill: blue;
+    }
   }
 `;
 
@@ -167,39 +187,76 @@ export default class TestimonialSection extends Component {
         <TestimonialInnerContainerDiv>
           <h2>What Our Clients Are Saying</h2>
           <TestimonialCardContainerDiv>
-            <CardContainer className="cardContainer">
-              <TestimonialCardContentContainerDiv>
-                <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
-                <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur dignissim, felis porttitor viverra imperdiet, turpis
-                  sem sodales ligula, ut mattis massa sem et diam.
-                </p>
-              </TestimonialCardContentContainerDiv>
-            </CardContainer>
-            <CardContainer className="cardContainer">
-              <TestimonialCardContentContainerDiv>
-                <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
-                <TestimonialCardHeader>Hank Murphey</TestimonialCardHeader>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur dignissim, felis porttitor viverra imperdiet, turpis
-                  sem sodales ligula, ut mattis massa sem et diam.
-                </p>
-              </TestimonialCardContentContainerDiv>
-            </CardContainer>
-            <CardContainer className="cardContainer">
-              <TestimonialCardContentContainerDiv>
-                <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
-                <TestimonialCardHeader>Yolanda Simon</TestimonialCardHeader>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur dignissim, felis porttitor viverra imperdiet, turpis
-                  sem sodales ligula, ut mattis massa sem et diam.
-                </p>
-              </TestimonialCardContentContainerDiv>
-            </CardContainer>
+            <Carousel
+              initialSlideHeight="-200px"
+              renderCenterLeftControls={({ previousSlide }) => (
+                <SlideButton onClick={previousSlide}>
+                  <svg
+                    id="Layer_1"
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 33 43"
+                  >
+                    <path d="M.92 21.99L32.5.93v41.16L.92 21.99z" />
+                    <path
+                      d="M38 5.87v39.31L7.83 26 38 5.87M39 4L6 26l33 21V4z"
+                      transform="translate(-6 -4)"
+                    />
+                  </svg>
+                </SlideButton>
+              )}
+              renderCenterRightControls={({ nextSlide }) => (
+                <SlideButton>
+                  <svg
+                    onClick={nextSlide}
+                    id="Layer_1"
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 33 43"
+                  >
+                    <path d="M.5.91l31.58 20.1L.5 42.07V.91z" />
+                    <path
+                      d="M12 5.82L42.17 25 12 45.13V5.82M11 4v43l33-22L11 4z"
+                      transform="translate(-11 -4)"
+                    />
+                  </svg>
+                </SlideButton>
+              )}
+            >
+              <CardContainer className="cardContainer">
+                <TestimonialCardContentContainerDiv>
+                  <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+                  <TestimonialCardHeader>Jenn Burke</TestimonialCardHeader>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur dignissim, felis porttitor viverra imperdiet,
+                    turpis sem sodales ligula, ut mattis massa sem et diam.
+                  </p>
+                </TestimonialCardContentContainerDiv>
+              </CardContainer>
+              <CardContainer className="cardContainer">
+                <TestimonialCardContentContainerDiv>
+                  <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+                  <TestimonialCardHeader>Hank Murphey</TestimonialCardHeader>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur dignissim, felis porttitor viverra imperdiet,
+                    turpis sem sodales ligula, ut mattis massa sem et diam.
+                  </p>
+                </TestimonialCardContentContainerDiv>
+              </CardContainer>
+              <CardContainer className="cardContainer">
+                <TestimonialCardContentContainerDiv>
+                  <TestimonialIconContainerDiv>;D</TestimonialIconContainerDiv>
+                  <TestimonialCardHeader>Yolanda Simon</TestimonialCardHeader>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur dignissim, felis porttitor viverra imperdiet,
+                    turpis sem sodales ligula, ut mattis massa sem et diam.
+                  </p>
+                </TestimonialCardContentContainerDiv>
+              </CardContainer>
+            </Carousel>
           </TestimonialCardContainerDiv>
         </TestimonialInnerContainerDiv>
       </TestimonialContainerSection>
