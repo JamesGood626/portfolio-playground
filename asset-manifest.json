@@ -1,14 +1,14 @@
 {
   "main.css": "static/css/main.9eb1a885.css",
   "main.css.map": "static/css/main.9eb1a885.css.map",
-  "main.js": "static/js/main.49fe2070.js",
-  "main.js.map": "static/js/main.49fe2070.js.map",
-  "static/js/0.c54e1272.chunk.js": "static/js/0.c54e1272.chunk.js",
-  "static/js/0.c54e1272.chunk.js.map": "static/js/0.c54e1272.chunk.js.map",
-  "static/js/1.da884a43.chunk.js": "static/js/1.da884a43.chunk.js",
-  "static/js/1.da884a43.chunk.js.map": "static/js/1.da884a43.chunk.js.map",
-  "static/js/2.3a356f63.chunk.js": "static/js/2.3a356f63.chunk.js",
-  "static/js/2.3a356f63.chunk.js.map": "static/js/2.3a356f63.chunk.js.map",
+  "main.js": "static/js/main.4873201a.js",
+  "main.js.map": "static/js/main.4873201a.js.map",
+  "static/js/0.b54e07c2.chunk.js": "static/js/0.b54e07c2.chunk.js",
+  "static/js/0.b54e07c2.chunk.js.map": "static/js/0.b54e07c2.chunk.js.map",
+  "static/js/1.17df6a46.chunk.js": "static/js/1.17df6a46.chunk.js",
+  "static/js/1.17df6a46.chunk.js.map": "static/js/1.17df6a46.chunk.js.map",
+  "static/js/2.dece32e5.chunk.js": "static/js/2.dece32e5.chunk.js",
+  "static/js/2.dece32e5.chunk.js.map": "static/js/2.dece32e5.chunk.js.map",
   "static/media/1024W-cccwc.png": "static/media/1024W-cccwc.2505d7d2.png",
   "static/media/1024W-header-img.png": "static/media/1024W-header-img.a5d10b4a.png",
   "static/media/1366W-cccwc.png": "static/media/1366W-cccwc.daa66960.png",
@@ -31,5 +31,8 @@
   "static/media/768W-post-four.png": "static/media/768W-post-four.33a28fa1.png",
   "static/media/768W-post-one.png": "static/media/768W-post-one.6d5fcb60.png",
   "static/media/768W-post-three.png": "static/media/768W-post-three.a65ef14a.png",
-  "static/media/768W-post-two.png": "static/media/768W-post-two.d1ecc79a.png"
+  "static/media/768W-post-two.png": "static/media/768W-post-two.d1ecc79a.png",
+  "static/media/hank_murphey.png": "static/media/hank_murphey.d686a21e.png",
+  "static/media/hannah_altel.png": "static/media/hannah_altel.950d79ec.png",
+  "static/media/jenn_burke.png": "static/media/jenn_burke.9ceb36e3.png"
 }
