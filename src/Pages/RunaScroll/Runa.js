@@ -56,17 +56,17 @@ class Runa extends Component {
   }
 
   componentDidMount = () => {
-    let { target, scrolled } = new SmoothScroll(document, 120, 12);
+    new SmoothScroll(document, 120, 12);
     window.addEventListener("scroll", this.onScroll);
-    this.setState({
-      target: target,
-      scrolled: scrolled
-    });
+    // this.setState({
+    //   target: target,
+    //   scrolled: scrolled
+    // });
   };
 
   componentWillUnmount = () => {
-    this.state.target.removeEventListener("wheel", this.state.scrolled, false);
-    window.removeEventListener("scroll", this.onScroll);
+    // this.state.target.removeEventListener("wheel", this.state.scrolled, false);
+    // window.removeEventListener("scroll", this.onScroll);
   };
 
   getScrollIncrement = runaArr => {

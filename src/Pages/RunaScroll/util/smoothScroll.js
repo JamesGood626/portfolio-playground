@@ -33,6 +33,7 @@ export const SmoothScroll = (target, speed, smooth) => {
       delta = -e.deltaY;
     }
     delta = Math.max(-1, Math.min(1, delta));
+    console.log("Delta: ", delta);
     pos += -delta * speed;
     const totalAmountOfVerticalScrollability =
       target.scrollHeight - target.clientHeight;
@@ -50,7 +51,6 @@ export const SmoothScroll = (target, speed, smooth) => {
     // Note: I was getting values of upwards of 33 delta after the calculation. The difference between pos
     // and target.scrollTop can be upwards of a couple hundred.
     var delta = (pos - target.scrollTop) / smooth;
-    // console.log("Delta before absolute value: ", delta);
 
     //console.log("The pos: ", pos);
     //console.log("The target.scrollTop: ", target.scrollTop);
@@ -85,4 +85,3 @@ export const SmoothScroll = (target, speed, smooth) => {
 //     }
 //   );
 // })();
-// };

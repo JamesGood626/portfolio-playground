@@ -79,11 +79,11 @@ export const Menu = () => {
           viewBox="0 0 41.01 41.01"
         >
           <path
-            className="cls-2"
+            className="h-logo-1"
             d="M128 108.91L147.09 128 128 147.09 108.91 128 128 108.91m0-1.42L107.49 128 128 148.51 148.51 128 128 107.49z"
             transform="translate(-107.49 -107.49)"
           />
-          <text className="cls-1" transform="translate(10.86 29.43)">
+          <text className="h-logo-1" transform="translate(10.86 29.43)">
             H
           </text>
         </svg>
