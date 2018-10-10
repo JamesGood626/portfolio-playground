@@ -24,6 +24,10 @@ class App extends Component {
             component={asyncComponent(() => import("./Pages/RunaScroll"))}
           />
           <Route
+            path="/fruitscroll"
+            component={asyncComponent(() => import("./Pages/FruitScroll"))}
+          />
+          <Route
             path="/sliderpractice"
             component={asyncComponent(() => import("./SliderPractice"))}
           />

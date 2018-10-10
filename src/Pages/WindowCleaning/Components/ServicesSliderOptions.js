@@ -127,49 +127,6 @@ const renderServiceOptionsDropDown = (
   );
 };
 
-// This was the start of a custom select dropdown, there's
-// a lot of javascript required to make it work though,
-// so I stuck with the standard select..
-// const logIt = () => {
-//   console.log("Loggin it");
-// };
-
-// const renderServiceOptionsDropDown = (
-//   selectedService,
-//   serviceOptions,
-//   showNewServiceDescription
-// ) => {
-//   return (
-//     <Fragment>
-//       <div className="listbox-area">
-//         <div id="exp_wrapper">
-//           <button
-//             aria-haspopup="listbox"
-//             aria-labelledby="exp_elem exp_button"
-//             id="exp_button"
-//             onClick={logIt}
-//           >
-//             {selectedService}
-//           </button>
-//           <ul
-//             id="exp_elem_list"
-//             tabindex="-1"
-//             role="listbox"
-//             aria-labelledby="exp_elem"
-//             class="hidden"
-//           >
-//             {Object.getOwnPropertyNames(serviceOptions).map((property, i) => (
-//               <li id={property} key={property} role="option" value={property}>
-//                 {serviceOptions[property].serviceOptionText}
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//       </div>
-//     </Fragment>
-//   );
-// };
-
 export const ServicesSliderOptions = ({
   showNewServiceDescription,
   serviceOptions,

@@ -194,7 +194,7 @@ export default class TestimonialSection extends Component {
         const scrollToPos = this.midCircContainer.getBoundingClientRect().width;
         this.slider.scrollLeft = scrollToPos;
         // showSlider must be set to true in order for the circles to be styled w/ position absolute.
-        this.setState((prevState, state) => ({
+        this.setState((state, props) => ({
           showSlider: true,
           scrollLeftPos: scrollToPos
         }));
@@ -203,13 +203,13 @@ export default class TestimonialSection extends Component {
         const scrollToPos =
           this.rightCircContainer.getBoundingClientRect().width * 2;
         this.slider.scrollLeft = scrollToPos;
-        this.setState((prevState, state) => ({
+        this.setState((state, props) => ({
           showSlider: true,
           scrollLeftPos: scrollToPos
         }));
       } else {
         TweenMax.set(".leftCircle100VW-container", { zIndex: 1000 });
-        this.setState((prevState, state) => ({
+        this.setState((state, props) => ({
           showSlider: true
         }));
       }

@@ -18,7 +18,7 @@ export const serviceCardConfig = [
           </g>
         </g>
         <path
-          class="cls-cabinet"
+          className="cls-cabinet"
           transform="rotate(45 355.341 338.807)"
           d="M111.5 106.5h488v488h-488z"
         />
@@ -39,7 +39,7 @@ export const serviceCardConfig = [
         viewBox="0 0 694.38 694.38"
       >
         <path
-          class="cls-gold"
+          className="cls-gold"
           transform="rotate(45 355.341 338.807)"
           d="M111.5 106.5h488v488h-488z"
         />
@@ -68,7 +68,7 @@ export const serviceCardConfig = [
         viewBox="0 0 694.38 694.38"
       >
         <path
-          class="cls-piggy"
+          className="cls-piggy"
           transform="rotate(45 355.341 338.807)"
           d="M111.5 106.5h488v488h-488z"
         />
@@ -97,7 +97,7 @@ export const serviceCardConfig = [
         viewBox="0 0 694.38 694.38"
       >
         <path
-          class="cls-presentation"
+          className="cls-presentation"
           transform="rotate(45 355.341 338.807)"
           d="M111.5 106.5h488v488h-488z"
         />

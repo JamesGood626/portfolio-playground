@@ -32,6 +32,7 @@ export const SmoothScroll = (target, speed, smooth) => {
       //we are on firefox
       delta = -e.deltaY;
     }
+    console.log("THE DELTA: ", e.deltaFactor);
     delta = Math.max(-1, Math.min(1, delta));
     console.log("Delta: ", delta);
     pos += -delta * speed;

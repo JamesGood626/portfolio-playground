@@ -58,15 +58,11 @@ class Runa extends Component {
   componentDidMount = () => {
     new SmoothScroll(document, 120, 12);
     window.addEventListener("scroll", this.onScroll);
-    // this.setState({
-    //   target: target,
-    //   scrolled: scrolled
-    // });
   };
 
   componentWillUnmount = () => {
     // this.state.target.removeEventListener("wheel", this.state.scrolled, false);
-    // window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("scroll", this.onScroll);
   };
 
   getScrollIncrement = runaArr => {
@@ -104,38 +100,38 @@ class Runa extends Component {
   };
 
   setDefaultScrollRotationIndex = scrollY => {
-    this.setState((prevState, state) => ({
+    this.setState((state, props) => ({
       prevScrollPosition: scrollY,
-      prevRotateIndex: prevState.rotateIndex,
-      rotateIndex: 1
+      prevRotateIndex: state.rotateIndex,
+      rotateIndex: 0
     }));
   };
 
   setDecrementRotationCountAndScrollHeightLevel = () => {
-    this.setState((prevState, state) => ({
-      rotateIndex: 19,
-      scrollHeightLevel: prevState.scrollHeightLevel - 1,
-      rotationCount: prevState.rotationCount - 1
+    this.setState((state, props) => ({
+      rotateIndex: 18,
+      scrollHeightLevel: state.scrollHeightLevel - 1,
+      rotationCount: state.rotationCount - 1
     }));
   };
 
   setDecrementRotateIndex = () => {
-    this.setState((prevState, state) => ({
-      rotateIndex: prevState.rotateIndex - 1
+    this.setState((state, props) => ({
+      rotateIndex: state.rotateIndex - 1 < 0 ? 0 : state.rotateIndex - 1
     }));
   };
 
   setIncrementRotationCountAndScrollHeightLevel = () => {
-    this.setState((prevState, state) => ({
-      rotateIndex: 1,
-      scrollHeightLevel: prevState.scrollHeightLevel + 1,
-      rotationCount: prevState.rotationCount + 1
+    this.setState((state, props) => ({
+      rotateIndex: 0,
+      scrollHeightLevel: state.scrollHeightLevel + 1,
+      rotationCount: state.rotationCount + 1
     }));
   };
 
   setIncrementRotateIndex = () => {
-    this.setState((prevState, state) => ({
-      rotateIndex: prevState.rotateIndex + 1
+    this.setState((state, props) => ({
+      rotateIndex: state.rotateIndex + 1
     }));
   };
 
@@ -151,15 +147,15 @@ class Runa extends Component {
     if (lowEndRange < scrollY && scrollY < highEndRange) {
       return;
     } else if (lowEndRange > scrollY) {
-      if (rotateIndex - 1 === 0) {
-        // rotateIndex set to 19
+      if (rotateIndex - 1 === -1) {
+        // rotateIndex set to 18
         this.setDecrementRotationCountAndScrollHeightLevel();
       } else {
         this.setDecrementRotateIndex();
       }
     } else if (scrollY > highEndRange) {
-      if (rotateIndex + 1 === 20) {
-        // rotateIndex set to 1
+      if (rotateIndex + 1 === 19) {
+        // rotateIndex set to 0
         this.setIncrementRotationCountAndScrollHeightLevel();
       } else {
         this.setIncrementRotateIndex();
@@ -193,7 +189,7 @@ class Runa extends Component {
   };
 
   renderRuna = () => {
-    return this.state.runaArr[this.state.rotateIndex - 1];
+    return this.state.runaArr[this.state.rotateIndex];
   };
 
   render() {

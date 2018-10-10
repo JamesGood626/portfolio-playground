@@ -37,11 +37,11 @@ export default class Hamburguesa extends Component {
     window.addEventListener("resize", this.updateScreenSize);
     TweenMax.set(this.hamberguesaTopLine, { transformOrigin: "center" });
     TweenMax.set(this.hamberguesaBottomLine, { transformOrigin: "center" });
-    const tl = new TimelineMax();
-    tl.add("startTween");
-    tl.to(".hamberguesa", 0.5, { fill: "#84ceeb" });
-    tl.to(this.hamberguesaMidLine, 0.3, { opacity: 0 }, "startTween");
-    tl.to(
+    this.tl = new TimelineMax();
+    this.tl.add("startTween");
+    this.tl.to(".hamberguesa", 0.5, { fill: "#84ceeb" });
+    this.tl.to(this.hamberguesaMidLine, 0.3, { opacity: 0 }, "startTween");
+    this.tl.to(
       this.hamberguesaTopLine,
       0.5,
       {
@@ -50,7 +50,7 @@ export default class Hamburguesa extends Component {
       },
       "startTween"
     );
-    tl.to(
+    this.tl.to(
       this.hamberguesaBottomLine,
       0.5,
       {
@@ -59,22 +59,27 @@ export default class Hamburguesa extends Component {
       },
       "startTween"
     );
-    tl.add("finishTween");
-    tl.to(".hamberguesa", 0.3, { fill: "#fcfcfc" }, "finishTween");
-    tl.to(".hamberguesa-mid-line", 0.3, { opacity: 1 }, "finishTween");
-    tl.to(".hamberguesa-top-line", 0.5, { y: 0, rotation: 0 }, "finishTween");
-    tl.to(
+    this.tl.add("finishTween");
+    this.tl.to(".hamberguesa", 0.3, { fill: "#fcfcfc" }, "finishTween");
+    this.tl.to(".hamberguesa-mid-line", 0.3, { opacity: 1 }, "finishTween");
+    this.tl.to(
+      ".hamberguesa-top-line",
+      0.5,
+      { y: 0, rotation: 0 },
+      "finishTween"
+    );
+    this.tl.to(
       ".hamberguesa-bottom-line",
       0.5,
       { y: 0, rotation: 0 },
       "finishTween"
     );
-    tl.addPause(0.5);
+    this.tl.addPause(0.5);
 
-    tl.pause();
-    this.setState((prevState, state) => ({
-      tl: tl
-    }));
+    this.tl.pause();
+    // this.setState({
+    //   tl: tl
+    // });
   };
 
   componentWillUnmount = () => {
@@ -91,22 +96,22 @@ export default class Hamburguesa extends Component {
   // Throttle?
   updateScreenSize = e => {
     if (e.target.innerWidth > 900) {
-      this.setState((prevState, state) => ({
+      this.setState({
         showSidebar: false
-      }));
+      });
     }
   };
 
   toggleSidebar = e => {
     if (!this.state.showSidebar) {
-      this.state.tl.time(0);
-      this.state.tl.play();
+      this.tl.time(0);
+      this.tl.play();
     } else {
-      this.state.tl.play();
+      this.tl.play();
     }
 
-    this.setState((prevState, state) => ({
-      showSidebar: !prevState.showSidebar
+    this.setState((state, props) => ({
+      showSidebar: !state.showSidebar
     }));
   };
 

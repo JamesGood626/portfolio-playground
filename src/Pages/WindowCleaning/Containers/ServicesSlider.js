@@ -43,17 +43,17 @@ export default class ServicesSlider extends Component {
 
   showNewServiceDescription = async e => {
     const key = e.target.id !== "option-select" ? e.target.id : e.target.value;
-    await this.setState((prevState, state) => ({
+    await this.setState((state, props) => ({
       selectedService: serviceOptionsConfig[key].serviceOptionText,
       quoteRequested: null
     }));
   };
 
   updateQuoteRequested = e => {
-    this.setState((prevState, state) => ({
+    this.setState((state, props) => ({
       quoteRequested:
         quotePricingConfig[
-          prevState.selectedService
+          state.selectedService
             .replace(" ", "_")
             .replace(" ", "_")
             .toUpperCase()

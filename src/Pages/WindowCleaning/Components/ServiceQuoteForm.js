@@ -278,17 +278,17 @@ export default class ServiceQuoteForm extends Component {
     const fieldId = e.target.id;
     const type = e.target.className;
     if (type === "checkbox" && !e.target.checked) {
-      await this.setState((prevState, state) => ({
+      await this.setState((state, props) => ({
         formValues: {
-          ...prevState.formValues,
-          [fieldId]: { ...prevState.formValues[fieldId], value: null }
+          ...state.formValues,
+          [fieldId]: { ...state.formValues[fieldId], value: null }
         }
       }));
     } else {
-      await this.setState((prevState, state) => ({
+      await this.setState((state, props) => ({
         formValues: {
-          ...prevState.formValues,
-          [fieldId]: { ...prevState.formValues[fieldId], type, value: newVal }
+          ...state.formValues,
+          [fieldId]: { ...state.formValues[fieldId], type, value: newVal }
         }
       }));
     }
@@ -301,8 +301,8 @@ export default class ServiceQuoteForm extends Component {
   };
 
   setTotal = async total => {
-    await this.setState((prevState, state) => ({
-      ...prevState,
+    await this.setState((state, props) => ({
+      ...state,
       total
     }));
   };

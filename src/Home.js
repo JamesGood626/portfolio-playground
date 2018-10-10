@@ -83,6 +83,9 @@ export const Home = () => {
         <Link to="/runascroll">
           <h1 data-text="Runa Scroll">Runa Scroll</h1>
         </Link>
+        <Link to="/fruitscroll">
+          <h1 data-text="Fruit Scroll">Fruit Scroll</h1>
+        </Link>
       </Nav>
     </Container>
   );
