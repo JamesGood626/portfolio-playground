@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import throttle from "lodash.throttle";
 import ImageSection from "../Components/image-section";
 import ImgConfig from "../Config";
 
@@ -11,10 +12,19 @@ export default class pageController extends Component {
 
   componentDidMount = () => {
     document.body.style.overflow = "hidden";
+    // Check the deltaY from the event
+    // negative -> scroll up
+    // positive -> scroll down
+    // Throttle the mousewheel event with a time that allows animations to complete.
+    window.addEventListener("mousewheel", throttle(this.changeSlide, 3000));
   };
 
   componentWillUnmount = () => {
     document.body.style.overflow = "auto";
+  };
+
+  changeSlide = e => {
+    console.log("MOUSEWHEEL EVENT: ", e.deltaY);
   };
 
   render() {

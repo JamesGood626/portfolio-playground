@@ -4,13 +4,18 @@ import styled from "styled-components";
 const Container = styled.div`
   position: absolute;
   top: ${props => props.positionTop}
-  height: 100vh;
+  height: auto;
   width: 100vw;
 `;
 
+// object-fit: cover; was the trick for maintaining
+// a consistent size for the image across all screen sizes.
+// Removing that and setting height: auto; will make the height
+// responsive.
 const Image = styled.img`
   height: 100vh;
   width: 100vw;
+  object-fit: cover;
 `;
 
 // pass in some props to control the position
