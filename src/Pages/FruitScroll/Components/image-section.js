@@ -1,11 +1,50 @@
 import React, { Fragment } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+// TODO:
+// Adjust timings for animations
+const slideOutFrames = keyframes`
+  0% {
+    transform: translateY(0%)
+  }
+  100% {
+    transform: translateY(-50%)
+  }
+`;
+
+const slideInFrames = keyframes`
+  0% {
+    transform: translateY(100%)
+  }
+  100% {
+    transform: translateY(0%)
+  }
+`;
 
 const Container = styled.div`
   position: absolute;
-  top: ${props => props.positionTop}
+  top: ${props => props.positionTop};
+  // For the active slide
+  z-index: ${props => (props.animateSlideIn ? 10 : null)};
+  // For the inactive slides
+  z-index: ${props => (props.positionTop === null ? -10 : null)};
+  // For the exiting slide
+  z-index: ${props => (props.animateSlideOut ? 5 : null)};
   height: auto;
   width: 100vw;
+
+  // Slide Out Animation
+  animation-name: ${props => props.animateSlideOut && slideOutFrames};
+  // Slide In Animation
+  animation-name: ${props => props.animateSlideIn && slideInFrames};
+
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
 `;
 
 // object-fit: cover; was the trick for maintaining
@@ -94,12 +133,19 @@ export default ({
   imgListText,
   imgAltText,
   slideId,
+  prevSlideId,
   currentSlideId
 }) => {
   return (
     // Position top will be derived by the pageController's state.
     // if the slideId is 0 then strawberry will be present, 1 blueberry, etc.
-    <Container positionTop={slideId === currentSlideId ? "0%" : "100%"}>
+    <Container
+      positionTop={slideId === currentSlideId ? "0%" : null}
+      animateSlideOut={slideId === prevSlideId ? true : false}
+      animateSlideIn={
+        slideId === currentSlideId && prevSlideId !== null ? true : false
+      }
+    >
       <Image
         id={`${imgId}`}
         src={`${imgArr[0]}`}
