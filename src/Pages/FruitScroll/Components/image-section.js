@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 // TODO:
 // Adjust timings for animations
-const slideOutFrames = keyframes`
+const slideOutFramesForward = keyframes`
   0% {
     transform: translateY(0%)
   }
@@ -12,9 +12,27 @@ const slideOutFrames = keyframes`
   }
 `;
 
-const slideInFrames = keyframes`
+const slideInFramesForward = keyframes`
   0% {
     transform: translateY(100%)
+  }
+  100% {
+    transform: translateY(0%)
+  }
+`;
+
+const slideOutFramesBackward = keyframes`
+  0% {
+    transform: translateY(0%)
+  }
+  100% {
+    transform: translateY(50%)
+  }
+`;
+
+const slideInFramesBackward = keyframes`
+  0% {
+    transform: translateY(-100%)
   }
   100% {
     transform: translateY(0%)
@@ -33,12 +51,31 @@ const Container = styled.div`
   height: auto;
   width: 100vw;
 
+  // FORWARD ANIMATIONS
   // Slide Out Animation
-  animation-name: ${props => props.animateSlideOut && slideOutFrames};
+  animation-name: ${props =>
+    props.animateSlideOut &&
+    props.direction === "FORWARD" &&
+    slideOutFramesForward};
   // Slide In Animation
-  animation-name: ${props => props.animateSlideIn && slideInFrames};
+  animation-name: ${props =>
+    props.animateSlideIn &&
+    props.direction === "FORWARD" &&
+    slideInFramesForward};
 
-  animation-duration: 2s;
+  // BACKWARD ANIMATIONS
+  // Slide Out Animation
+  animation-name: ${props =>
+    props.animateSlideOut &&
+    props.direction === "BACKWARD" &&
+    slideOutFramesBackward};
+  // Slide In Animation
+  animation-name: ${props =>
+    props.animateSlideIn &&
+    props.direction === "BACKWARD" &&
+    slideInFramesBackward};
+
+  animation-duration: 1s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -134,7 +171,8 @@ export default ({
   imgAltText,
   slideId,
   prevSlideId,
-  currentSlideId
+  currentSlideId,
+  direction
 }) => {
   return (
     // Position top will be derived by the pageController's state.
@@ -145,6 +183,7 @@ export default ({
       animateSlideIn={
         slideId === currentSlideId && prevSlideId !== null ? true : false
       }
+      direction={direction}
     >
       <Image
         id={`${imgId}`}

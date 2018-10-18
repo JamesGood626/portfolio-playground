@@ -7,15 +7,16 @@ import ImgConfig from "../Config";
 // Add direction to state to pass as props.
 export default class pageController extends Component {
   state = {
-    slideId: 0,
+    slideId: 1,
     prevSlideId: null,
+    direction: "FORWARD",
     transitionSlide: false
   };
 
   componentDidMount = () => {
     document.body.style.overflow = "hidden";
     // Throttle the mousewheel event with a time that allows animations to complete.
-    window.addEventListener("mousewheel", throttle(this.changeSlide, 2000));
+    window.addEventListener("mousewheel", throttle(this.changeSlide, 1800));
   };
 
   componentWillUnmount = () => {
@@ -31,11 +32,34 @@ export default class pageController extends Component {
     // This trickery is necessary because two events always fire
     // So this is how I prevent the slideId from being incremented twice in one scroll.
     // Need to look at how throttle is implemented.
+    if (deltaY > 0) {
+      // set the state of the direction to be forward if the state isn't forward
+      this.setStateDirectionForward();
+    } else {
+      // set to backward if not backward
+      this.setStateDirectionBackward();
+    }
     if (!this.state.transitionSlide) {
       this.toggleTransitionSlide();
       this.updateSlideId(deltaY);
     } else {
       this.toggleTransitionSlide();
+    }
+  };
+
+  setStateDirectionForward = () => {
+    if (this.state.direction != "FORWARD") {
+      this.setState({
+        direction: "FORWARD"
+      });
+    }
+  };
+
+  setStateDirectionBackward = () => {
+    if (this.state.direction != "BACKWARD") {
+      this.setState({
+        direction: "FORWARD"
+      });
     }
   };
 
@@ -83,6 +107,7 @@ export default class pageController extends Component {
           slideId={0}
           prevSlideId={this.state.prevSlideId}
           currentSlideId={this.state.slideId}
+          direction={this.state.direction}
         />
         <ImageSection
           imgId="blueberry-img"
@@ -93,6 +118,7 @@ export default class pageController extends Component {
           slideId={1}
           prevSlideId={this.state.prevSlideId}
           currentSlideId={this.state.slideId}
+          direction={this.state.direction}
         />
         <ImageSection
           imgId="mango-img"
@@ -103,6 +129,7 @@ export default class pageController extends Component {
           slideId={2}
           prevSlideId={this.state.prevSlideId}
           currentSlideId={this.state.slideId}
+          direction={this.state.direction}
         />
         <ImageSection
           imgId="pineapple-img"
@@ -113,6 +140,7 @@ export default class pageController extends Component {
           slideId={3}
           prevSlideId={this.state.prevSlideId}
           currentSlideId={this.state.slideId}
+          direction={this.state.direction}
         />
       </main>
     );
