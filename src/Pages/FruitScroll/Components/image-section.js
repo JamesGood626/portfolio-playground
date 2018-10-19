@@ -1,8 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import styled, { keyframes } from "styled-components";
 
 // TODO:
-// Adjust timings for animations
+// Make this component a class component so that I can use
+// GSAP to have more control over the test animation for the
+// component that is animating in.
 const slideOutFramesForward = keyframes`
   0% {
     transform: translateY(0%)
@@ -75,8 +77,8 @@ const Container = styled.div`
     props.direction === "BACKWARD" &&
     slideInFramesBackward};
 
-  animation-duration: 1s;
-  animation-timing-function: ease;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
@@ -103,7 +105,7 @@ const TextContainer = styled.div`
 `;
 
 const TextContainerLeft = TextContainer.extend`
-  right: 12%;
+  right: 8%;
 `;
 
 const TextContainerRight = TextContainer.extend`
@@ -113,6 +115,7 @@ const TextContainerRight = TextContainer.extend`
 const HeaderText = styled.h1`
   margin-bottom: 0.4rem;
   width: ${props => props.headerBgWidth};
+  font-family: "Nunito Sans", sans-serif;
   font-size: 3.2rem;
   color: ${props => props.fontColor};
   background: #fcfcfc;
@@ -120,6 +123,7 @@ const HeaderText = styled.h1`
 
 const ListTextUl = styled.ul`
   list-style-type: none;
+  font-family: "Cardo", serif;
   font-size: 1.2rem;
   color: #fcfcfc;
 
@@ -136,10 +140,10 @@ const fruitHeaderColor = {
 };
 
 const fruitHeaderWidth = {
-  strawberry: "16.8rem",
-  blueberry: "15rem",
-  mango: "10.4rem",
-  pineapple: "15.2rem"
+  strawberry: "16.2rem",
+  blueberry: "14rem",
+  mango: "9.9rem",
+  pineapple: "14.2rem"
 };
 
 const renderImageText = (imgHeaderText, imgListText) => {
@@ -163,48 +167,100 @@ const renderListText = listTextArr => {
   return listTextArr.map(text => <li>{text}</li>);
 };
 
-export default ({
-  imgId,
-  imgArr,
-  imgHeaderText,
-  imgListText,
-  imgAltText,
-  slideId,
-  prevSlideId,
-  currentSlideId,
-  direction
-}) => {
-  return (
-    // Position top will be derived by the pageController's state.
-    // if the slideId is 0 then strawberry will be present, 1 blueberry, etc.
-    <Container
-      positionTop={slideId === currentSlideId ? "0%" : null}
-      animateSlideOut={slideId === prevSlideId ? true : false}
-      animateSlideIn={
-        slideId === currentSlideId && prevSlideId !== null ? true : false
-      }
-      direction={direction}
-    >
-      <Image
-        id={`${imgId}`}
-        src={`${imgArr[0]}`}
-        srcSet={`
+class ImageSection extends Component {
+  render() {
+    const {
+      imgId,
+      imgArr,
+      imgHeaderText,
+      imgListText,
+      imgAltText,
+      slideId,
+      prevSlideId,
+      currentSlideId,
+      direction
+    } = this.props;
+    return (
+      // Position top will be derived by the pageController's state.
+      // if the slideId is 0 then strawberry will be present, 1 blueberry, etc.
+      <Container
+        positionTop={slideId === currentSlideId ? "0%" : null}
+        animateSlideOut={slideId === prevSlideId ? true : false}
+        animateSlideIn={
+          slideId === currentSlideId && prevSlideId !== null ? true : false
+        }
+        direction={direction}
+      >
+        <Image
+          id={`${imgId}`}
+          src={`${imgArr[0]}`}
+          srcSet={`
           ${imgArr[1]} 900px,
           ${imgArr[2]} 1400px,
           ${imgArr[3]} 1920px,
         `}
-        sizes="100vw"
-        alt={imgAltText}
-      />
-      {imgHeaderText === "Blueberry" || imgHeaderText === "Pineapple" ? (
-        <TextContainerRight>
-          {renderImageText(imgHeaderText, imgListText)}
-        </TextContainerRight>
-      ) : (
-        <TextContainerLeft>
-          {renderImageText(imgHeaderText, imgListText)}
-        </TextContainerLeft>
-      )}
-    </Container>
-  );
-};
+          sizes="100vw"
+          alt={imgAltText}
+        />
+        {imgHeaderText === "Blueberry" || imgHeaderText === "Pineapple" ? (
+          <TextContainerRight>
+            {renderImageText(imgHeaderText, imgListText)}
+          </TextContainerRight>
+        ) : (
+          <TextContainerLeft>
+            {renderImageText(imgHeaderText, imgListText)}
+          </TextContainerLeft>
+        )}
+      </Container>
+    );
+  }
+}
+
+export default ImageSection;
+
+// export default ({
+//   imgId,
+//   imgArr,
+//   imgHeaderText,
+//   imgListText,
+//   imgAltText,
+//   slideId,
+//   prevSlideId,
+//   currentSlideId,
+//   direction
+// }) => {
+//   console.log("THE DIRECTION: ", direction);
+//   return (
+//     // Position top will be derived by the pageController's state.
+//     // if the slideId is 0 then strawberry will be present, 1 blueberry, etc.
+//     <Container
+//       positionTop={slideId === currentSlideId ? "0%" : null}
+//       animateSlideOut={slideId === prevSlideId ? true : false}
+//       animateSlideIn={
+//         slideId === currentSlideId && prevSlideId !== null ? true : false
+//       }
+//       direction={direction}
+//     >
+//       <Image
+//         id={`${imgId}`}
+//         src={`${imgArr[0]}`}
+//         srcSet={`
+//           ${imgArr[1]} 900px,
+//           ${imgArr[2]} 1400px,
+//           ${imgArr[3]} 1920px,
+//         `}
+//         sizes="100vw"
+//         alt={imgAltText}
+//       />
+//       {imgHeaderText === "Blueberry" || imgHeaderText === "Pineapple" ? (
+//         <TextContainerRight>
+//           {renderImageText(imgHeaderText, imgListText)}
+//         </TextContainerRight>
+//       ) : (
+//         <TextContainerLeft>
+//           {renderImageText(imgHeaderText, imgListText)}
+//         </TextContainerLeft>
+//       )}
+//     </Container>
+//   );
+// };

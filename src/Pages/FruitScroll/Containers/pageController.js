@@ -7,7 +7,7 @@ import ImgConfig from "../Config";
 // Add direction to state to pass as props.
 export default class pageController extends Component {
   state = {
-    slideId: 1,
+    slideId: 0,
     prevSlideId: null,
     direction: "FORWARD",
     transitionSlide: false
@@ -16,7 +16,16 @@ export default class pageController extends Component {
   componentDidMount = () => {
     document.body.style.overflow = "hidden";
     // Throttle the mousewheel event with a time that allows animations to complete.
-    window.addEventListener("mousewheel", throttle(this.changeSlide, 1800));
+    // W/ a time of 2000ms and trailing set to false, it enabled me to drop using toggleTransitionSlide
+    // without the function executing once more after the 2000 seconds has elapsed.
+    // AND THIS NOTE IN THE LODASH DOCUMENTATION IS WHY:
+    // Note: If leading and trailing options are true, func is invoked on the trailing
+    // edge of the timeout only if the throttled function is invoked more than once
+    // during the wait timeout.
+    window.addEventListener(
+      "mousewheel",
+      throttle(this.changeSlide, 2000, { trailing: false })
+    );
   };
 
   componentWillUnmount = () => {
@@ -25,6 +34,7 @@ export default class pageController extends Component {
 
   changeSlide = e => {
     console.log("MOUSEWHEEL EVENT: ", e.deltaY);
+    console.log("THE SLIDE ID: ", this.state.slideId);
     // Check the deltaY from the event
     // negative -> scroll up (decrement this.state.slideId)
     // positive -> scroll down (increment this.state.slideId)
@@ -33,17 +43,15 @@ export default class pageController extends Component {
     // So this is how I prevent the slideId from being incremented twice in one scroll.
     // Need to look at how throttle is implemented.
     if (deltaY > 0) {
-      // set the state of the direction to be forward if the state isn't forward
       this.setStateDirectionForward();
     } else {
-      // set to backward if not backward
       this.setStateDirectionBackward();
     }
     if (!this.state.transitionSlide) {
-      this.toggleTransitionSlide();
+      // this.toggleTransitionSlide();
       this.updateSlideId(deltaY);
     } else {
-      this.toggleTransitionSlide();
+      // this.toggleTransitionSlide();
     }
   };
 
@@ -58,7 +66,7 @@ export default class pageController extends Component {
   setStateDirectionBackward = () => {
     if (this.state.direction != "BACKWARD") {
       this.setState({
-        direction: "FORWARD"
+        direction: "BACKWARD"
       });
     }
   };
