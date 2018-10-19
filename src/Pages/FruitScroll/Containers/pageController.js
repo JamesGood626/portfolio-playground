@@ -33,25 +33,18 @@ export default class pageController extends Component {
   };
 
   changeSlide = e => {
-    console.log("MOUSEWHEEL EVENT: ", e.deltaY);
-    console.log("THE SLIDE ID: ", this.state.slideId);
     // Check the deltaY from the event
     // negative -> scroll up (decrement this.state.slideId)
     // positive -> scroll down (increment this.state.slideId)
     const { deltaY } = e;
-    // This trickery is necessary because two events always fire
-    // So this is how I prevent the slideId from being incremented twice in one scroll.
-    // Need to look at how throttle is implemented.
     if (deltaY > 0) {
       this.setStateDirectionForward();
     } else {
       this.setStateDirectionBackward();
     }
     if (!this.state.transitionSlide) {
-      // this.toggleTransitionSlide();
       this.updateSlideId(deltaY);
     } else {
-      // this.toggleTransitionSlide();
     }
   };
 
@@ -69,12 +62,6 @@ export default class pageController extends Component {
         direction: "BACKWARD"
       });
     }
-  };
-
-  toggleTransitionSlide = () => {
-    this.setState((state, props) => ({
-      transitionSlide: !state.transitionSlide
-    }));
   };
 
   updateSlideId = deltaY => {

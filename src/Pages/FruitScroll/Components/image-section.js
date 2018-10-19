@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import styled, { keyframes } from "styled-components";
+import { TweenMax } from "gsap";
 
 // TODO:
 // Make this component a class component so that I can use
@@ -119,6 +120,14 @@ const HeaderText = styled.h1`
   font-size: 3.2rem;
   color: ${props => props.fontColor};
   background: #fcfcfc;
+
+  // clip-path: inset(100px 50px);
+`;
+
+const TextEl = styled.text`
+  fill: ${props => props.fontColor};
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.8rem;
 `;
 
 const ListTextUl = styled.ul`
@@ -126,6 +135,7 @@ const ListTextUl = styled.ul`
   font-family: "Cardo", serif;
   font-size: 1.2rem;
   color: #fcfcfc;
+  margin-top: 1rem;
 
   li {
     margin-bottom: 0.8rem;
@@ -140,34 +150,69 @@ const fruitHeaderColor = {
 };
 
 const fruitHeaderWidth = {
-  strawberry: "16.2rem",
-  blueberry: "14rem",
-  mango: "9.9rem",
-  pineapple: "14.2rem"
+  strawberry: "230",
+  blueberry: "200",
+  mango: "140",
+  pineapple: "200"
 };
 
-const renderImageText = (imgHeaderText, imgListText) => {
+const svgRectStyles = {
+  fill: "#fcfcfc",
+  transform: "translateY(14px)"
+};
+
+// Removed this to explore SVG text to achieve Clip-path animation for Header Text
+{
+  /* <HeaderText
+  fontColor={fruitHeaderColor[fruitKey]}
+  headerBgWidth={fruitHeaderWidth[fruitKey]}
+>
+  {imgHeaderText}
+</HeaderText> */
+}
+
+const renderImageText = (imgHeaderText, imgListText, slideId) => {
   const fruitKey = imgHeaderText.toLowerCase();
   return (
     <Fragment>
       <div>
-        <HeaderText
-          fontColor={fruitHeaderColor[fruitKey]}
-          headerBgWidth={fruitHeaderWidth[fruitKey]}
-        >
-          {imgHeaderText}
-        </HeaderText>
+        <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+          <rect
+            height="50"
+            width={fruitHeaderWidth[fruitKey]}
+            fill="#fcfcfc"
+            y="15"
+          />
+          <TextEl x="0" y="55" fontColor={fruitHeaderColor[fruitKey]}>
+            {imgHeaderText}
+          </TextEl>
+        </svg>
       </div>
-      <ListTextUl>{renderListText(imgListText)}</ListTextUl>
+      <ListTextUl className={`${fruitKey}-${slideId}`}>
+        {renderListText(imgListText, slideId)}
+      </ListTextUl>
     </Fragment>
   );
 };
 
-const renderListText = listTextArr => {
-  return listTextArr.map(text => <li>{text}</li>);
+const renderListText = (listTextArr, slideId) => {
+  return listTextArr.map((text, i) => (
+    <li key={`list-text-${slideId}-${i}`}>{text}</li>
+  ));
 };
 
 class ImageSection extends Component {
+  componentDidUpdate = () => {
+    const { imgHeaderText, slideId } = this.props;
+    const fruitKey = imgHeaderText.toLowerCase();
+    const el = document.querySelector(`.${fruitKey}-${slideId}`);
+    // SWEET ITS ANIMATING.
+    // Utilize the props to determine the currentSlide which should have the coordinated animation
+    // for the banner and fruit description text.
+    // TweenMax.to(el, 1, { x: "400px" });
+    TweenMax.staggerFromTo(el.childNodes, 0.4, { alpha: 0 }, { alpha: 1 }, 0.2);
+  };
+
   render() {
     const {
       imgId,
@@ -204,11 +249,11 @@ class ImageSection extends Component {
         />
         {imgHeaderText === "Blueberry" || imgHeaderText === "Pineapple" ? (
           <TextContainerRight>
-            {renderImageText(imgHeaderText, imgListText)}
+            {renderImageText(imgHeaderText, imgListText, slideId)}
           </TextContainerRight>
         ) : (
           <TextContainerLeft>
-            {renderImageText(imgHeaderText, imgListText)}
+            {renderImageText(imgHeaderText, imgListText, slideId)}
           </TextContainerLeft>
         )}
       </Container>
