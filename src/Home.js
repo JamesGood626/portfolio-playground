@@ -86,6 +86,12 @@ export const Home = () => {
         <Link to="/fruitscroll">
           <h1 data-text="Fruit Scroll">Fruit Scroll</h1>
         </Link>
+        <Link to="/card-stack-animation">
+          <h1 data-text="Card Stack Animation">Card Stack Animation</h1>
+        </Link>
+        <Link to="/image-grid">
+          <h1 data-text="Image Grid">Image Grid</h1>
+        </Link>
       </Nav>
     </Container>
   );

@@ -28,6 +28,16 @@ class App extends Component {
             component={asyncComponent(() => import("./Pages/FruitScroll"))}
           />
           <Route
+            path="/card-stack-animation"
+            component={asyncComponent(() =>
+              import("./Pages/CardStackAnimation")
+            )}
+          />
+          <Route
+            path="/image-grid"
+            component={asyncComponent(() => import("./Pages/ImageGrid"))}
+          />
+          <Route
             path="/sliderpractice"
             component={asyncComponent(() => import("./SliderPractice"))}
           />

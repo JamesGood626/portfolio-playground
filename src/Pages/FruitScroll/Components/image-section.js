@@ -171,21 +171,45 @@ const svgRectStyles = {
 </HeaderText> */
 }
 
+// The mask setup
+{
+  /* <mask id="theMask">
+  <rect id="theSquare" x="-100" y="0" width="100" height="100" fill="#fff" />
+</mask>
+<g mask="url(#theMask)">
+  <TextEl x="0" y="55" fontColor={fruitHeaderColor[fruitKey]}>
+    {imgHeaderText}
+  </TextEl>
+</g> */
+}
+
 const renderImageText = (imgHeaderText, imgListText, slideId) => {
   const fruitKey = imgHeaderText.toLowerCase();
   return (
     <Fragment>
       <div>
         <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
-          <rect
-            height="50"
-            width={fruitHeaderWidth[fruitKey]}
-            fill="#fcfcfc"
-            y="15"
-          />
-          <TextEl x="0" y="55" fontColor={fruitHeaderColor[fruitKey]}>
-            {imgHeaderText}
-          </TextEl>
+          <mask id="theMask">
+            <rect
+              id={`the-${fruitKey}-square`}
+              x="-250"
+              y="0"
+              width={fruitHeaderWidth[fruitKey]}
+              height="100"
+              fill="#fff"
+            />
+          </mask>
+          <g mask="url(#theMask)">
+            <rect
+              height="50"
+              width={fruitHeaderWidth[fruitKey]}
+              fill="#fcfcfc"
+              y="15"
+            />
+            <TextEl x="0" y="55" fontColor={fruitHeaderColor[fruitKey]}>
+              {imgHeaderText}
+            </TextEl>
+          </g>
         </svg>
       </div>
       <ListTextUl className={`${fruitKey}-${slideId}`}>
@@ -202,6 +226,26 @@ const renderListText = (listTextArr, slideId) => {
 };
 
 class ImageSection extends Component {
+  // ALRIGHT, SO DUE TO MY SLOW COMPUTER I LAST LEFT OFF HERE
+  // Tweaking the Tween for the-${fruitKey}-square svg mask
+  // The first one that mounts animates as it should.
+  // Now I just need to set the mask to hide any subsequent headers that
+  // should be revealed on scrolling to a new slide. Tweaking the x value should
+  // suffice. But srsly, my computer be sleepn.
+  componentDidMount = () => {
+    const { imgHeaderText, slideId, currentSlideId } = this.props;
+    const fruitKey = imgHeaderText.toLowerCase();
+    if (slideId === currentSlideId) {
+      console.log("Animating fruitKey: ", fruitKey);
+      TweenMax.to(`#the-${fruitKey}-square`, 1, {
+        attr: { x: 0 },
+        delay: 0.5
+      });
+    } else {
+      TweenMax.set(`#the-${fruitKey}-square`, { x: -250 });
+    }
+  };
+
   componentDidUpdate = () => {
     const { imgHeaderText, slideId } = this.props;
     const fruitKey = imgHeaderText.toLowerCase();
@@ -210,6 +254,11 @@ class ImageSection extends Component {
     // Utilize the props to determine the currentSlide which should have the coordinated animation
     // for the banner and fruit description text.
     // TweenMax.to(el, 1, { x: "400px" });
+
+    // TweenMax.to(`#the-${fruitKey}-square`, 1, {
+    //   attr: { x: 0 },
+    //   delay: 0.5
+    // });
     TweenMax.staggerFromTo(el.childNodes, 0.4, { alpha: 0 }, { alpha: 1 }, 0.2);
   };
 
@@ -242,8 +291,8 @@ class ImageSection extends Component {
           srcSet={`
           ${imgArr[1]} 900px,
           ${imgArr[2]} 1400px,
-          ${imgArr[3]} 1920px,
-        `}
+          ${imgArr[3]} 1920px
+          `}
           sizes="100vw"
           alt={imgAltText}
         />
