@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 import { Transition, TransitionGroup } from "react-transition-group";
 import { TweenMax, TimelineMax } from "gsap";
-import { Menu } from "./Menu";
+import { Menu } from "./menu";
 import Sidebar from "./Sidebar";
 
 const Div = styled.div`

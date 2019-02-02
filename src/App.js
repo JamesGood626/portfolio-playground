@@ -4,6 +4,8 @@ import { Route, Switch } from "react-router";
 import { asyncComponent } from "./asyncComponent";
 import { Home } from "./Home";
 
+// NOTE: visiting fruit scroll and then navigating to a different project page now locks
+// the body in place. Check you css.
 // Use Switch within the page components if you'd like to add page transitions
 class App extends Component {
   render() {
@@ -26,6 +28,14 @@ class App extends Component {
           <Route
             path="/fruitscroll"
             component={asyncComponent(() => import("./Pages/FruitScroll"))}
+          />
+          <Route
+            path="/grid-primer-one"
+            component={asyncComponent(() => import("./Pages/GridPrimerOne"))}
+          />
+          <Route
+            path="/architecture-grid"
+            component={asyncComponent(() => import("./Pages/ArchitectureGrid"))}
           />
           <Route
             path="/card-stack-animation"

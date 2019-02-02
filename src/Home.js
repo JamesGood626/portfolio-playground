@@ -70,29 +70,30 @@ const Nav = styled.nav`
 //   }
 // `;
 
+const destinationsArr = [
+  { linkTo: "/lawyer", title: "Lawyer Page" },
+  { linkTo: "/windowcleaning", title: "Window Cleaning Page" },
+  { linkTo: "/runascroll", title: "Runa Scroll" },
+  { linkTo: "/fruitscroll", title: "Fruit Scroll" },
+  { linkTo: "/grid-primer-one", title: "Grid Primer One" },
+  { linkTo: "/architecture-grid", title: "Architecture Grid" }
+  // { linkTo: "/card-stack-animation", title: "Card Stack Animation" },
+  // { linkTo: "/image-grid", title: "Image Grid" },
+];
+
+const renderLinks = destinations =>
+  destinations.map(dest => {
+    return (
+      <Link to={dest.linkTo}>
+        <h1 data-text={dest.title}>{dest.title}</h1>
+      </Link>
+    );
+  });
+
 export const Home = () => {
   return (
     <Container>
-      <Nav>
-        <Link to="/lawyer">
-          <h1 data-text="Lawyer Page">Lawyer Page</h1>
-        </Link>
-        <Link to="/windowcleaning">
-          <h1 data-text="Window Cleaning Page">Window Cleaning Page</h1>
-        </Link>
-        <Link to="/runascroll">
-          <h1 data-text="Runa Scroll">Runa Scroll</h1>
-        </Link>
-        <Link to="/fruitscroll">
-          <h1 data-text="Fruit Scroll">Fruit Scroll</h1>
-        </Link>
-        <Link to="/card-stack-animation">
-          <h1 data-text="Card Stack Animation">Card Stack Animation</h1>
-        </Link>
-        <Link to="/image-grid">
-          <h1 data-text="Image Grid">Image Grid</h1>
-        </Link>
-      </Nav>
+      <Nav>{renderLinks(destinationsArr)}</Nav>
     </Container>
   );
 };
