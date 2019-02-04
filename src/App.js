@@ -29,6 +29,10 @@ class App extends Component {
             path="/fruitscroll"
             component={asyncComponent(() => import("./Pages/FruitScroll"))}
           />
+          <Route
+            path="/budapest-shoe"
+            component={asyncComponent(() => import("./Pages/BudapestShoe"))}
+          />
           {/* <Route
             path="/grid-primer-one"
             component={asyncComponent(() => import("./Pages/GridPrimerOne"))}

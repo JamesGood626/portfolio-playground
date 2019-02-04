@@ -79,6 +79,7 @@ const destinationsArr = [
   { linkTo: "/windowcleaning", title: "Window Cleaning Page" },
   { linkTo: "/runascroll", title: "Runa Scroll" },
   { linkTo: "/fruitscroll", title: "Fruit Scroll" },
+  { linkTo: "/budapest-shoe", title: "Budapest Shoe" },
   // { linkTo: "/grid-primer-one", title: "Grid Primer One" },
   { linkTo: "/architecture-grid", title: "Architecture Grid" }
   // { linkTo: "/card-stack-animation", title: "Card Stack Animation" },
