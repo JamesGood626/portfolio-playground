@@ -29,28 +29,28 @@ class App extends Component {
             path="/fruitscroll"
             component={asyncComponent(() => import("./Pages/FruitScroll"))}
           />
-          <Route
+          {/* <Route
             path="/grid-primer-one"
             component={asyncComponent(() => import("./Pages/GridPrimerOne"))}
-          />
+          /> */}
           <Route
             path="/architecture-grid"
             component={asyncComponent(() => import("./Pages/ArchitectureGrid"))}
           />
-          <Route
+          {/* <Route
             path="/card-stack-animation"
             component={asyncComponent(() =>
               import("./Pages/CardStackAnimation")
             )}
-          />
-          <Route
+          /> */}
+          {/* <Route
             path="/image-grid"
             component={asyncComponent(() => import("./Pages/ImageGrid"))}
-          />
-          <Route
+          /> */}
+          {/* <Route
             path="/sliderpractice"
             component={asyncComponent(() => import("./SliderPractice"))}
-          />
+          /> */}
         </Switch>
       </HashRouter>
     );

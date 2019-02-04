@@ -8,7 +8,9 @@ const Container = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(120deg, #2978a0, #87f6ff) fixed;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  /* background: linear-gradient(120deg, #2978a0, #87f6ff) fixed; */
 `;
 
 const Nav = styled.nav`
@@ -30,6 +32,8 @@ const Nav = styled.nav`
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 1.6rem;
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
 
       @media (min-width: 712px) {
         font-size: 4rem;
@@ -75,7 +79,7 @@ const destinationsArr = [
   { linkTo: "/windowcleaning", title: "Window Cleaning Page" },
   { linkTo: "/runascroll", title: "Runa Scroll" },
   { linkTo: "/fruitscroll", title: "Fruit Scroll" },
-  { linkTo: "/grid-primer-one", title: "Grid Primer One" },
+  // { linkTo: "/grid-primer-one", title: "Grid Primer One" },
   { linkTo: "/architecture-grid", title: "Architecture Grid" }
   // { linkTo: "/card-stack-animation", title: "Card Stack Animation" },
   // { linkTo: "/image-grid", title: "Image Grid" },
