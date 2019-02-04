@@ -20,7 +20,7 @@ const Topbar = styled.div`
   }
 
   .red {
-    background: #ff530d;
+    background: red;
   }
 `;
 

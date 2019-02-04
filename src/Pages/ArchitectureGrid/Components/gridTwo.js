@@ -7,7 +7,7 @@ const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(7, max-content);
   grid-template-rows: repeat(5, max-content);
-  grid-gap: 1rem;
+  grid-gap: 1.2rem;
   width: 95vw;
   height: 100%;
   grid-template-areas:
@@ -21,7 +21,6 @@ const GridContainer = styled.section`
   img {
     height: auto;
     object-fit: cover;
-    margin-top: 0.4rem;
   }
 
   #architecture {
@@ -34,6 +33,32 @@ const GridContainer = styled.section`
 
   #architecture-three {
     width: 340px;
+  }
+
+  .img-margin {
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .img-blend {
+    position: relative;
+  }
+
+  .img-blend:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: red;
+    mix-blend-mode: multiply;
+  }
+
+  #third-post-img:before {
+    height: 98.5%;
   }
 
   .clip-img {
@@ -68,22 +93,68 @@ const GridContainer = styled.section`
 
   .post-one {
     grid-area: one;
+    position: relative;
   }
+  .post-one:after {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    right: -0.7rem;
+    width: 0.15rem;
+    height: 33.2rem;
+    background: rgba(100, 100, 100, 0.12);
+  }
+
   .post-two {
     grid-area: two;
   }
   .post-three {
+    position: relative;
     grid-area: three;
   }
+
+  .post-three:after {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    right: -0.7rem;
+    width: 0.15rem;
+    height: 33.2rem;
+    background: rgba(100, 100, 100, 0.12);
+  }
+
   .post-four {
+    position: relative;
     grid-area: four;
   }
+  .post-four:after {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    right: -0.7rem;
+    width: 0.15rem;
+    height: 33.2rem;
+    background: rgba(100, 100, 100, 0.12);
+  }
+
   .post-five {
     grid-area: five;
   }
   .post-six {
+    position: relative;
     grid-area: six;
   }
+
+  .post-six:after {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    right: -0.7rem;
+    width: 0.15rem;
+    height: 21.6rem;
+    background: rgba(100, 100, 100, 0.12);
+  }
+
   .post-seven {
     grid-area: seven;
   }
@@ -93,6 +164,7 @@ const GridContainer = styled.section`
   .post-nine {
     grid-area: nine;
   }
+
   .post-ten {
     grid-area: ten;
   }
@@ -106,12 +178,12 @@ const GridContainer = styled.section`
   }
 
   .post-container:hover {
-    border-top: 0.4rem solid #ff530d;
+    border-top: 0.4rem solid red;
     h3 {
-      color: #ff530d;
+      color: red;
     }
-    p {
-      color: #787878;
+    .img-blend:before {
+      background: #787878;
     }
   }
 
@@ -157,6 +229,10 @@ const GridContainer = styled.section`
     font-size: 0.8rem;
     font-weight: 600;
   }
+
+  @media screen and (max-width: 1390px) {
+    background: orange;
+  }
 `;
 
 const WorksContainer = styled.div`
@@ -169,7 +245,7 @@ const WorksContainer = styled.div`
     position: absolute;
     width: 9rem;
     height: 0.5;
-    border-top: 0.5rem solid #ff530d;
+    border-top: 0.5rem solid red;
   }
 
   #works-header {
@@ -177,7 +253,7 @@ const WorksContainer = styled.div`
     text-orientation: sideways;
     transform: rotateZ(180deg);
     font-size: 5.4rem;
-    color: #ff530d;
+    color: red;
     margin-top: 2.2rem;
     margin-left: 0.4rem;
   }
@@ -203,7 +279,7 @@ const Works = () => (
 );
 
 const Image = ({ id, classList, img }) => (
-  <div id={id} class={classList}>
+  <div id={id} class={`${classList} img-blend img-margin`}>
     <img id={img.id} src={img.src} />
   </div>
 );
