@@ -5,18 +5,33 @@ import gridContentArr from "../config/contentConfig";
 
 const GridContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(7, max-content);
-  grid-template-rows: repeat(5, max-content);
+  justify-content: center;
   grid-gap: 1.2rem;
   width: 95vw;
   height: 100%;
+  padding-bottom: 2rem;
+  grid-template-columns: repeat(2, max-content);
+  grid-auto-rows: auto;
   grid-template-areas:
-    "works one three three four six nine"
-    "works one three three four six nine"
-    "works two three three four seven ten"
-    "works two three three four seven ten"
-    "works two three three five eight eight"
-    "works two three three five eight eight";
+    "works works"
+    "works works"
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    "one two"
+    ". two"
+    "three three"
+    "three three"
+    "four five"
+    "six seven"
+    "eight eight"
+    "eight eight"
+    "nine ten";
 
   img {
     height: auto;
@@ -58,7 +73,7 @@ const GridContainer = styled.section`
   }
 
   #third-post-img:before {
-    height: 98.5%;
+    height: 97%;
   }
 
   .clip-img {
@@ -95,15 +110,6 @@ const GridContainer = styled.section`
     grid-area: one;
     position: relative;
   }
-  .post-one:after {
-    content: "";
-    position: absolute;
-    top: -0.5rem;
-    right: -0.7rem;
-    width: 0.15rem;
-    height: 33.2rem;
-    background: rgba(100, 100, 100, 0.12);
-  }
 
   .post-two {
     grid-area: two;
@@ -113,46 +119,18 @@ const GridContainer = styled.section`
     grid-area: three;
   }
 
-  .post-three:after {
-    content: "";
-    position: absolute;
-    top: -0.5rem;
-    right: -0.7rem;
-    width: 0.15rem;
-    height: 33.2rem;
-    background: rgba(100, 100, 100, 0.12);
-  }
-
   .post-four {
     position: relative;
     grid-area: four;
   }
-  .post-four:after {
-    content: "";
-    position: absolute;
-    top: -0.5rem;
-    right: -0.7rem;
-    width: 0.15rem;
-    height: 33.2rem;
-    background: rgba(100, 100, 100, 0.12);
-  }
 
   .post-five {
+    position: relative;
     grid-area: five;
   }
   .post-six {
     position: relative;
     grid-area: six;
-  }
-
-  .post-six:after {
-    content: "";
-    position: absolute;
-    top: -0.5rem;
-    right: -0.7rem;
-    width: 0.15rem;
-    height: 21.6rem;
-    background: rgba(100, 100, 100, 0.12);
   }
 
   .post-seven {
@@ -230,8 +208,102 @@ const GridContainer = styled.section`
     font-weight: 600;
   }
 
-  @media screen and (max-width: 1390px) {
-    background: orange;
+  @media screen and (min-width: 560px) and (max-width: 929px) {
+    grid-template-columns: repeat(3, max-content);
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "works works one"
+      "works works two"
+      "works works two"
+      "three three four"
+      "three three seven"
+      "five six nine"
+      "eight eight ten"
+      "eight eight .";
+
+    .post-one:after {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      left: -0.7rem;
+      width: 0.15rem;
+      height: 89.5rem;
+      background: rgba(100, 100, 100, 0.12);
+    }
+
+    .post-five:after {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      right: -1rem;
+      width: 0.15rem;
+      height: 10.1rem;
+      background: rgba(100, 100, 100, 0.12);
+    }
+  }
+
+  @media screen and (min-width: 930px) {
+    /* width: 95vw; */
+    /* background: lime; */
+    grid-template-areas:
+      ". works one three three . ."
+      ". works two three three . ."
+      ". works two three three . ."
+      ". . four six nine . ."
+      ". . four seven ten . ."
+      ". . five eight eight . .";
+
+    .post-one:after {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      right: -0.7rem;
+      width: 0.15rem;
+      height: 33.2rem;
+      background: rgba(100, 100, 100, 0.12);
+    }
+
+    .post-three:after {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      right: -0.7rem;
+      width: 0.15rem;
+      height: 33.2rem;
+      background: rgba(100, 100, 100, 0.12);
+    }
+
+    .post-four:after {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      right: -0.7rem;
+      width: 0.15rem;
+      height: 33.2rem;
+      background: rgba(100, 100, 100, 0.12);
+    }
+
+    .post-six:after {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      right: -0.7rem;
+      width: 0.15rem;
+      height: 21.6rem;
+      background: rgba(100, 100, 100, 0.12);
+    }
+  }
+
+  @media screen and (min-width: 1390px) {
+    grid-template-columns: repeat(7, max-content);
+    grid-template-rows: repeat(5, max-content);
+    grid-template-areas:
+      "works one three three four six nine"
+      "works one three three four six nine"
+      "works two three three four seven ten"
+      "works two three three four seven ten"
+      "works two three three five eight eight"
+      "works two three three five eight eight";
   }
 `;
 

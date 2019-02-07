@@ -10,7 +10,11 @@ const Main = styled.main`
   align-items: center;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+
+  @media screen and (min-width: 930px) {
+    height: 100vh;
+  }
 `;
 
 const index = () => {
