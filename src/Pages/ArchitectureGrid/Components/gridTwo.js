@@ -9,7 +9,6 @@ const GridContainer = styled.section`
   grid-gap: 1.2rem;
   width: 95vw;
   height: 100%;
-  padding-bottom: 2rem;
   grid-template-columns: repeat(2, max-content);
   grid-auto-rows: auto;
   grid-template-areas:
@@ -220,6 +219,7 @@ const GridContainer = styled.section`
       "five six nine"
       "eight eight ten"
       "eight eight .";
+    padding-bottom: 2rem;
 
     .post-one:after {
       content: "";

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="74px" viewBox="0 0 60 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-35.1%" y="-25.8%" width="170.2%" height="151.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.196218297 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="-13.4098542%" cy="18.8661906%" fx="-13.4098542%" fy="18.8661906%" r="194.196509%" gradientTransform="translate(-0.134099,0.188662),scale(1.000000,0.633333),rotate(42.774344),translate(0.134099,-0.188662)" id="radialGradient-2">
+            <stop stop-color="#00FFDD" offset="0%"></stop>
+            <stop stop-color="#00FF81" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="bevel">
+        <g transform="translate(-81.000000, -19.000000)" id="Page" stroke="url(#radialGradient-2)">
+            <g>
+                <g id="Header">
+                    <g id="Logo" transform="translate(88.000000, 24.000000)">
+                        <g filter="url(#filter-1)">
+                            <path d="M0,30 L19,0 L38,30 L19,60 L0,30 Z M0,30 L19,40 L38,30 L19,20 L0,30 Z" id="Combined-Shape" stroke-width="5" fill-rule="nonzero"></path>
+                            <path d="M3,30 L22,0 L41,30 L22,60 L3,30 Z M3,30 L22,40 L41,30 L22,20 L3,30 Z" id="Combined-Shape-Copy" stroke-width="5" opacity="0.20047433" fill-rule="nonzero"></path>
+                            <path d="M6,30 L25,0 L44,30 L25,60 L6,30 Z M6,30 L25,40 L44,30 L25,20 L6,30 Z" id="Combined-Shape-Copy" stroke-width="5" opacity="0.100074405" fill-rule="nonzero"></path>
+                            <path d="M9,30 L28,0 L47,30 L28,60 L9,30 Z M9,30 L28,40 L47,30 L28,20 L9,30 Z" id="Combined-Shape-Copy" stroke-width="5" opacity="0.0463634673" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

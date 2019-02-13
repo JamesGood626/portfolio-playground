@@ -1,0 +1,1653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="145px" height="176px" viewBox="0 0 145 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Flash glow icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-188.4%" y="-153.5%" width="473.3%" height="412.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="11" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.103685462 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-157.8%" y="-126.6%" width="411.8%" height="359.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.201992754 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-72.6%" y="-54.0%" width="241.3%" height="214.6%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.958896%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294617),rotate(-37.489486),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-4">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.564958%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294617),rotate(153.290506),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-5">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.0288997%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294617),rotate(46.071241),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-7" points="33.0769231 1.19947665 18.3760684 33.5853462 36.7521368 27.587963 18.3760684 63.5722625"></polyline>
+        <filter x="-146.0%" y="-36.2%" width="395.3%" height="179.0%" filterUnits="objectBoundingBox" id="filter-8">
+            <feMorphology radius="4.23500018" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.23500018" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.50985%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.296097),rotate(-37.350953),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-9">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.367909%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296097),rotate(153.405589),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-10">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.7725078%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296097),rotate(45.927800),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-11">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-12" points="33.1868417 1.15125417 18.3770711 33.6104847 36.7634476 27.5435887 18.2676479 63.6166952"></polyline>
+        <filter x="-144.7%" y="-36.2%" width="393.3%" height="178.9%" filterUnits="objectBoundingBox" id="filter-13">
+            <feMorphology radius="4.23500018" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.23500018" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.345406%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.296643),rotate(-37.299982),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-14">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.295789%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296643),rotate(153.447883),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-15">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.6785674%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296643),rotate(45.874971),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-16">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-17" points="33.2785613 1.0529241 18.3915342 33.6183428 36.7638223 27.4826005 18.1858857 63.680109"></polyline>
+        <filter x="-143.7%" y="-36.1%" width="391.8%" height="178.7%" filterUnits="objectBoundingBox" id="filter-18">
+            <feMorphology radius="4.23500018" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.23500018" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.4796%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.296197),rotate(-37.341586),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-19">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.35464%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296197),rotate(153.413363),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-20">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.7552289%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296197),rotate(45.918094),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-21">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-22" points="33.3443022 0.920056942 18.4209963 33.6116832 36.7564989 27.4160651 18.1439269 63.7585656"></polyline>
+        <filter x="-143.1%" y="-36.0%" width="391.0%" height="178.5%" filterUnits="objectBoundingBox" id="filter-23">
+            <feMorphology radius="4.23500018" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.23500018" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.896511%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294821),rotate(-37.470297),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-24">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.537573%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294821),rotate(153.306459),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-25">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.9932914%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294821),rotate(46.051385),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-26">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-27" points="33.377292 0.774278737 18.4630606 33.5969094 36.7435174 27.3576078 18.1479889 63.8482022"></polyline>
+        <filter x="-143.0%" y="-35.8%" width="391.0%" height="178.2%" filterUnits="objectBoundingBox" id="filter-28">
+            <feMorphology radius="4.23500018" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.23500018" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polyline id="path-29" points="33.0769231 1.19947665 18.3760684 33.5853462 36.7521368 27.587963 18.3760684 63.5722625"></polyline>
+        <filter x="-146.0%" y="-36.2%" width="395.3%" height="179.0%" filterUnits="objectBoundingBox" id="filter-30">
+            <feMorphology radius="4.23500018" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.23500018" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-158.0%" y="-127.7%" width="412.7%" height="360.5%" filterUnits="objectBoundingBox" id="filter-31">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="14.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.264719946   0 0 0 0 0.876142645   0 0 0 0 0.671988938  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-74.1%" y="-56.4%" width="244.9%" height="218.1%" filterUnits="objectBoundingBox" id="filter-32">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.213345%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.293787),rotate(-37.567565),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-33">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.676689%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293787),rotate(153.225559),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-34">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.1740986%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293787),rotate(46.151992),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-35">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-36" points="39.6923077 1.443438 22.0512821 40.4162641 44.1025641 33.1990741 22.0512821 76.5022142"></polyline>
+        <filter x="-142.3%" y="-35.6%" width="388.0%" height="176.7%" filterUnits="objectBoundingBox" id="filter-37">
+            <feMorphology radius="5.08200042" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.08200042" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.821209%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.295068),rotate(-37.447110),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-38">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.504521%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295068),rotate(153.325730),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-39">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.9503045%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295068),rotate(46.027386),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-40">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-41" points="39.806748 1.39323178 22.052326 40.4424367 44.1143402 33.1528743 21.9384014 76.5484748"></polyline>
+        <filter x="-141.2%" y="-35.6%" width="386.2%" height="176.6%" filterUnits="objectBoundingBox" id="filter-42">
+            <feMorphology radius="5.08200042" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.08200042" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.676807%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.295544),rotate(-37.402571),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-43">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.441153%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295544),rotate(153.362731),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-44">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.8678578%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295544),rotate(45.981272),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-45">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-46" points="39.9022407 1.29085667 22.0673841 40.4506181 44.1147304 33.0893773 21.8532758 76.6144972"></polyline>
+        <filter x="-140.4%" y="-35.5%" width="385.0%" height="176.4%" filterUnits="objectBoundingBox" id="filter-47">
+            <feMorphology radius="5.08200042" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.08200042" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.793161%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.295161),rotate(-37.438467),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-48">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.492211%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295161),rotate(153.332912),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-49">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.9342924%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295161),rotate(46.018439),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-50">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-51" points="39.9706861 1.15252372 22.0980581 40.4436845 44.1071057 33.0201048 21.8095909 76.6961813"></polyline>
+        <filter x="-139.9%" y="-35.4%" width="384.3%" height="176.2%" filterUnits="objectBoundingBox" id="filter-52">
+            <feMorphology radius="5.08200042" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.08200042" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.156426%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.293972),rotate(-37.550126),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-53">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.651691%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293972),rotate(153.240071),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-54">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.1416236%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293972),rotate(46.133962),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-55">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-56" points="40.005033 1.00074858 22.1418529 40.4283029 44.0935902 32.9592427 21.81382 76.7895053"></polyline>
+        <filter x="-139.8%" y="-35.3%" width="384.3%" height="175.9%" filterUnits="objectBoundingBox" id="filter-57">
+            <feMorphology radius="5.08200042" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.08200042" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polyline id="path-58" points="39.6923077 1.443438 22.0512821 40.4162641 44.1025641 33.1990741 22.0512821 76.5022142"></polyline>
+        <filter x="-142.3%" y="-35.6%" width="388.0%" height="176.7%" filterUnits="objectBoundingBox" id="filter-59">
+            <feMorphology radius="5.08200042" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.08200042" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-158.1%" y="-127.7%" width="412.8%" height="361.4%" filterUnits="objectBoundingBox" id="filter-60">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="18.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.264719946   0 0 0 0 0.876142645   0 0 0 0 0.671988938  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-74.4%" y="-56.4%" width="245.3%" height="218.8%" filterUnits="objectBoundingBox" id="filter-61">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.91979%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294745),rotate(-37.477459),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-62">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.547791%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294745),rotate(153.300505),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-63">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.0065789%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294745),rotate(46.058797),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-64">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-65" points="51.6 1.87037037 28.6666667 52.3703704 57.3333333 43.0185185 28.6666667 99.1296296"></polyline>
+        <filter x="-147.3%" y="-36.8%" width="397.9%" height="179.8%" filterUnits="objectBoundingBox" id="filter-66">
+            <feMorphology radius="6.60660031" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="6.60660031" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.462057%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.296255),rotate(-37.336152),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-67">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.346946%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296255),rotate(153.417873),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-68">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.745208%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296255),rotate(45.912463),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-69">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-70" points="51.7749654 1.79361116 28.6682628 52.4103851 57.3513376 42.9478847 28.4940859 99.2003565"></polyline>
+        <filter x="-145.9%" y="-36.7%" width="395.8%" height="179.7%" filterUnits="objectBoundingBox" id="filter-71">
+            <feMorphology radius="6.60660031" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="6.60660031" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.294575%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.296813),rotate(-37.284201),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-72">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.273501%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296813),rotate(153.460973),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-73">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.6495243%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296813),rotate(45.858608),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-74">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-75" points="51.9209621 1.63709204 28.6912847 52.4228935 57.3519341 42.8508055 28.3639392 99.3012967"></polyline>
+        <filter x="-144.9%" y="-36.6%" width="394.2%" height="179.5%" filterUnits="objectBoundingBox" id="filter-76">
+            <feMorphology radius="6.60660031" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="6.60660031" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.431515%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.296357),rotate(-37.326688),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-77">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.333551%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296357),rotate(153.425727),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-78">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.7277611%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296357),rotate(45.902654),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-79">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-80" points="52.0256067 1.42559775 28.7381816 52.4122929 57.3402768 42.7448962 28.2971502 99.4261817"></polyline>
+        <filter x="-144.3%" y="-36.5%" width="393.4%" height="179.2%" filterUnits="objectBoundingBox" id="filter-81">
+            <feMorphology radius="6.60660031" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="6.60660031" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.856638%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294952),rotate(-37.458022),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-82">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.520071%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294952),rotate(153.316661),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-83">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.9705304%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294952),rotate(46.038682),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-84">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-85" points="52.078119 1.19355201 28.8051386 52.3887763 57.3196133 42.6518455 28.3036161 99.5688629"></polyline>
+        <filter x="-144.2%" y="-36.3%" width="393.4%" height="178.9%" filterUnits="objectBoundingBox" id="filter-86">
+            <feMorphology radius="6.60660031" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="6.60660031" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polyline id="path-87" points="51.6 1.87037037 28.6666667 52.3703704 57.3333333 43.0185185 28.6666667 99.1296296"></polyline>
+        <filter x="-147.3%" y="-36.8%" width="397.9%" height="179.8%" filterUnits="objectBoundingBox" id="filter-88">
+            <feMorphology radius="6.60660031" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="6.60660031" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-163.3%" y="-128.2%" width="421.2%" height="362.7%" filterUnits="objectBoundingBox" id="filter-89">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="11" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.201992754 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-76.6%" y="-55.7%" width="247.9%" height="217.6%" filterUnits="objectBoundingBox" id="filter-90">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.492326%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.289706),rotate(-37.955516),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-91">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.239101%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.289706),rotate(152.901933),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-92">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.903022%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.289706),rotate(46.552219),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-93">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-94" points="29.7692308 1.09782609 16.5384615 30.7391304 33.0769231 25.25 16.5384615 58.1847826"></polyline>
+        <filter x="-148.6%" y="-36.1%" width="400.4%" height="179.3%" filterUnits="objectBoundingBox" id="filter-95">
+            <feMorphology radius="3.85000008" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.85000008" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.396324%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.290008),rotate(-37.926654),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-96">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.196839%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.290008),rotate(152.926063),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-97">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.8483606%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.290008),rotate(46.522501),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-98">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-99" points="29.7895787 1.08889924 16.5386472 30.743784 33.0790169 25.2417855 16.518391 58.1930079"></polyline>
+        <filter x="-148.3%" y="-36.0%" width="400.0%" height="179.2%" filterUnits="objectBoundingBox" id="filter-100">
+            <feMorphology radius="3.85000008" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.85000008" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.360001%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.290122),rotate(-37.915723),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-101">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.180851%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.290122),rotate(152.935199),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-102">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.8276767%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.290122),rotate(46.511243),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-103">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-104" points="29.8065576 1.07069658 16.5413245 30.7452387 33.0790863 25.2304955 16.5032553 58.2047469"></polyline>
+        <filter x="-148.1%" y="-36.0%" width="399.7%" height="179.2%" filterUnits="objectBoundingBox" id="filter-105">
+            <feMorphology radius="3.85000008" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.85000008" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.38748%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.290035),rotate(-37.923993),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-106">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.192946%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.290035),rotate(152.928287),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-107">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.8433248%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.290035),rotate(46.519760),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-108">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-109" points="29.8187274 1.04610048 16.5467785 30.7440059 33.0777306 25.2181786 16.495488 58.2192707"></polyline>
+        <filter x="-148.0%" y="-36.0%" width="399.5%" height="179.2%" filterUnits="objectBoundingBox" id="filter-110">
+            <feMorphology radius="3.85000008" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.85000008" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.475456%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.289759),rotate(-37.950448),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-111">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.231674%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.289759),rotate(152.906171),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-112">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.8934176%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.289759),rotate(46.547001),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-113">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-114" points="29.8248345 1.01911431 16.5545654 30.741271 33.0753275 25.2073571 16.4962399 58.235864"></polyline>
+        <filter x="-148.0%" y="-36.0%" width="399.5%" height="179.1%" filterUnits="objectBoundingBox" id="filter-115">
+            <feMorphology radius="3.85000008" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.85000008" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polyline id="path-116" points="29.7692308 1.09782609 16.5384615 30.7391304 33.0769231 25.25 16.5384615 58.1847826"></polyline>
+        <filter x="-148.6%" y="-36.1%" width="400.4%" height="179.3%" filterUnits="objectBoundingBox" id="filter-117">
+            <feMorphology radius="3.85000008" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.85000008" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-193.1%" y="-155.8%" width="482.0%" height="417.0%" filterUnits="objectBoundingBox" id="filter-118">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.103685462 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-163.7%" y="-130.1%" width="422.4%" height="366.2%" filterUnits="objectBoundingBox" id="filter-119">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="11" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.201992754 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-76.8%" y="-56.5%" width="248.6%" height="219.0%" filterUnits="objectBoundingBox" id="filter-120">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.434814%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.293070),rotate(-37.635279),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-121">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.77398%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293070),rotate(153.169183),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-122">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.3004278%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293070),rotate(46.221969),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-123">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-124" points="29.6844181 1.08213654 16.4913434 30.2998232 32.9826868 24.8891405 16.4913434 57.3532368"></polyline>
+        <filter x="-148.8%" y="-36.5%" width="400.8%" height="180.3%" filterUnits="objectBoundingBox" id="filter-125">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.092751%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294179),rotate(-37.530598),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-126">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.623728%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294179),rotate(153.256316),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-127">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.1052903%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294179),rotate(46.113768),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-128">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-129" points="29.7586562 1.04956751 16.4920207 30.3168015 32.9903261 24.8591705 16.4181171 57.3832463"></polyline>
+        <filter x="-147.8%" y="-36.5%" width="399.3%" height="180.2%" filterUnits="objectBoundingBox" id="filter-130">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.966186%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294593),rotate(-37.491727),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-131">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.568158%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294593),rotate(153.288643),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-132">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.0330604%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294593),rotate(46.073560),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-133">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-134" points="29.8206028 0.983156235 16.5017889 30.3221088 32.9905791 24.8179796 16.3628957 57.4260754"></polyline>
+        <filter x="-147.0%" y="-36.4%" width="398.1%" height="180.0%" filterUnits="objectBoundingBox" id="filter-135">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.067053%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294263),rotate(-37.522712),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-136">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.612444%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294263),rotate(153.262876),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-137">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.0906259%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294263),rotate(46.105612),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-138">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-139" points="29.8650036 0.893418926 16.5216873 30.317611 32.985633 24.7730422 16.3345571 57.4790643"></polyline>
+        <filter x="-146.6%" y="-36.3%" width="397.5%" height="179.8%" filterUnits="objectBoundingBox" id="filter-140">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.383324%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.293236),rotate(-37.619556),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-141">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.751357%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293236),rotate(153.182277),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-142">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.2710609%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293236),rotate(46.205725),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-143">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-144" points="29.8872847 0.794961607 16.5500972 30.3076329 32.9768654 24.7335606 16.3373006 57.5396041"></polyline>
+        <filter x="-146.5%" y="-36.2%" width="397.5%" height="179.6%" filterUnits="objectBoundingBox" id="filter-145">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polyline id="path-146" points="29.6844181 1.08213654 16.4913434 30.2998232 32.9826868 24.8891405 16.4913434 57.3532368"></polyline>
+        <filter x="-148.8%" y="-36.5%" width="400.8%" height="180.3%" filterUnits="objectBoundingBox" id="filter-147">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-154.1%" y="-123.0%" width="405.9%" height="351.2%" filterUnits="objectBoundingBox" id="filter-148">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.264719946   0 0 0 0 0.876142645   0 0 0 0 0.671988938  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-70.7%" y="-52.6%" width="239.2%" height="210.5%" filterUnits="objectBoundingBox" id="filter-149">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.691454%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.292244),rotate(-37.713464),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-150">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.886773%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.292244),rotate(153.104032),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-151">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.4467621%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.292244),rotate(46.302702),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-152">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-153" points="35.6213018 1.30223211 19.7896121 36.4624991 39.5792242 29.9513386 19.7896121 69.0183019"></polyline>
+        <filter x="-146.2%" y="-36.3%" width="395.7%" height="178.6%" filterUnits="objectBoundingBox" id="filter-154">
+            <feMorphology radius="4.57380026" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.57380026" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.408048%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.293156),rotate(-37.627108),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-155">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.76222%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293156),rotate(153.175989),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-156">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.2851624%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293156),rotate(46.213527),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-157">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-158" points="35.6946337 1.2700606 19.7902811 36.4792702 39.5867702 29.9217344 19.7172796 69.0479451"></polyline>
+        <filter x="-145.4%" y="-36.2%" width="394.4%" height="178.5%" filterUnits="objectBoundingBox" id="filter-159">
+            <feMorphology radius="4.57380026" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.57380026" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.302608%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.293497),rotate(-37.594885),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-160">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.715897%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293497),rotate(153.202819),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-161">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.225021%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293497),rotate(46.180231),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-162">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-163" points="35.7558242 1.20445991 19.7999301 36.4845127 39.5870202 29.8810463 19.6627322 69.0902515"></polyline>
+        <filter x="-144.8%" y="-36.2%" width="393.5%" height="178.4%" filterUnits="objectBoundingBox" id="filter-164">
+            <feMorphology radius="4.57380026" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.57380026" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.385579%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.293229),rotate(-37.620245),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-165">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.752348%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293229),rotate(153.181703),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-166">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.2723474%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293229),rotate(46.206437),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-167">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-168" points="35.7996831 1.1158179 19.8195856 36.4800698 39.5821344 29.8366573 19.6347394 69.1425936"></polyline>
+        <filter x="-144.4%" y="-36.1%" width="393.0%" height="178.2%" filterUnits="objectBoundingBox" id="filter-169">
+            <feMorphology radius="4.57380026" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.57380026" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.64704%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.292386),rotate(-37.699955),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-170">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.867249%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.292386),rotate(153.115293),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-171">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.4214418%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.292386),rotate(46.288758),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-172">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-173" points="35.8216922 1.0185623 19.8476488 36.4702135 39.5734738 29.7976577 19.6374494 69.2023945"></polyline>
+        <filter x="-144.3%" y="-36.0%" width="393.0%" height="178.0%" filterUnits="objectBoundingBox" id="filter-174">
+            <feMorphology radius="4.57380026" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.57380026" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polyline id="path-175" points="35.6213018 1.30223211 19.7896121 36.4624991 39.5792242 29.9513386 19.7896121 69.0183019"></polyline>
+        <filter x="-146.2%" y="-36.3%" width="395.7%" height="178.6%" filterUnits="objectBoundingBox" id="filter-176">
+            <feMorphology radius="4.57380026" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="4.57380026" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-161.3%" y="-129.0%" width="418.5%" height="363.3%" filterUnits="objectBoundingBox" id="filter-177">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="17" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.264719946   0 0 0 0 0.876142645   0 0 0 0 0.671988938  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-74.5%" y="-55.4%" width="244.9%" height="216.2%" filterUnits="objectBoundingBox" id="filter-178">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.395371%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.293197),rotate(-37.623236),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-179">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.75665%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293197),rotate(153.179213),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-180">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.2779324%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293197),rotate(46.209527),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-181">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-182" points="46.3076923 1.68739936 25.7264957 47.247182 51.4529915 38.8101852 25.7264957 89.4321659"></polyline>
+        <filter x="-147.6%" y="-36.3%" width="398.5%" height="179.6%" filterUnits="objectBoundingBox" id="filter-183">
+            <feMorphology radius="5.94594012" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.94594012" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.044353%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294337),rotate(-37.515743),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-184">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.602477%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294337),rotate(153.268672),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-185">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.0776719%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294337),rotate(46.098404),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-186">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-187" points="46.4266544 1.63520939 25.727581 47.2743887 51.4652329 38.76216 25.6091549 89.4802543"></polyline>
+        <filter x="-146.6%" y="-36.3%" width="396.9%" height="179.5%" filterUnits="objectBoundingBox" id="filter-188">
+            <feMorphology radius="5.94594012" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.94594012" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.914585%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294762),rotate(-37.475858),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-189">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.545506%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294762),rotate(153.301836),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-190">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.0036078%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294762),rotate(46.057140),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-191">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-192" points="46.5259202 1.52878924 25.743234 47.2828934 51.4656384 38.6961541 25.5206659 89.5488854"></polyline>
+        <filter x="-145.8%" y="-36.2%" width="395.7%" height="179.4%" filterUnits="objectBoundingBox" id="filter-193">
+            <feMorphology radius="5.94594012" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.94594012" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.018208%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.294423),rotate(-37.507713),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-194">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.590998%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294423),rotate(153.275350),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-195">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.0627507%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.294423),rotate(46.090098),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-196">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-197" points="46.5970699 1.38499049 25.77512 47.2756858 51.4577125 38.6241445 25.4752549 89.633797"></polyline>
+        <filter x="-145.4%" y="-36.1%" width="395.1%" height="179.2%" filterUnits="objectBoundingBox" id="filter-198">
+            <feMorphology radius="5.94594012" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.94594012" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="243.342868%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.293367),rotate(-37.607194),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-199">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.733584%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293367),rotate(153.192571),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-200">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="99.247986%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.293367),rotate(46.192952),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-201">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-202" points="46.632774 1.22721843 25.8206452 47.2596965 51.443663 38.5608776 25.4796511 89.7308084"></polyline>
+        <filter x="-145.3%" y="-36.0%" width="395.1%" height="178.9%" filterUnits="objectBoundingBox" id="filter-203">
+            <feMorphology radius="5.94594012" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.94594012" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polyline id="path-204" points="46.3076923 1.68739936 25.7264957 47.247182 51.4529915 38.8101852 25.7264957 89.4321659"></polyline>
+        <filter x="-147.6%" y="-36.3%" width="398.5%" height="179.6%" filterUnits="objectBoundingBox" id="filter-205">
+            <feMorphology radius="5.94594012" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="5.94594012" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-170.7%" y="-132.8%" width="435.7%" height="372.1%" filterUnits="objectBoundingBox" id="filter-206">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.201992754 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-80.9%" y="-58.0%" width="256.0%" height="222.5%" filterUnits="objectBoundingBox" id="filter-207">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.981416%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.288185),rotate(-38.101920),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-208">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.454523%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288185),rotate(152.779403),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-209">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="100.181369%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288185),rotate(46.702824),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-210">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-211" points="26.7159763 0.990430057 14.8422091 27.7320416 29.6844181 22.7798913 14.8422091 52.492793"></polyline>
+        <filter x="-150.6%" y="-36.1%" width="404.5%" height="180.0%" filterUnits="objectBoundingBox" id="filter-212">
+            <feMorphology radius="3.46499998" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.46499998" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.977594%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.288197),rotate(-38.100780),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-213">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.452839%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288197),rotate(152.780358),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-214">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="100.179195%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288197),rotate(46.701653),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-215">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-216" points="26.7119296 0.991866478 14.8422027 27.7307566 29.6840294 22.781185 14.8462619 52.4907923"></polyline>
+        <filter x="-150.6%" y="-36.1%" width="404.5%" height="180.0%" filterUnits="objectBoundingBox" id="filter-217">
+            <feMorphology radius="3.46499998" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.46499998" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.963444%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.288241),rotate(-38.096559),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-218">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.446603%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288241),rotate(152.783893),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-219">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="100.171145%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288241),rotate(46.697314),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-220">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-221" points="26.7087264 0.99456196 14.8418654 27.729513 29.6842147 22.7824952 14.8494941 52.4874878"></polyline>
+        <filter x="-150.6%" y="-36.1%" width="404.4%" height="180.1%" filterUnits="objectBoundingBox" id="filter-222">
+            <feMorphology radius="3.46499998" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.46499998" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.940677%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.288311),rotate(-38.089766),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-223">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.436572%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288311),rotate(152.789583),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-224">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="100.158193%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288311),rotate(46.690330),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-225">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-226" points="26.7067462 0.998225832 14.8412309 27.7284951 29.6849448 22.7836985 14.8515091 52.4833124"></polyline>
+        <filter x="-150.6%" y="-36.1%" width="404.4%" height="180.1%" filterUnits="objectBoundingBox" id="filter-227">
+            <feMorphology radius="3.46499998" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.46499998" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="244.91205%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.288400),rotate(-38.081221),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-228">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="196.423958%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288400),rotate(152.796740),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-229">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="100.141905%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.288400),rotate(46.681545),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-230">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-231" points="26.7062011 1.00244672 14.8403492 27.7278562 29.6861051 22.7846801 14.8520371 52.4788004"></polyline>
+        <filter x="-150.6%" y="-36.1%" width="404.4%" height="180.1%" filterUnits="objectBoundingBox" id="filter-232">
+            <feMorphology radius="3.46499998" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.46499998" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polyline id="path-233" points="26.7159763 0.990430057 14.8422091 27.7320416 29.6844181 22.7798913 14.8422091 52.492793"></polyline>
+        <filter x="-150.6%" y="-36.1%" width="404.5%" height="180.0%" filterUnits="objectBoundingBox" id="filter-234">
+            <feMorphology radius="3.46499998" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.46499998" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-163.3%" y="-130.6%" width="421.2%" height="367.8%" filterUnits="objectBoundingBox" id="filter-235">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="11" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.201992754 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-76.6%" y="-56.7%" width="247.9%" height="220.0%" filterUnits="objectBoundingBox" id="filter-236">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.789514%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.295173),rotate(-37.437342),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-237">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.490611%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295173),rotate(153.333846),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-238">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.93221%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295173),rotate(46.017275),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-239">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-240" points="29.7692308 1.07749597 16.5384615 30.1698873 33.0769231 24.7824074 16.5384615 57.1072866"></polyline>
+        <filter x="-148.5%" y="-36.7%" width="400.2%" height="180.6%" filterUnits="objectBoundingBox" id="filter-241">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.302953%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.296785),rotate(-37.286803),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-242">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.277174%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296785),rotate(153.458815),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-243">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.6543118%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296785),rotate(45.861306),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-244">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-245" points="29.8768885 1.03026537 16.5394436 30.1945087 33.0880012 24.7389458 16.4322711 57.1508055"></polyline>
+        <filter x="-147.0%" y="-36.6%" width="398.0%" height="180.5%" filterUnits="objectBoundingBox" id="filter-246">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.125432%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.297379),rotate(-37.231598),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-247">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.199351%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.297379),rotate(153.504585),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-248">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.5528647%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.297379),rotate(45.804047),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-249">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-250" points="29.9667215 0.933957809 16.5536092 30.2022052 33.0883683 24.6792121 16.3521907 57.2129149"></polyline>
+        <filter x="-145.9%" y="-36.5%" width="396.3%" height="180.3%" filterUnits="objectBoundingBox" id="filter-251">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.271528%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.296890),rotate(-37.277041),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-252">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.263396%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296890),rotate(153.466910),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-253">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.6363558%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.296890),rotate(45.851184),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-254">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-255" points="30.0311102 0.803823556 16.5824653 30.1956825 33.0811955 24.6140452 16.3110949 57.2897577"></polyline>
+        <filter x="-145.3%" y="-36.4%" width="395.5%" height="180.0%" filterUnits="objectBoundingBox" id="filter-256">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="39.6347511%" cy="53.4897697%" fx="39.6347511%" fy="53.4897697%" r="242.723947%" gradientTransform="translate(0.396348,0.534898),scale(1.000000,0.295389),rotate(-37.417121),scale(1.000000,0.385000),translate(-0.396348,-0.534898)" id="radialGradient-257">
+            <stop stop-color="#00FFAB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="195.461838%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295389),rotate(153.350646),scale(1.000000,0.767670),translate(-0.500000,-0.500000)" id="radialGradient-258">
+            <stop stop-color="#67FFE2" stop-opacity="0.598958333" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="98.8947746%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.295389),rotate(45.996340),scale(1.000000,2.488274),translate(-0.500000,-0.500000)" id="radialGradient-259">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polyline id="path-260" points="30.0634215 0.661043814 16.6236645 30.1812126 33.068481 24.5567903 16.3150734 57.3775506"></polyline>
+        <filter x="-145.2%" y="-36.2%" width="395.5%" height="179.7%" filterUnits="objectBoundingBox" id="filter-261">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polyline id="path-262" points="29.7692308 1.07749597 16.5384615 30.1698873 33.0769231 24.7824074 16.5384615 57.1072866"></polyline>
+        <filter x="-148.5%" y="-36.7%" width="400.2%" height="180.6%" filterUnits="objectBoundingBox" id="filter-263">
+            <feMorphology radius="3.81150006" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3.81150006" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.715862772  0 0 0 0.10900702 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.851514">
+        <g transform="translate(-945.000000, -751.000000)" id="Page">
+            <g>
+                <g id="Display-1-page" transform="translate(0.000000, 177.000000)">
+                    <g id="Group-15" transform="translate(322.000000, 595.000000)">
+                        <g id="Group-12" transform="translate(600.000000, 0.000000)">
+                            <g id="Flash-glow-icon" transform="translate(39.000000, 0.000000)">
+                                <g id="Group-27">
+                                    <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="120" height="120"></rect>
+                                    <g id="Group-26" transform="translate(17.000000, 9.000000)" fill-rule="nonzero">
+                                        <g id="Group-25" opacity="0.699776786" style="mix-blend-mode: hard-light;">
+                                            <g id="Group-24" filter="url(#filter-1)" style="mix-blend-mode: overlay;">
+                                                <g id="Group-18" filter="url(#filter-2)" opacity="0.203473772" style="mix-blend-mode: hard-light;" transform="translate(15.435897, 18.663043)">
+                                                    <g id="Group-17" filter="url(#filter-3)" opacity="0.502092634" style="mix-blend-mode: hard-light;">
+                                                        <g id="Path-5">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                                                            <use stroke="url(#radialGradient-4)" stroke-width="8.47000037" xlink:href="#path-7"></use>
+                                                            <use stroke="url(#radialGradient-5)" stroke-width="4.84000021" xlink:href="#path-7"></use>
+                                                            <use stroke="url(#radialGradient-6)" stroke-width="2.4200001" xlink:href="#path-7"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.252743676" transform="translate(27.515548, 32.383975) rotate(10.000000) translate(-27.515548, -32.383975) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-13)" xlink:href="#path-12"></use>
+                                                            <use stroke="url(#radialGradient-9)" stroke-width="8.47000037" xlink:href="#path-12"></use>
+                                                            <use stroke="url(#radialGradient-10)" stroke-width="4.84000021" xlink:href="#path-12"></use>
+                                                            <use stroke="url(#radialGradient-11)" stroke-width="2.4200001" xlink:href="#path-12"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.204797" transform="translate(27.474854, 32.366517) rotate(20.000000) translate(-27.474854, -32.366517) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-18)" xlink:href="#path-17"></use>
+                                                            <use stroke="url(#radialGradient-14)" stroke-width="8.47000037" xlink:href="#path-17"></use>
+                                                            <use stroke="url(#radialGradient-15)" stroke-width="4.84000021" xlink:href="#path-17"></use>
+                                                            <use stroke="url(#radialGradient-16)" stroke-width="2.4200001" xlink:href="#path-17"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.149459" transform="translate(27.450213, 32.339311) rotate(30.000000) translate(-27.450213, -32.339311) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-23)" xlink:href="#path-22"></use>
+                                                            <use stroke="url(#radialGradient-19)" stroke-width="8.47000037" xlink:href="#path-22"></use>
+                                                            <use stroke="url(#radialGradient-20)" stroke-width="4.84000021" xlink:href="#path-22"></use>
+                                                            <use stroke="url(#radialGradient-21)" stroke-width="2.4200001" xlink:href="#path-22"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.0975864955" transform="translate(27.445753, 32.311240) rotate(40.000000) translate(-27.445753, -32.311240) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-28)" xlink:href="#path-27"></use>
+                                                            <use stroke="url(#radialGradient-24)" stroke-width="8.47000037" xlink:href="#path-27"></use>
+                                                            <use stroke="url(#radialGradient-25)" stroke-width="4.84000021" xlink:href="#path-27"></use>
+                                                            <use stroke="url(#radialGradient-26)" stroke-width="2.4200001" xlink:href="#path-27"></use>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Path-5" style="mix-blend-mode: normal;">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-30)" xlink:href="#path-29"></use>
+                                                        <use stroke="url(#radialGradient-4)" stroke-width="8.47000037" xlink:href="#path-29"></use>
+                                                        <use stroke="url(#radialGradient-5)" stroke-width="4.84000021" xlink:href="#path-29"></use>
+                                                        <use stroke="url(#radialGradient-6)" stroke-width="2.4200001" xlink:href="#path-29"></use>
+                                                    </g>
+                                                </g>
+                                                <g id="Group-18" filter="url(#filter-31)" opacity="0.1" style="mix-blend-mode: hard-light;" transform="translate(9.923077, 12.076087)">
+                                                    <g id="Group-17" filter="url(#filter-32)" opacity="0.502092634" style="mix-blend-mode: hard-light;">
+                                                        <g id="Path-5">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-37)" xlink:href="#path-36"></use>
+                                                            <use stroke="url(#radialGradient-33)" stroke-width="10.1640008" xlink:href="#path-36"></use>
+                                                            <use stroke="url(#radialGradient-34)" stroke-width="5.80800048" xlink:href="#path-36"></use>
+                                                            <use stroke="url(#radialGradient-35)" stroke-width="2.90400024" xlink:href="#path-36"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.252743676" transform="translate(33.026371, 38.970853) rotate(10.000000) translate(-33.026371, -38.970853) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-42)" xlink:href="#path-41"></use>
+                                                            <use stroke="url(#radialGradient-38)" stroke-width="10.1640008" xlink:href="#path-41"></use>
+                                                            <use stroke="url(#radialGradient-39)" stroke-width="5.80800048" xlink:href="#path-41"></use>
+                                                            <use stroke="url(#radialGradient-40)" stroke-width="2.90400024" xlink:href="#path-41"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.204797" transform="translate(32.984003, 38.952677) rotate(20.000000) translate(-32.984003, -38.952677) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-47)" xlink:href="#path-46"></use>
+                                                            <use stroke="url(#radialGradient-43)" stroke-width="10.1640008" xlink:href="#path-46"></use>
+                                                            <use stroke="url(#radialGradient-44)" stroke-width="5.80800048" xlink:href="#path-46"></use>
+                                                            <use stroke="url(#radialGradient-45)" stroke-width="2.90400024" xlink:href="#path-46"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.149459" transform="translate(32.958348, 38.924352) rotate(30.000000) translate(-32.958348, -38.924352) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-52)" xlink:href="#path-51"></use>
+                                                            <use stroke="url(#radialGradient-48)" stroke-width="10.1640008" xlink:href="#path-51"></use>
+                                                            <use stroke="url(#radialGradient-49)" stroke-width="5.80800048" xlink:href="#path-51"></use>
+                                                            <use stroke="url(#radialGradient-50)" stroke-width="2.90400024" xlink:href="#path-51"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.0975864955" transform="translate(32.953705, 38.895127) rotate(40.000000) translate(-32.953705, -38.895127) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-57)" xlink:href="#path-56"></use>
+                                                            <use stroke="url(#radialGradient-53)" stroke-width="10.1640008" xlink:href="#path-56"></use>
+                                                            <use stroke="url(#radialGradient-54)" stroke-width="5.80800048" xlink:href="#path-56"></use>
+                                                            <use stroke="url(#radialGradient-55)" stroke-width="2.90400024" xlink:href="#path-56"></use>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Path-5" style="mix-blend-mode: normal;">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-59)" xlink:href="#path-58"></use>
+                                                        <use stroke="url(#radialGradient-33)" stroke-width="10.1640008" xlink:href="#path-58"></use>
+                                                        <use stroke="url(#radialGradient-34)" stroke-width="5.80800048" xlink:href="#path-58"></use>
+                                                        <use stroke="url(#radialGradient-35)" stroke-width="2.90400024" xlink:href="#path-58"></use>
+                                                    </g>
+                                                </g>
+                                                <g id="Group-18" filter="url(#filter-60)" opacity="0.046968006" style="mix-blend-mode: hard-light;">
+                                                    <g id="Group-17" filter="url(#filter-61)" opacity="0.502092634" style="mix-blend-mode: hard-light;">
+                                                        <g id="Path-5">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-66)" xlink:href="#path-65"></use>
+                                                            <use stroke="url(#radialGradient-62)" stroke-width="13.2132006" xlink:href="#path-65"></use>
+                                                            <use stroke="url(#radialGradient-63)" stroke-width="7.55040035" xlink:href="#path-65"></use>
+                                                            <use stroke="url(#radialGradient-64)" stroke-width="3.77520018" xlink:href="#path-65"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.252743676" transform="translate(42.922712, 50.496984) rotate(10.000000) translate(-42.922712, -50.496984) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-71)" xlink:href="#path-70"></use>
+                                                            <use stroke="url(#radialGradient-67)" stroke-width="13.2132006" xlink:href="#path-70"></use>
+                                                            <use stroke="url(#radialGradient-68)" stroke-width="7.55040035" xlink:href="#path-70"></use>
+                                                            <use stroke="url(#radialGradient-69)" stroke-width="3.77520018" xlink:href="#path-70"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.204797" transform="translate(42.857937, 50.469194) rotate(20.000000) translate(-42.857937, -50.469194) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-76)" xlink:href="#path-75"></use>
+                                                            <use stroke="url(#radialGradient-72)" stroke-width="13.2132006" xlink:href="#path-75"></use>
+                                                            <use stroke="url(#radialGradient-73)" stroke-width="7.55040035" xlink:href="#path-75"></use>
+                                                            <use stroke="url(#radialGradient-74)" stroke-width="3.77520018" xlink:href="#path-75"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.149459" transform="translate(42.818714, 50.425890) rotate(30.000000) translate(-42.818714, -50.425890) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-81)" xlink:href="#path-80"></use>
+                                                            <use stroke="url(#radialGradient-77)" stroke-width="13.2132006" xlink:href="#path-80"></use>
+                                                            <use stroke="url(#radialGradient-78)" stroke-width="7.55040035" xlink:href="#path-80"></use>
+                                                            <use stroke="url(#radialGradient-79)" stroke-width="3.77520018" xlink:href="#path-80"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.0975864955" transform="translate(42.811615, 50.381207) rotate(40.000000) translate(-42.811615, -50.381207) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-86)" xlink:href="#path-85"></use>
+                                                            <use stroke="url(#radialGradient-82)" stroke-width="13.2132006" xlink:href="#path-85"></use>
+                                                            <use stroke="url(#radialGradient-83)" stroke-width="7.55040035" xlink:href="#path-85"></use>
+                                                            <use stroke="url(#radialGradient-84)" stroke-width="3.77520018" xlink:href="#path-85"></use>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Path-5" style="mix-blend-mode: normal;">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-88)" xlink:href="#path-87"></use>
+                                                        <use stroke="url(#radialGradient-62)" stroke-width="13.2132006" xlink:href="#path-87"></use>
+                                                        <use stroke="url(#radialGradient-63)" stroke-width="7.55040035" xlink:href="#path-87"></use>
+                                                        <use stroke="url(#radialGradient-64)" stroke-width="3.77520018" xlink:href="#path-87"></use>
+                                                    </g>
+                                                </g>
+                                                <g id="Group-18" filter="url(#filter-89)" opacity="0.895740327" style="mix-blend-mode: screen;" transform="translate(17.641026, 21.956522)">
+                                                    <g id="Group-17" filter="url(#filter-90)" opacity="0.502092634" style="mix-blend-mode: hard-light;">
+                                                        <g id="Path-5">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-95)" xlink:href="#path-94"></use>
+                                                            <use stroke="url(#radialGradient-91)" stroke-width="7.70000017" xlink:href="#path-94"></use>
+                                                            <use stroke="url(#radialGradient-92)" stroke-width="4.4000001" xlink:href="#path-94"></use>
+                                                            <use stroke="url(#radialGradient-93)" stroke-width="2.20000005" xlink:href="#path-94"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.252743676" transform="translate(24.798704, 29.640954) rotate(10.000000) translate(-24.798704, -29.640954) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-100)" xlink:href="#path-99"></use>
+                                                            <use stroke="url(#radialGradient-96)" stroke-width="7.70000017" xlink:href="#path-99"></use>
+                                                            <use stroke="url(#radialGradient-97)" stroke-width="4.4000001" xlink:href="#path-99"></use>
+                                                            <use stroke="url(#radialGradient-98)" stroke-width="2.20000005" xlink:href="#path-99"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.204797" transform="translate(24.791171, 29.637722) rotate(20.000000) translate(-24.791171, -29.637722) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-105)" xlink:href="#path-104"></use>
+                                                            <use stroke="url(#radialGradient-101)" stroke-width="7.70000017" xlink:href="#path-104"></use>
+                                                            <use stroke="url(#radialGradient-102)" stroke-width="4.4000001" xlink:href="#path-104"></use>
+                                                            <use stroke="url(#radialGradient-103)" stroke-width="2.20000005" xlink:href="#path-104"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.149459" transform="translate(24.786609, 29.632686) rotate(30.000000) translate(-24.786609, -29.632686) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-110)" xlink:href="#path-109"></use>
+                                                            <use stroke="url(#radialGradient-106)" stroke-width="7.70000017" xlink:href="#path-109"></use>
+                                                            <use stroke="url(#radialGradient-107)" stroke-width="4.4000001" xlink:href="#path-109"></use>
+                                                            <use stroke="url(#radialGradient-108)" stroke-width="2.20000005" xlink:href="#path-109"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.0975864955" transform="translate(24.785784, 29.627489) rotate(40.000000) translate(-24.785784, -29.627489) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-115)" xlink:href="#path-114"></use>
+                                                            <use stroke="url(#radialGradient-111)" stroke-width="7.70000017" xlink:href="#path-114"></use>
+                                                            <use stroke="url(#radialGradient-112)" stroke-width="4.4000001" xlink:href="#path-114"></use>
+                                                            <use stroke="url(#radialGradient-113)" stroke-width="2.20000005" xlink:href="#path-114"></use>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Path-5" style="mix-blend-mode: normal;">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-117)" xlink:href="#path-116"></use>
+                                                        <use stroke="url(#radialGradient-91)" stroke-width="7.70000017" xlink:href="#path-116"></use>
+                                                        <use stroke="url(#radialGradient-92)" stroke-width="4.4000001" xlink:href="#path-116"></use>
+                                                        <use stroke="url(#radialGradient-93)" stroke-width="2.20000005" xlink:href="#path-116"></use>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <g id="Group-24" filter="url(#filter-118)" opacity="0.801967076" style="mix-blend-mode: screen;" transform="translate(4.410256, 5.489130)">
+                                                <g id="Group-18" filter="url(#filter-119)" opacity="0.203473772" style="mix-blend-mode: hard-light;" transform="translate(13.852728, 16.837311)">
+                                                    <g id="Group-17" filter="url(#filter-120)" opacity="0.502092634" style="mix-blend-mode: hard-light;">
+                                                        <g id="Path-5">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-125)" xlink:href="#path-124"></use>
+                                                            <use stroke="url(#radialGradient-121)" stroke-width="7.62300013" xlink:href="#path-124"></use>
+                                                            <use stroke="url(#radialGradient-122)" stroke-width="4.35600007" xlink:href="#path-124"></use>
+                                                            <use stroke="url(#radialGradient-123)" stroke-width="2.17800004" xlink:href="#path-124"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.252743676" transform="translate(24.704222, 29.216407) rotate(10.000000) translate(-24.704222, -29.216407) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-130)" xlink:href="#path-129"></use>
+                                                            <use stroke="url(#radialGradient-126)" stroke-width="7.62300013" xlink:href="#path-129"></use>
+                                                            <use stroke="url(#radialGradient-127)" stroke-width="4.35600007" xlink:href="#path-129"></use>
+                                                            <use stroke="url(#radialGradient-128)" stroke-width="2.17800004" xlink:href="#path-129"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.204797" transform="translate(24.676737, 29.204616) rotate(20.000000) translate(-24.676737, -29.204616) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-135)" xlink:href="#path-134"></use>
+                                                            <use stroke="url(#radialGradient-131)" stroke-width="7.62300013" xlink:href="#path-134"></use>
+                                                            <use stroke="url(#radialGradient-132)" stroke-width="4.35600007" xlink:href="#path-134"></use>
+                                                            <use stroke="url(#radialGradient-133)" stroke-width="2.17800004" xlink:href="#path-134"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.149459" transform="translate(24.660095, 29.186242) rotate(30.000000) translate(-24.660095, -29.186242) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-140)" xlink:href="#path-139"></use>
+                                                            <use stroke="url(#radialGradient-136)" stroke-width="7.62300013" xlink:href="#path-139"></use>
+                                                            <use stroke="url(#radialGradient-137)" stroke-width="4.35600007" xlink:href="#path-139"></use>
+                                                            <use stroke="url(#radialGradient-138)" stroke-width="2.17800004" xlink:href="#path-139"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.0975864955" transform="translate(24.657083, 29.167283) rotate(40.000000) translate(-24.657083, -29.167283) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-145)" xlink:href="#path-144"></use>
+                                                            <use stroke="url(#radialGradient-141)" stroke-width="7.62300013" xlink:href="#path-144"></use>
+                                                            <use stroke="url(#radialGradient-142)" stroke-width="4.35600007" xlink:href="#path-144"></use>
+                                                            <use stroke="url(#radialGradient-143)" stroke-width="2.17800004" xlink:href="#path-144"></use>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Path-5" style="mix-blend-mode: normal;">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-147)" xlink:href="#path-146"></use>
+                                                        <use stroke="url(#radialGradient-121)" stroke-width="7.62300013" xlink:href="#path-146"></use>
+                                                        <use stroke="url(#radialGradient-122)" stroke-width="4.35600007" xlink:href="#path-146"></use>
+                                                        <use stroke="url(#radialGradient-123)" stroke-width="2.17800004" xlink:href="#path-146"></use>
+                                                    </g>
+                                                </g>
+                                                <g id="Group-18" filter="url(#filter-148)" opacity="0.1" style="mix-blend-mode: hard-light;" transform="translate(8.905325, 10.894731)">
+                                                    <g id="Group-17" filter="url(#filter-149)" opacity="0.502092634" style="mix-blend-mode: hard-light;">
+                                                        <g id="Path-5">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-154)" xlink:href="#path-153"></use>
+                                                            <use stroke="url(#radialGradient-150)" stroke-width="9.14760052" xlink:href="#path-153"></use>
+                                                            <use stroke="url(#radialGradient-151)" stroke-width="5.2272003" xlink:href="#path-153"></use>
+                                                            <use stroke="url(#radialGradient-152)" stroke-width="2.61360015" xlink:href="#path-153"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.252743676" transform="translate(29.652025, 35.159003) rotate(10.000000) translate(-29.652025, -35.159003) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-159)" xlink:href="#path-158"></use>
+                                                            <use stroke="url(#radialGradient-155)" stroke-width="9.14760052" xlink:href="#path-158"></use>
+                                                            <use stroke="url(#radialGradient-156)" stroke-width="5.2272003" xlink:href="#path-158"></use>
+                                                            <use stroke="url(#radialGradient-157)" stroke-width="2.61360015" xlink:href="#path-158"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.204797" transform="translate(29.624876, 35.147356) rotate(20.000000) translate(-29.624876, -35.147356) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-164)" xlink:href="#path-163"></use>
+                                                            <use stroke="url(#radialGradient-160)" stroke-width="9.14760052" xlink:href="#path-163"></use>
+                                                            <use stroke="url(#radialGradient-161)" stroke-width="5.2272003" xlink:href="#path-163"></use>
+                                                            <use stroke="url(#radialGradient-162)" stroke-width="2.61360015" xlink:href="#path-163"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.149459" transform="translate(29.608437, 35.129206) rotate(30.000000) translate(-29.608437, -35.129206) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-169)" xlink:href="#path-168"></use>
+                                                            <use stroke="url(#radialGradient-165)" stroke-width="9.14760052" xlink:href="#path-168"></use>
+                                                            <use stroke="url(#radialGradient-166)" stroke-width="5.2272003" xlink:href="#path-168"></use>
+                                                            <use stroke="url(#radialGradient-167)" stroke-width="2.61360015" xlink:href="#path-168"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.0975864955" transform="translate(29.605462, 35.110478) rotate(40.000000) translate(-29.605462, -35.110478) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-174)" xlink:href="#path-173"></use>
+                                                            <use stroke="url(#radialGradient-170)" stroke-width="9.14760052" xlink:href="#path-173"></use>
+                                                            <use stroke="url(#radialGradient-171)" stroke-width="5.2272003" xlink:href="#path-173"></use>
+                                                            <use stroke="url(#radialGradient-172)" stroke-width="2.61360015" xlink:href="#path-173"></use>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Path-5" style="mix-blend-mode: normal;">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-176)" xlink:href="#path-175"></use>
+                                                        <use stroke="url(#radialGradient-150)" stroke-width="9.14760052" xlink:href="#path-175"></use>
+                                                        <use stroke="url(#radialGradient-151)" stroke-width="5.2272003" xlink:href="#path-175"></use>
+                                                        <use stroke="url(#radialGradient-152)" stroke-width="2.61360015" xlink:href="#path-175"></use>
+                                                    </g>
+                                                </g>
+                                                <g id="Group-18" filter="url(#filter-177)" opacity="0.046968006" style="mix-blend-mode: hard-light;">
+                                                    <g id="Group-17" filter="url(#filter-178)" opacity="0.502092634" style="mix-blend-mode: hard-light;">
+                                                        <g id="Path-5">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-183)" xlink:href="#path-182"></use>
+                                                            <use stroke="url(#radialGradient-179)" stroke-width="11.8918802" xlink:href="#path-182"></use>
+                                                            <use stroke="url(#radialGradient-180)" stroke-width="6.79536014" xlink:href="#path-182"></use>
+                                                            <use stroke="url(#radialGradient-181)" stroke-width="3.39768007" xlink:href="#path-182"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.252743676" transform="translate(38.537194, 45.557732) rotate(10.000000) translate(-38.537194, -45.557732) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-188)" xlink:href="#path-187"></use>
+                                                            <use stroke="url(#radialGradient-184)" stroke-width="11.8918802" xlink:href="#path-187"></use>
+                                                            <use stroke="url(#radialGradient-185)" stroke-width="6.79536014" xlink:href="#path-187"></use>
+                                                            <use stroke="url(#radialGradient-186)" stroke-width="3.39768007" xlink:href="#path-187"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.204797" transform="translate(38.493152, 45.538837) rotate(20.000000) translate(-38.493152, -45.538837) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-193)" xlink:href="#path-192"></use>
+                                                            <use stroke="url(#radialGradient-189)" stroke-width="11.8918802" xlink:href="#path-192"></use>
+                                                            <use stroke="url(#radialGradient-190)" stroke-width="6.79536014" xlink:href="#path-192"></use>
+                                                            <use stroke="url(#radialGradient-191)" stroke-width="3.39768007" xlink:href="#path-192"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.149459" transform="translate(38.466484, 45.509394) rotate(30.000000) translate(-38.466484, -45.509394) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-198)" xlink:href="#path-197"></use>
+                                                            <use stroke="url(#radialGradient-194)" stroke-width="11.8918802" xlink:href="#path-197"></use>
+                                                            <use stroke="url(#radialGradient-195)" stroke-width="6.79536014" xlink:href="#path-197"></use>
+                                                            <use stroke="url(#radialGradient-196)" stroke-width="3.39768007" xlink:href="#path-197"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.0975864955" transform="translate(38.461657, 45.479013) rotate(40.000000) translate(-38.461657, -45.479013) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-203)" xlink:href="#path-202"></use>
+                                                            <use stroke="url(#radialGradient-199)" stroke-width="11.8918802" xlink:href="#path-202"></use>
+                                                            <use stroke="url(#radialGradient-200)" stroke-width="6.79536014" xlink:href="#path-202"></use>
+                                                            <use stroke="url(#radialGradient-201)" stroke-width="3.39768007" xlink:href="#path-202"></use>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Path-5" style="mix-blend-mode: normal;">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-205)" xlink:href="#path-204"></use>
+                                                        <use stroke="url(#radialGradient-179)" stroke-width="11.8918802" xlink:href="#path-204"></use>
+                                                        <use stroke="url(#radialGradient-180)" stroke-width="6.79536014" xlink:href="#path-204"></use>
+                                                        <use stroke="url(#radialGradient-181)" stroke-width="3.39768007" xlink:href="#path-204"></use>
+                                                    </g>
+                                                </g>
+                                                <g id="Group-18" filter="url(#filter-206)" opacity="0.895740327" style="mix-blend-mode: screen;" transform="translate(15.831690, 19.808601)">
+                                                    <g id="Group-17" filter="url(#filter-207)" opacity="0.502092634" style="mix-blend-mode: hard-light;">
+                                                        <g id="Path-5">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-212)" xlink:href="#path-211"></use>
+                                                            <use stroke="url(#radialGradient-208)" stroke-width="6.92999997" xlink:href="#path-211"></use>
+                                                            <use stroke="url(#radialGradient-209)" stroke-width="3.95999998" xlink:href="#path-211"></use>
+                                                            <use stroke="url(#radialGradient-210)" stroke-width="1.97999999" xlink:href="#path-211"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.252743676" transform="translate(22.263116, 26.741329) rotate(10.000000) translate(-22.263116, -26.741329) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-217)" xlink:href="#path-216"></use>
+                                                            <use stroke="url(#radialGradient-213)" stroke-width="6.92999997" xlink:href="#path-216"></use>
+                                                            <use stroke="url(#radialGradient-214)" stroke-width="3.95999998" xlink:href="#path-216"></use>
+                                                            <use stroke="url(#radialGradient-215)" stroke-width="1.97999999" xlink:href="#path-216"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.204797" transform="translate(22.263040, 26.741025) rotate(20.000000) translate(-22.263040, -26.741025) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-222)" xlink:href="#path-221"></use>
+                                                            <use stroke="url(#radialGradient-218)" stroke-width="6.92999997" xlink:href="#path-221"></use>
+                                                            <use stroke="url(#radialGradient-219)" stroke-width="3.95999998" xlink:href="#path-221"></use>
+                                                            <use stroke="url(#radialGradient-220)" stroke-width="1.97999999" xlink:href="#path-221"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.149459" transform="translate(22.263088, 26.740769) rotate(30.000000) translate(-22.263088, -26.740769) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-227)" xlink:href="#path-226"></use>
+                                                            <use stroke="url(#radialGradient-223)" stroke-width="6.92999997" xlink:href="#path-226"></use>
+                                                            <use stroke="url(#radialGradient-224)" stroke-width="3.95999998" xlink:href="#path-226"></use>
+                                                            <use stroke="url(#radialGradient-225)" stroke-width="1.97999999" xlink:href="#path-226"></use>
+                                                        </g>
+                                                        <g id="Path-5" opacity="0.0975864955" transform="translate(22.263227, 26.740624) rotate(40.000000) translate(-22.263227, -26.740624) ">
+                                                            <use fill="black" fill-opacity="1" filter="url(#filter-232)" xlink:href="#path-231"></use>
+                                                            <use stroke="url(#radialGradient-228)" stroke-width="6.92999997" xlink:href="#path-231"></use>
+                                                            <use stroke="url(#radialGradient-229)" stroke-width="3.95999998" xlink:href="#path-231"></use>
+                                                            <use stroke="url(#radialGradient-230)" stroke-width="1.97999999" xlink:href="#path-231"></use>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Path-5" style="mix-blend-mode: normal;">
+                                                        <use fill="black" fill-opacity="1" filter="url(#filter-234)" xlink:href="#path-233"></use>
+                                                        <use stroke="url(#radialGradient-208)" stroke-width="6.92999997" xlink:href="#path-233"></use>
+                                                        <use stroke="url(#radialGradient-209)" stroke-width="3.95999998" xlink:href="#path-233"></use>
+                                                        <use stroke="url(#radialGradient-210)" stroke-width="1.97999999" xlink:href="#path-233"></use>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <g id="Group-18" filter="url(#filter-235)" opacity="0.79968843" style="mix-blend-mode: normal;" transform="translate(18.743590, 21.956522)">
+                                            <g id="Group-17" filter="url(#filter-236)" opacity="0.502092634" style="mix-blend-mode: hard-light;">
+                                                <g id="Path-5">
+                                                    <use fill="black" fill-opacity="1" filter="url(#filter-241)" xlink:href="#path-240"></use>
+                                                    <use stroke="url(#radialGradient-237)" stroke-width="7.62300013" xlink:href="#path-240"></use>
+                                                    <use stroke="url(#radialGradient-238)" stroke-width="4.35600007" xlink:href="#path-240"></use>
+                                                    <use stroke="url(#radialGradient-239)" stroke-width="2.17800004" xlink:href="#path-240"></use>
+                                                </g>
+                                                <g id="Path-5" opacity="0.252743676" transform="translate(24.760136, 29.090535) rotate(10.000000) translate(-24.760136, -29.090535) ">
+                                                    <use fill="black" fill-opacity="1" filter="url(#filter-246)" xlink:href="#path-245"></use>
+                                                    <use stroke="url(#radialGradient-242)" stroke-width="7.62300013" xlink:href="#path-245"></use>
+                                                    <use stroke="url(#radialGradient-243)" stroke-width="4.35600007" xlink:href="#path-245"></use>
+                                                    <use stroke="url(#radialGradient-244)" stroke-width="2.17800004" xlink:href="#path-245"></use>
+                                                </g>
+                                                <g id="Path-5" opacity="0.204797" transform="translate(24.720279, 29.073436) rotate(20.000000) translate(-24.720279, -29.073436) ">
+                                                    <use fill="black" fill-opacity="1" filter="url(#filter-251)" xlink:href="#path-250"></use>
+                                                    <use stroke="url(#radialGradient-247)" stroke-width="7.62300013" xlink:href="#path-250"></use>
+                                                    <use stroke="url(#radialGradient-248)" stroke-width="4.35600007" xlink:href="#path-250"></use>
+                                                    <use stroke="url(#radialGradient-249)" stroke-width="2.17800004" xlink:href="#path-250"></use>
+                                                </g>
+                                                <g id="Path-5" opacity="0.149459" transform="translate(24.696145, 29.046791) rotate(30.000000) translate(-24.696145, -29.046791) ">
+                                                    <use fill="black" fill-opacity="1" filter="url(#filter-256)" xlink:href="#path-255"></use>
+                                                    <use stroke="url(#radialGradient-252)" stroke-width="7.62300013" xlink:href="#path-255"></use>
+                                                    <use stroke="url(#radialGradient-253)" stroke-width="4.35600007" xlink:href="#path-255"></use>
+                                                    <use stroke="url(#radialGradient-254)" stroke-width="2.17800004" xlink:href="#path-255"></use>
+                                                </g>
+                                                <g id="Path-5" opacity="0.0975864955" transform="translate(24.691777, 29.019297) rotate(40.000000) translate(-24.691777, -29.019297) ">
+                                                    <use fill="black" fill-opacity="1" filter="url(#filter-261)" xlink:href="#path-260"></use>
+                                                    <use stroke="url(#radialGradient-257)" stroke-width="7.62300013" xlink:href="#path-260"></use>
+                                                    <use stroke="url(#radialGradient-258)" stroke-width="4.35600007" xlink:href="#path-260"></use>
+                                                    <use stroke="url(#radialGradient-259)" stroke-width="2.17800004" xlink:href="#path-260"></use>
+                                                </g>
+                                            </g>
+                                            <g id="Path-5" style="mix-blend-mode: normal;">
+                                                <use fill="black" fill-opacity="1" filter="url(#filter-263)" xlink:href="#path-262"></use>
+                                                <use stroke="url(#radialGradient-237)" stroke-width="7.62300013" xlink:href="#path-262"></use>
+                                                <use stroke="url(#radialGradient-238)" stroke-width="4.35600007" xlink:href="#path-262"></use>
+                                                <use stroke="url(#radialGradient-239)" stroke-width="2.17800004" xlink:href="#path-262"></use>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

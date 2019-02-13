@@ -41,6 +41,20 @@ class App extends Component {
             path="/architecture-grid"
             component={asyncComponent(() => import("./Pages/ArchitectureGrid"))}
           />
+          <Route
+            path="/residence"
+            component={asyncComponent(() => import("./Pages/Residence"))}
+          />
+          <Route
+            path="/grid-exp"
+            component={asyncComponent(() =>
+              import("./Pages/GridExperimentation")
+            )}
+          />
+          <Route
+            path="/ethereum-classic"
+            component={asyncComponent(() => import("./Pages/EthereumClassic"))}
+          />
           {/* <Route
             path="/card-stack-animation"
             component={asyncComponent(() =>

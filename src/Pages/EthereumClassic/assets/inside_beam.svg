@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="306px" height="35px" viewBox="0 0 306 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 54</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-9.0%" y="-9.9%" width="118.0%" height="119.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.637058424  0 0 0 0.150164176 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="0%" y1="100%" x2="103.847419%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#00FFDB" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#42F78B" stop-opacity="0.774566474" offset="69.6186911%"></stop>
+            <stop stop-color="#00FFB5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="96.2164415%" y1="0%" x2="26.1198749%" y2="0%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-574.000000, -448.000000)" fill-rule="nonzero" id="Page">
+            <g>
+                <g id="Display-1-page" transform="translate(0.000000, 177.000000)">
+                    <g id="Group-9" style="mix-blend-mode: normal;" transform="translate(0.000000, 210.000000)">
+                        <g id="Group-8" transform="translate(132.000000, 24.000000)">
+                            <g id="Group-4" filter="url(#filter-1)" transform="translate(424.000000, 0.000000)">
+                                <g id="Group-54" transform="translate(18.000000, 52.000000)">
+                                    <path d="M1.76439903,5.49999071 C0.792914713,5.50335828 0.00297001756,4.6106619 8.17511842e-06,3.50609753 C-0.00295366733,2.40153317 0.782188932,1.50337687 1.75367325,1.50000929 L290.235601,0.500009295 C291.207085,0.496641721 291.99703,1.3893381 291.999992,2.49390247 C292.002954,3.59846683 291.217811,4.49662313 290.246327,4.49999071 L1.76439903,5.49999071 Z" id="Path-3" fill="url(#linearGradient-2)"></path>
+                                    <path d="M1.76171759,4.49999535 C1.27597543,4.50167914 0.881003081,4.05533095 0.87952216,3.50304877 C0.878041239,2.95076658 1.27061254,2.50168843 1.7563547,2.50000465 L290.238282,1.50000465 C290.724025,1.49832086 291.118997,1.94466905 291.120478,2.49695123 C291.121959,3.04923342 290.729387,3.49831157 290.243645,3.49999535 L1.76171759,4.49999535 Z" id="Path-3" fill="url(#linearGradient-3)"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
