@@ -1,8 +1,39 @@
 import React from "react";
+import styled from "styled-components";
+
+const Nav = styled.nav`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 74%;
+  height: 4.4rem;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 100%;
+    background: #222;
+    color: #fff;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    list-style-type: none;
+  }
+`;
 
 export default function nav() {
   return (
-    <nav>
+    <Nav>
       <div>STUDIO</div>
       <ul>
         <li id="collections">
@@ -43,6 +74,6 @@ export default function nav() {
           <span>r</span>
         </li>
       </ul>
-    </nav>
+    </Nav>
   );
 }
