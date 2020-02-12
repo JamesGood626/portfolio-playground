@@ -9,6 +9,7 @@ const Nav = styled.nav`
   align-items: center;
   width: 74%;
   height: 4.4rem;
+  font-family: ${props => props.theme.mainFont};
 
   div {
     display: flex;
@@ -16,7 +17,7 @@ const Nav = styled.nav`
     align-items: center;
     width: 9rem;
     height: 100%;
-    background: #222;
+    background: ${props => props.theme.primaryBlack};
     color: #fff;
   }
 
@@ -26,7 +27,7 @@ const Nav = styled.nav`
     align-items: center;
     width: 100%;
     height: 100%;
-    background: #ddd;
+    background: ${props => props.theme.mainBgColor};
     list-style-type: none;
   }
 `;

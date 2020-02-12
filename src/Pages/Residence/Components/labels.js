@@ -14,13 +14,14 @@ const Container = styled.div`
     align-items: center;
     width: 16rem;
     height: 4.2rem;
-    background: yellow;
+    background: ${props => props.theme.primaryColor};
+    color: ${props => props.theme.primaryBlack};
   }
 
   #progress-container {
     width: 18rem;
     height: 6.5rem;
-    background: #222;
+    background: ${props => props.theme.primaryBlack};
   }
 
   #progress-container {
@@ -28,7 +29,7 @@ const Container = styled.div`
     justify-content: space-around;
     align-items: center;
     font-size: 3rem;
-    color: #fff;
+    color: ${props => props.theme.primaryWhite};
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -36,7 +37,7 @@ const Container = styled.div`
   .progress-line {
     width: 7.5rem;
     height: 0.2rem;
-    background: #fff;
+    background: ${props => props.theme.primaryWhite};
   }
 `;
 

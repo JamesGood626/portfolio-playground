@@ -28,8 +28,10 @@ const MainContent = styled.section`
   width: 37.5vw;
   padding-left: 5rem;
   padding-right: 5rem;
+  font-family: ${props => props.theme.mainFont};
 
   h1 {
+    font-weight: 300;
     font-size: 5rem;
     line-height: 6.5rem;
   }

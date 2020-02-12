@@ -10,10 +10,10 @@ const runaBackground = () => {
     >
       <defs>
         <linearGradient id="MyGradient">
-          <stop offset="7%" stop-color="#3e070e" />
-          <stop offset="35%" stop-color="#6e252e" />
-          <stop offset="67%" stop-color="#3e070e" />
-          <stop offset="98%" stop-color="#6e252e" />
+          <stop offset="7%" stopColor="#3e070e" />
+          <stop offset="35%" stopColor="#6e252e" />
+          <stop offset="67%" stopColor="#3e070e" />
+          <stop offset="98%" stopColor="#6e252e" />
         </linearGradient>
       </defs>
       <title>runa-bg-v2</title>

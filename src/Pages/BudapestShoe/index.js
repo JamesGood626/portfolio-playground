@@ -14,29 +14,25 @@ const FauxBody = styled.div`
   padding: 0;
   background: linear-gradient(#0a0a0a, #202020);
   font-family: "Roboto", sans-serif;
-`;
-
-const Container = styled.div`
-  width: 85vw;
-  height: 100vh;
-
-  main {
-    width: 85vw;
-  }
 
   /**
    *
    *
-   * Large Phone Media Queries
+   * Large Screen
    *
    *
    **/
-  @media screen and (max-width: 960px) {
-    height: 100%;
+  @media screen and (min-width: 960px) {
+    height: 100vh;
+  }
+`;
 
-    #page-container {
-      height: auto;
-    }
+const Container = styled.div`
+  width: 85vw;
+  height: 100%;
+
+  main {
+    width: 85vw;
   }
 `;
 

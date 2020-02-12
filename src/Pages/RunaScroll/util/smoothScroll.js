@@ -32,14 +32,17 @@ export const SmoothScroll = (target, speed, smooth) => {
       //we are on firefox
       delta = -e.deltaY;
     }
-    console.log("THE DELTA: ", e.deltaFactor);
+    // COME BACK TO THESE:
+    // console.log("THE DELTA: ", e.deltaFactor);
     delta = Math.max(-1, Math.min(1, delta));
-    console.log("Delta: ", delta);
+    // console.log("Delta: ", delta);
     pos += -delta * speed;
     const totalAmountOfVerticalScrollability =
       target.scrollHeight - target.clientHeight;
     pos = Math.max(0, Math.min(pos, totalAmountOfVerticalScrollability)); // limit scrolling
     if (!moving) update();
+    // Returning these to facilitate removing the event listener on component unmounting
+    return { target, scrolled };
   }
 
   function update() {

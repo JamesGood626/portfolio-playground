@@ -7,7 +7,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   margin-top: 4rem;
   margin-bottom: 4rem;
   /* background: linear-gradient(120deg, #2978a0, #87f6ff) fixed; */
@@ -19,7 +19,7 @@ const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   width: 90vw;
-  height: 80vh;
+  height: 80%;
   font-family: Courgette;
 
   & > a {
@@ -82,8 +82,8 @@ const destinationsArr = [
   { linkTo: "/budapest-shoe", title: "Budapest Shoe" },
   { linkTo: "/architecture-grid", title: "Architecture Grid" },
   { linkTo: "/residence", title: "Residence" },
-  { linkTo: "/ethereum-classic", title: "Ethereum Classic" },
-  { linkTo: "/grid-exp", title: "Grid Experimentation" }
+  { linkTo: "/ethereum-classic", title: "Ethereum Classic" }
+  // { linkTo: "/grid-exp", title: "Grid Experimentation" }
   // { linkTo: "/grid-primer-one", title: "Grid Primer One" },
   // { linkTo: "/card-stack-animation", title: "Card Stack Animation" },
   // { linkTo: "/image-grid", title: "Image Grid" },

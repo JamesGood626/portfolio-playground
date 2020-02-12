@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Navbar from "./Components/navbar";
 import Heading from "./Components/heading";
 import RocketSection from "./Components/rocket-section";

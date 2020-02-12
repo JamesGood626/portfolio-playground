@@ -1,8 +1,20 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Nav from "./Components/nav";
 import Sidebar from "./Components/sidebar";
 import Content from "./Components/content";
+
+const theme = {
+  mainFont: "Roboto, sans-serif",
+  secondaryFont: "questa-grande, serif",
+  headerFont: "Nunito, sans-serif",
+  mainBgColor: "#F2F4F4",
+  primaryColor: "#04F06A",
+  textColor: "#04F06A",
+  primaryWhite: "#fff",
+  primaryBlack: "#222",
+  primaryGrey: "#F2F4F4"
+};
 
 const MainGrid = styled.main`
   width: 100vw;
@@ -26,11 +38,13 @@ export default class index extends Component {
 
   render() {
     return (
-      <MainGrid>
-        <Nav />
-        <Sidebar />
-        <Content />
-      </MainGrid>
+      <ThemeProvider theme={theme}>
+        <MainGrid>
+          <Nav />
+          <Sidebar />
+          <Content />
+        </MainGrid>
+      </ThemeProvider>
     );
   }
 }

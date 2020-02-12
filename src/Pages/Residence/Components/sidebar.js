@@ -8,6 +8,7 @@ const Aside = styled.aside`
   height: 100%;
   width: 6rem;
   background: #ddd;
+  font-family: ${props => props.theme.mainFont};
 
   #hamburger {
     display: flex;
@@ -22,7 +23,7 @@ const Aside = styled.aside`
     position: absolute;
     z-index: 20;
     height: 0.35rem;
-    background: #444;
+    background: ${props => props.theme.primaryBlack};
   }
 
   /* There's some real wacky stuff going on with the width of these spans...... */
@@ -85,7 +86,7 @@ const Aside = styled.aside`
   }
 
   #forward-arrow {
-    background: yellow;
+    background: ${props => props.theme.primaryColor};
   }
 `;
 
